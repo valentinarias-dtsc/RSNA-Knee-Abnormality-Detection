@@ -1,1 +1,47 @@
-data/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# virtual env
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# dataset
+data/*
+!data/.gitkeep
+
+# secrets
+.env
+.env.*
+
+# caches
+.cache/
+.pytest_cache/
+
+# logs
+*.log
+
+# private files
+private/*
+
+# data files
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
