@@ -45,3 +45,9 @@ private/*
 *.xls
 *.parquet
 *.feather
+
+# Versioned outputs for stage 03 (narrow exceptions to the generic data-file rules)
+!artifacts/
+!artifacts/03_report_label_generation/
+!artifacts/03_report_label_generation/*.csv
+!artifacts/03_report_label_generation/*.json

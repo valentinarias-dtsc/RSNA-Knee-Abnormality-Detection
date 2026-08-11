@@ -1,0 +1,19 @@
+{
+  "stage": "03 - report label generation",
+  "policy_version": "report-label-policy-v1.0.0",
+  "targets": [
+    "ACL", "MCL", "Medial Meniscus", "Lateral Meniscus",
+    "Medial OA", "Lateral OA", "PF OA", "Effusion",
+    "Synovitis", "Baker's", "Contusion", "Fracture"
+  ],
+  "states": ["positive", "negative", "uncertain", "unknown"],
+  "source_priority": ["official", "report_derived", "unresolved"],
+  "confidence_domain": [0.0, 1.0],
+  "confidence_is_calibrated_probability": false,
+  "expected_studies": 4407,
+  "expected_complete_gold_studies": 58,
+  "missing_mention_policy": "unknown",
+  "uncertainty_policy": "missing_binary_label",
+  "allowed_label_input_columns": ["StudyInstanceUID", "Report", "12 official target columns"],
+  "forbidden_label_inputs": ["PixelData", "DICOM metadata", "Series metadata", "scanner", "anatomical plane"]
+}

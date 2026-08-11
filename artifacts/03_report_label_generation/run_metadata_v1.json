@@ -1,0 +1,73 @@
+{
+  "stage": "03 - report label generation",
+  "policy_version": "report-label-policy-v1.0.0",
+  "execution_timestamp_utc": "2026-08-11T19:00:57.260207+00:00",
+  "input": {
+    "path": "data/train.csv",
+    "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+  },
+  "configuration": {
+    "path": "config/03_report_label_generation/policy_v1.json",
+    "sha256": "1b2daf3902f47ef7eb4fc6fd5d81fea2f371984fec53a53f6bf47ff73d927036"
+  },
+  "counts": {
+    "studies": 4407,
+    "targets": 12,
+    "study_target_rows": 52884,
+    "gold_studies": 58,
+    "gold_study_target_rows": 696
+  },
+  "confidence_definition": {
+    "positive_explicit": 0.9,
+    "positive_with_conflict": 0.7,
+    "negative_explicit": 0.85,
+    "uncertain_explicit": 0.5,
+    "unknown": 0.0,
+    "interpretation": "deterministic evidence-strength rank; not a calibrated probability"
+  },
+  "schema": {
+    "StudyInstanceUID": "object",
+    "report_sha256": "object",
+    "language_group": "object",
+    "target": "object",
+    "status": "object",
+    "derived_label": "Int64",
+    "derived_score": "float64",
+    "confidence": "float64",
+    "evidence": "object",
+    "rationale": "object",
+    "official_label": "Int64",
+    "final_label": "Int64",
+    "final_source": "object",
+    "policy_version": "object"
+  },
+  "artifacts": {
+    "supervision": {
+      "path": "artifacts/03_report_label_generation/supervision_long_v1.csv",
+      "sha256": "9d15e0649acbafac625c5cd622acfab259092612e46d30927ed62018da3bdad8"
+    },
+    "metrics": {
+      "path": "artifacts/03_report_label_generation/gold_metrics_v1.csv",
+      "sha256": "0f42a4babd9cdd2ea320a74e7668a4a3a1d81cec878e3a3f43145062415c61df"
+    },
+    "errors": {
+      "path": "artifacts/03_report_label_generation/error_analysis_v1.csv",
+      "sha256": "e9f634e9f32bc1dd247fac6623b482c9a68db2964d8862ef6ce7ef8f7200ec27"
+    },
+    "languages": {
+      "path": "artifacts/03_report_label_generation/language_summary_v1.csv",
+      "sha256": "9175c9932932e5f8ca01ba5ac0e79d2700d25ad4b7a7407b647276e45efdac00"
+    }
+  },
+  "figures": {
+    "status": {
+      "path": "figures/03_report_label_generation/status_coverage_by_target_v1.png",
+      "sha256": "f8e17f413e7dcd8ba45dbb3e99563f8166154adafc0788191c006a9c137163ff"
+    },
+    "metrics": {
+      "path": "figures/03_report_label_generation/gold_metrics_by_target_v1.png",
+      "sha256": "ef8994e6b2defef7af01f01317a8086b4d5ca20bac6afea78ff37b4bed8b8102"
+    }
+  },
+  "reproducibility": "Semantic artifacts are deterministic for fixed input/code; execution_timestamp_utc changes per run."
+}
