@@ -1,14 +1,14 @@
-# 03 - Report label generation implementation
+# 03 Report Label Generation — Implementation
 
-## Resumen técnico
+## Technical Summary
 
 Se implementó la etapa 03 como módulos Python y un entry point sin notebook. La versión activa es `report-label-policy-v1.0.0`. El flujo lee únicamente `StudyInstanceUID`, `Report` y los 12 targets oficiales de `train.csv`; no importa ni consulta DICOM o tablas de Series.
 
-## Contexto
+## Stage Context
 
 El componente materializa la supervisión textual identificada por las etapas de caracterización y revisión de estrategia. Su salida es un contrato para entrenamiento MRI posterior, no un modelo predictivo.
 
-## Arquitectura
+## Architecture
 
 ```text
 train.csv
@@ -21,7 +21,7 @@ train.csv
    → artefactos + figuras + reportes
 ```
 
-## Archivos creados o modificados
+## Files Created or Modified
 
 - `src/report_labels/__init__.py`: API pública del paquete.
 - `src/report_labels/constants.py`: targets, dominios y política léxica multilingüe.
@@ -36,11 +36,11 @@ train.csv
 - `.gitignore`: excepciones acotadas para versionar outputs de esta etapa.
 - `README.md`: comando y contrato principal.
 
-## Módulos e interfaces
+## Modules and Responsibilities
 
 `ReportLabelExtractor.extract(report)` devuelve un `ExtractionResult` por target sin consultar gold. `build_supervision(train)` expande Studies a formato largo. `evaluate_gold(frame)` calcula métricas sólo con derived pre-override. `validate_supervision(frame, train, expected_studies)` protege cardinalidad, dominios, provenance, missing y prioridad official. `run_pipeline(...)` orquesta la etapa completa.
 
-## Orquestador / entry point
+## Entry Points
 
 Desde la raíz:
 
@@ -50,7 +50,7 @@ python scripts/generate_report_labels.py
 
 Los paths pueden cambiarse mediante argumentos `--train`, `--artifact-dir`, `--figure-dir`, `--stage-report` y `--implementation-report`.
 
-## Configuración
+## Configuration
 
 `policy_v1.json` declara versión, 12 targets, estados válidos, prioridad de fuentes, semántica de confidence, cardinalidades esperadas y prohibición de inputs MRI. Los léxicos ejecutables permanecen en Python para permitir tests y revisión de cambios.
 
@@ -62,11 +62,11 @@ Los tests cubren afirmación ACL, negación, incertidumbre, ausencia de mención
 python -m unittest discover -s tests -v
 ```
 
-## Dependencias
+## Dependencies
 
 Se reutilizan Python estándar, pandas, NumPy y Matplotlib ya presentes. Se eligió CSV largo en vez de Parquet para no incorporar `pyarrow` sólo por persistencia.
 
-## Artefactos generados
+## Generated Artifacts
 
 - `artifacts/03_report_label_generation/supervision_long_v1.csv`: supervisión larga principal.
 - `artifacts/03_report_label_generation/gold_metrics_v1.csv`: métricas pre-override por target.
@@ -74,17 +74,17 @@ Se reutilizan Python estándar, pandas, NumPy y Matplotlib ya presentes. Se elig
 - `artifacts/03_report_label_generation/language_summary_v1.csv`: cobertura lingüística.
 - `artifacts/03_report_label_generation/run_metadata_v1.json`: schema, hashes, versión y conteos.
 
-## Figuras generadas
+## Generated Figures
 
 - `figures/03_report_label_generation/status_coverage_by_target_v1.png`: estados por target; utilizada en el reporte de etapa.
 - `figures/03_report_label_generation/gold_metrics_by_target_v1.png`: coverage y métricas gold; utilizada en el reporte de etapa.
 
-## Reportes generados
+## Generated Reports
 
-- `reports/stages/03 - report label generation.md`: resultados, decisiones e interpretación.
-- `reports/implementation/03 - report label generation implementation.md`: este documento técnico.
+- `reports/stages/03_report_label_generation.md`: resultados, decisiones e interpretación.
+- `reports/implementation/03_report_label_generation_implementation.md`: este documento técnico.
 
-## Reproducibilidad
+## Reproduction
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -93,10 +93,10 @@ python scripts/generate_report_labels.py
 
 Los labels, métricas, errores y figuras son deterministas para input y código fijos. `execution_timestamp_utc` del metadata cambia en cada ejecución y está documentado como campo operativo.
 
-## Limitaciones técnicas
+## Technical Limitations
 
 La segmentación y el alcance de negación son basados en reglas; no existe parser clínico. Los léxicos requieren mantenimiento explícito y los grupos lingüísticos no sustituyen language identification validado. CSV no conserva tipos nullable tan estrictamente como Parquet, por lo que el schema se valida al generar y se registra en metadata.
 
-## Conexión con el siguiente componente
+## Interface With the Next Stage
 
 El pipeline MRI dispone de una fila por Study-target con `final_label`, `final_source`, `confidence` y missing explícito. Debe pivotar por `StudyInstanceUID`, construir máscaras de pérdida para unresolved y mantener mayor peso o tratamiento separado para `official`. El Report no forma parte del contrato de inferencia.

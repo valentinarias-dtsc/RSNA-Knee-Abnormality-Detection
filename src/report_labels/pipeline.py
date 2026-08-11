@@ -231,7 +231,7 @@ def run_pipeline(
         resolved_config = config_path.resolve()
         configuration = {"path": _portable_path(resolved_config), "sha256": _sha256(resolved_config)}
     metadata = {
-        "stage": "03 - report label generation",
+        "stage": "03_report_label_generation",
         "policy_version": POLICY_VERSION,
         "execution_timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "input": {"path": _portable_path(train_path), "sha256": _sha256(train_path)},

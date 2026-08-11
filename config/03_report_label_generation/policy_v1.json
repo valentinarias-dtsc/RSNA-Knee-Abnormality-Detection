@@ -1,5 +1,5 @@
 {
-  "stage": "03 - report label generation",
+  "stage": "03_report_label_generation",
   "policy_version": "report-label-policy-v1.0.0",
   "targets": [
     "ACL", "MCL", "Medial Meniscus", "Lateral Meniscus",

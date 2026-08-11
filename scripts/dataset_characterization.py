@@ -344,8 +344,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     repo_root = Path(__file__).resolve().parents[1]
     parser.add_argument("--data-dir", type=Path, default=repo_root / "data")
-    parser.add_argument("--report", type=Path, default=repo_root / "reports" / "dataset_initial_characterization.md")
-    parser.add_argument("--figures-dir", type=Path, default=repo_root / "reports" / "figures")
+    parser.add_argument("--report", type=Path, default=repo_root / "reports" / "stages" / "01_dataset_characterization.md")
+    parser.add_argument("--figures-dir", type=Path, default=repo_root / "figures" / "01_dataset_characterization")
     parser.add_argument(
         "--max-dicom-studies",
         type=int,
@@ -642,14 +642,14 @@ def main() -> int:
 
     lines: list[str] = []
     add = lines.append
-    add("# RSNA Knee Abnormality Detection")
-    add("## Caracterización inicial del dataset")
+    add("# 01 Dataset Characterization")
+    add("## Execution Context")
     add("")
     add(f"**Fecha de ejecución:** {execution_time}.  ")
     add(f"**Directorio inspeccionado:** `{data_dir.relative_to(repo_root) if data_dir.is_relative_to(repo_root) else data_dir}`.  ")
     add("**Convención estadística:** todas las varianzas y desviaciones estándar usan la convención poblacional (`ddof=0`).")
     add("")
-    add("### 1. Resumen ejecutivo descriptivo")
+    add("## 1. Executive Summary")
     add("")
     add(
         f"El dataset local contiene {fmt_int(train_studies)} Studies en train y {fmt_int(test_studies)} en test. "
@@ -665,7 +665,7 @@ def main() -> int:
         "Por ello, unidad de almacenamiento, unidad de label y unidad aparente de predicción no son equivalentes."
     )
     add("")
-    add("#### Dimensiones generales")
+    add("### General Dimensions")
     add("")
     dimensions_rows = [
         ["Patients (PatientID observado en DICOM)", fmt_int(patient_count)],
@@ -682,11 +682,11 @@ def main() -> int:
     ]
     add(markdown_table(["Entidad", "Cantidad"], dimensions_rows, {1}))
     add("")
-    add("#### Estadísticas principales")
+    add("### Main Statistics")
     add("")
     add(markdown_table(stat_headers, stat_rows, set(range(1, len(stat_headers)))))
     add("")
-    add("### 2. Estructura de archivos")
+    add("## 2. File Structure")
     add("")
     add("```text")
     add("data/")
@@ -705,7 +705,7 @@ def main() -> int:
     add("")
     add(f"El recorrido físico fue exhaustivo para nombres y conteos: {fmt_int(total_files)} archivos y {fmt_int(total_dirs)} directorios. El tamaño estimado es {human_bytes(total_bytes)}; se calculó con el tamaño exacto de los {fmt_int(len(root_files))} archivos raíz y una muestra determinista estratificada de {fmt_int(len(size_sample_sizes))} DICOM ({fmt_int(empty_files_inspected)} vacíos dentro de lo inspeccionado).")
     add("")
-    add("### 3. Dimensiones generales")
+    add("## 3. General Dimensions")
     add("")
     ratio_rows = [
         ["Studies / PatientID observado", fmt_num(len(study_to_patient) / patient_count if patient_count else np.nan)],
@@ -717,11 +717,11 @@ def main() -> int:
     add("")
     add("La cantidad de Patients se basa en `PatientID` leído en una instancia por cada Study; no existe Patient ID en los CSV. La cobertura se detalla más adelante.")
     add("")
-    add("### 4. Diccionario de variables")
+    add("## 4. Data Dictionary")
     add("")
     add(markdown_table(["Variable", "Archivo", "Tipo", "Nivel aparente", "Valores únicos", "Missing %", "Ejemplos no nulos", "Interpretación descriptiva"], dictionary_rows, {4, 5}))
     add("")
-    add("### 5. Identificadores y jerarquía")
+    add("## 5. Identifiers and Hierarchy")
     add("")
     add(markdown_table(["Archivo", "Variable real", "Nivel", "Cardinalidad", "Único en tabla", "Filas en grupos duplicados"], id_rows, {3, 5}))
     add("")
@@ -745,7 +745,7 @@ def main() -> int:
     else:
         add("No pudo reconstruirse el nivel Patient a partir de la metadata DICOM leída.")
     add("")
-    add("### 6. Unidad de análisis y unidad de predicción")
+    add("## 6. Analysis and Prediction Units")
     add("")
     add("- **Unidad física de almacenamiento:** un archivo `.dcm` por Slice / DICOM Instance.")
     add("- **Granularidad de `*_series.csv`:** una fila por Series.")
@@ -755,7 +755,7 @@ def main() -> int:
     add("")
     add("El Study funciona como unidad principal de análisis porque enlaza tablas, Series, DICOM, Report y, cuando están disponibles, targets. Patient sólo se recupera desde headers DICOM; Series y Slice son niveles subordinados de adquisición.")
     add("")
-    add("### 7. Targets y prevalencias")
+    add("## 7. Targets and Prevalence")
     add("")
     add(f"Los 12 targets tienen dtype inferido `float64` por la presencia de missing, pero sus {fmt_int(target_valid_rows.sum())} valores observados son binarios (0/1). Hay {fmt_int(target_complete_rows.sum())} filas con los 12 targets completos y {fmt_int((target_valid_rows & ~target_complete_rows).sum())} con observación parcial.")
     add("")
@@ -767,11 +767,11 @@ def main() -> int:
     positive_distribution = n_positive.value_counts().sort_index()
     add(markdown_table(["Labels positivos por Study", "Studies"], [[fmt_num(k, 0), fmt_int(v)] for k, v in positive_distribution.items()], {0, 1}))
     add("")
-    add("![Prevalencia de targets](figures/target_prevalence.png)")
+    add("![Target prevalence](../../figures/01_dataset_characterization/target_prevalence.png)")
     add("")
-    add("![Labels positivos por Study](figures/positive_labels_per_study.png)")
+    add("![Positive labels per Study](../../figures/01_dataset_characterization/positive_labels_per_study.png)")
     add("")
-    add("### 8. Composición Study → Series")
+    add("## 8. Study-to-Series Composition")
     add("")
     add("La distribución se calculó exhaustivamente sobre directorios físicos. Frecuencias:")
     add("")
@@ -783,7 +783,7 @@ def main() -> int:
     high_series = series_per_study[series_per_study >= high_threshold]
     add(f"El mínimo observado fue {fmt_int(series_per_study.min())} Series ({fmt_int(len(low_series))} Studies) y el máximo {fmt_int(series_per_study.max())}. El umbral P99 es {fmt_num(high_threshold)}; {fmt_int(len(high_series))} Studies se ubican en o por encima de él. Son observaciones descriptivas, no una clasificación automática de outliers.")
     add("")
-    add("![Series por Study](figures/series_per_study.png)")
+    add("![Series per Study](../../figures/01_dataset_characterization/series_per_study.png)")
     add("")
     add("Las categorías tabulares de adquisición son:")
     add("")
@@ -793,9 +793,9 @@ def main() -> int:
             series_categories.append([col, val, fmt_int(count), fmt_pct(count / (len(train_series) + len(test_series)) * 100)])
     add(markdown_table(["Variable", "Categoría", "Series", "%"], series_categories, {2, 3}))
     add("")
-    add("![Plano anatómico](figures/anatomical_plane.png)")
+    add("![Anatomical plane](../../figures/01_dataset_characterization/anatomical_plane.png)")
     add("")
-    add("### 9. Composición Series → Slice")
+    add("## 9. Series-to-Slice Composition")
     add("")
     slices_frequency = slices_per_series.value_counts().sort_index()
     # Una tabla completa sigue siendo manejable; limita a 60 filas si aparecieran demasiadas cardinalidades.
@@ -806,9 +806,9 @@ def main() -> int:
     slice_p99 = slices_per_series.quantile(0.99)
     add(f"Se observaron {fmt_int((slices_per_series <= slice_p01).sum())} Series con conteo menor o igual a P1 ({fmt_num(slice_p01)}) y {fmt_int((slices_per_series >= slice_p99).sum())} con conteo mayor o igual a P99 ({fmt_num(slice_p99)}). La cantidad por sí sola no permite concluir que una Series esté incompleta.")
     add("")
-    add("![Slices por Series](figures/slices_per_series.png)")
+    add("![Slices per Series](../../figures/01_dataset_characterization/slices_per_series.png)")
     add("")
-    add("### 10. Reportes radiológicos")
+    add("## 10. Radiology Reports")
     add("")
     add(f"`train.csv` contiene {fmt_int(report_count)} reportes no missing asociados por fila a Study, {fmt_int(train['Report'].nunique())} textos únicos y {fmt_int(train['Report'].duplicated(keep=False).sum())} filas pertenecientes a grupos de textos exactamente duplicados.")
     add("")
@@ -817,9 +817,9 @@ def main() -> int:
     add("")
     add("La detección usa expresiones regulares simples y equivalentes frecuentes en inglés, español y neerlandés. No se estimaron longitudes de sección porque la estructura y el idioma son heterogéneos y una segmentación básica no resultó suficientemente robusta para presentarla como medición.")
     add("")
-    add("![Longitud de reportes](figures/report_length_chars.png)")
+    add("![Report length](../../figures/01_dataset_characterization/report_length_chars.png)")
     add("")
-    add("### 11. Metadata DICOM")
+    add("## 11. DICOM Metadata")
     add("")
     add(f"Se intentó leer una instancia determinista por Study sobre {dicom_sample_scope}, con `pydicom.dcmread(..., stop_before_pixels=True)`: {fmt_int(len(dicom) + len(dicom_errors))} inspeccionadas, {fmt_int(len(dicom))} correctamente leídas y {fmt_int(len(dicom_errors))} con problemas. Esta pasada cubre todos los Studies, pero sólo una Series y un Slice por Study.")
     add("")
@@ -837,15 +837,15 @@ def main() -> int:
         add("")
     add("La disponibilidad se refiere a los headers inspeccionados. Para valores que pueden variar por slice (por ejemplo, posición o `InstanceNumber`), no representa una enumeración exhaustiva de todas las instancias.")
     add("")
-    add("### 12. Missingness y completitud")
+    add("## 12. Missingness and Completeness")
     add("")
     add(markdown_table(["Partición", "Studies", "Con fila en series CSV", "Con directorio físico", "Con Report", "Con targets", "Con PatientID observado", "Presentes en tabla + series CSV + físico"], completeness_rows, set(range(1, 8))))
     add("")
     add("El missingness más marcado en las variables principales corresponde a los targets de `train.csv`; los IDs, Report y campos de las tablas de Series no presentan missing. Los porcentajes DICOM por tag figuran en la sección anterior.")
     add("")
-    add("![Missingness de train](figures/train_missingness.png)")
+    add("![Train missingness](../../figures/01_dataset_characterization/train_missingness.png)")
     add("")
-    add("### 13. Duplicados e integridad básica")
+    add("## 13. Duplicates and Basic Integrity")
     add("")
     add(markdown_table(["Tabla", "Filas", "Filas exactamente duplicadas (adicionales)"], duplicate_rows, {1, 2}))
     add("")
@@ -866,7 +866,7 @@ def main() -> int:
     add("")
     add("Los conteos de duplicados no implican por sí solos que las observaciones sean erróneas; identifican repeticiones que pueden revisarse posteriormente.")
     add("")
-    add("### 14. Comparación descriptiva train/test")
+    add("## 14. Descriptive Train/Test Comparison")
     add("")
     add(markdown_table(["Métrica", "Train", "Test"], comparison_rows, {1, 2}))
     add("")
@@ -881,14 +881,14 @@ def main() -> int:
         add("")
     add("Las diferencias anteriores son exclusivamente descriptivas. Test no contiene labels ni reportes, por lo que no se calculan prevalencias ni longitudes de texto para esa partición.")
     add("")
-    add("### 15. Observaciones adicionales")
+    add("## 15. Additional Observations")
     add("")
     add(f"- `sample_submission.csv` {'contiene exactamente una fila por cada Study ID de test' if submission_matches_test else 'no coincide exactamente con los Study IDs únicos de test'} y 12 columnas con valores placeholder de 0,5.")
     add("- `Fluid_Sensitive`, `Fat_Suppression` y `Anatomical_Plane` caracterizan Series en tablas separadas de los headers DICOM.")
     add("- Los reportes muestran heterogeneidad de idioma y formato; aquí sólo se midieron presencia, duplicación y longitud, sin interpretación clínica.")
     add("- Los targets faltantes no se trataron como negativos; toda prevalencia usa únicamente observaciones válidas.")
     add("")
-    add("### 16. Limitaciones de esta caracterización")
+    add("## 16. Limitations")
     add("")
     add("- La metadata DICOM se extrajo de una instancia determinista por Study, sin PixelData. Los conteos físicos de Series y slices sí son exhaustivos.")
     add(f"- El tamaño total es una estimación basada en {fmt_int(len(size_sample_sizes))} DICOM estratificados por partición; no se ejecutó `stat` sobre cada archivo por su costo observado.")
@@ -898,14 +898,14 @@ def main() -> int:
     add("- No se calculó el número de `SeriesDescription` distintas por Study: la extracción de headers usa una sola Series por Study; `ProtocolName` resultó ausente en todos los headers inspeccionados.")
     add("- No se cargaron píxeles ni se verificó la calidad visual de las imágenes.")
     add("")
-    add("### 17. Glosario")
+    add("## 17. Glossary")
     add("")
     glossary = [
         ("Patient", "Persona identificada mediante `PatientID` en metadata DICOM; puede tener uno o más Studies."),
         ("Study / MRI Exam", "Examen completo de resonancia magnética, identificado por `StudyInstanceUID`; es la unidad central del dataset."),
         ("Series", "Conjunto de imágenes adquiridas bajo una configuración o secuencia común dentro de un Study."),
         ("Slice / DICOM Instance", "Imagen individual de una Series; múltiples slices representan posiciones dentro del volumen adquirido."),
-        ("MRI / resonancia magnética", "Técnica de imagen médica basada en campos magnéticos y radiofrecuencia."),
+        ("MRI / Magnetic Resonance Imaging", "Técnica de imagen médica basada en campos magnéticos y radiofrecuencia."),
         ("DICOM", "Estándar de archivo y metadata para imágenes médicas digitales."),
         ("Radiology report", "Texto producido durante la interpretación radiológica del examen."),
         ("Findings", "Sección del reporte que describe los hallazgos observados."),
@@ -937,7 +937,7 @@ def main() -> int:
         add("")
         add(definition)
         add("")
-    add("### Reproducibilidad")
+    add("## Reproduction")
     add("")
     add("Desde la raíz del repositorio:")
     add("")

@@ -1,6 +1,6 @@
-# 03 - Generación reproducible de labels desde Report
+# 03 Report Label Generation
 
-## 1. Resumen ejecutivo
+## 1. Executive Summary
 
 Esta etapa implementa una política textual interpretable para transformar los 4,407 reportes de `train.csv` en estados auditables para los 12 targets. La política `report-label-policy-v1.0.0` reconoce evidencia target-específica, negación, normalidad e incertidumbre en varios grupos lingüísticos. La ausencia de mención se conserva como `unknown`.
 
@@ -8,15 +8,15 @@ Antes de cualquier override, la extracción se evaluó contra los 58 Studies con
 
 La etapa produce un contrato reusable para el futuro pipeline MRI, pero no procesa DICOM ni píxeles y no entrena ningún modelo visual.
 
-## 2. Conexión con la etapa anterior
+## 2. Previous Stage Connection
 
 La caracterización inicial estableció una fila por `StudyInstanceUID`, 4.407 reportes, 12 targets y sólo 58 filas completamente anotadas. La revisión posterior de notebooks públicos confirmó el flujo `Report → supervisión de entrenamiento → modelo MRI sin Report en inferencia`. Esos dos resultados motivan esta etapa 03 y fijan dos decisiones: el texto sólo construye supervisión y los labels oficiales tienen prioridad únicamente después de evaluar el extractor.
 
-## 3. Objetivo y preguntas
+## 3. Objective and Questions
 
 El objetivo fue construir supervisión reproducible desde `Report` sin usar MRI ni metadata de adquisición. Las preguntas operativas fueron: qué evidencia textual permite resolver cada target; cómo distinguir afirmación, negación, incertidumbre y silencio; qué cobertura ofrece una política multilingüe conservadora; cómo se comporta frente al gold set; y qué provenance necesita el siguiente componente.
 
-## 4. Datos utilizados
+## 4. Data and Inputs
 
 - Fuente: `data/train.csv`.
 - Unidad: `StudyInstanceUID`; 4,407 IDs únicos y ningún duplicado.
@@ -25,11 +25,11 @@ El objetivo fue construir supervisión reproducible desde `Report` sin usar MRI 
 - Gold: 58 Studies con los 12 labels completos.
 - Variables excluidas: DICOM, PixelData, tablas de Series, scanner y plano anatómico.
 
-## 5. Formulación del problema
+## 5. Problem Formulation
 
 Para cada par Study-target se guarda `status ∈ {positive, negative, uncertain, unknown}`. `derived_label` sólo vale 1 o 0 para estados positive/negative; uncertain y unknown permanecen missing. `derived_score` ordena evidencia explícita pero no es una probabilidad calibrada. `confidence` está en `[0,1]` y representa fuerza determinista de evidencia. `official_label` conserva el gold cuando existe. `final_label` usa official y, en su ausencia, un derived binario; `final_source` explicita `official`, `report_derived` o `unresolved`.
 
-## 6. Exploración textual relevante
+## 6. Relevant Text Exploration
 
 La medición por script y marcadores léxicos muestra heterogeneidad sustancial; los grupos son auxiliares reproducibles y no diagnósticos perfectos de idioma.
 
@@ -48,7 +48,7 @@ La medición por script y marcadores léxicos muestra heterogeneidad sustancial;
 
 Esta distribución descartó una solución English-only. La tasa `resolved_rate` se calcula sobre los 12 targets por Study y muestra dónde el léxico conservador deja mayor proporción sin resolver.
 
-## 7. Metodología
+## 7. Methodology
 
 1. Normalización Unicode determinista: case folding, remoción de diacríticos y espacios homogéneos, preservando escrituras griega y cirílica.
 2. Segmentación en cláusulas y contexto de secciones. Indicaciones, antecedentes y técnica se excluyen de las afirmaciones diagnósticas.
@@ -58,7 +58,7 @@ Esta distribución descartó una solución English-only. La tasa `resolved_rate`
 6. Evaluación derived vs official antes del override.
 7. Construcción final con prioridad official y persistencia de provenance.
 
-## 8. Decisiones
+## 8. Decisions
 
 - El silencio no es evidencia negativa: queda `unknown`.
 - La incertidumbre explícita no se binariza.
@@ -67,11 +67,11 @@ Esta distribución descartó una solución English-only. La tasa `resolved_rate`
 - Se usa CSV largo porque es interoperable con las dependencias existentes y no exige un motor Parquet adicional.
 - No se infiere Synovitis desde Effusion ni Contusion desde edema inespecífico: esas proxies aumentarían cobertura a costa de cambiar la semántica del target.
 
-## 9. Findings / resultados
+## 9. Findings and Results
 
 La política resolvió 15,847 de 52,884 pares Study-target (30.0%). Estados completos: positive=7,524, negative=8,323, uncertain=197, unknown=36,840.
 
-### Evaluación observada sobre gold
+### Observed Evaluation on the Gold Set
 
 | target | gold_positives | gold_negatives | coverage | precision | recall | f1 | fp | fn | unknown | uncertain |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -96,11 +96,11 @@ La figura muestra que coverage y unresolved dependen fuertemente del target; los
 
 La segunda figura separa cobertura de precision/recall/F1. Estas últimas se calculan únicamente entre casos binariamente resueltos; por eso no deben leerse sin la barra de coverage.
 
-## 10. Interpretación
+## 10. Interpretation
 
 Lo observado establece que una política léxica conservadora puede producir una fracción relevante de labels auditables sin convertir silencios en negativos. No establece que los scores sean probabilidades ni que pequeñas diferencias entre targets se generalicen. El tamaño N=58 amplifica la variabilidad y algunos gold labels pueden codificar una semántica más amplia o distinta de la frase explícita del reporte.
 
-## 11. Error analysis
+## 11. Error Analysis
 
 El artefacto de error analysis incluye FP, FN, unknown y uncertain con Report y evidencia. Resumen:
 
@@ -113,11 +113,11 @@ El artefacto de error analysis incluye FP, FN, unknown y uncertain con Report y 
 
 Los patrones esperables son vocabulario no cubierto, alcance imperfecto de negación, frases con varias estructuras, incertidumbre, variación lingüística y discrepancia report/gold. Una discordancia no se atribuye automáticamente al extractor: reporte y gold pueden representar criterios clínicos o ventanas de información diferentes.
 
-## 12. Supervisión final obtenida
+## 12. Final Supervision Output
 
 El artefacto final contiene 52,884 filas largas (4,407 Studies × 12 targets). Provenance final: official=696, report_derived=15,595, unresolved=36,593. Hay 81 Studies con los 12 `final_label` resueltos. Los 696 pares gold se preservan como official aun cuando la extracción textual discrepe.
 
-## 13. Artefactos y figuras
+## 13. Artifacts and Figures
 
 - `artifacts/03_report_label_generation/supervision_long_v1.csv`: artefacto principal largo; contiene derived, score, confidence, status, evidencia, official, final y provenance.
 - `artifacts/03_report_label_generation/gold_metrics_v1.csv`: métricas por target calculadas antes del override.
@@ -126,10 +126,10 @@ El artefacto final contiene 52,884 filas largas (4,407 Studies × 12 targets). P
 - `artifacts/03_report_label_generation/run_metadata_v1.json`: versión de política, input/hash, schema, conteos, hashes y definición de confidence.
 - `figures/03_report_label_generation/status_coverage_by_target_v1.png`: composición de estados por target; se interpreta junto con coverage.
 - `figures/03_report_label_generation/gold_metrics_by_target_v1.png`: coverage y métricas gold por target; N=58 limita las conclusiones.
-- `reports/stages/03 - report label generation.md`: este registro de conocimiento y decisiones.
-- `reports/implementation/03 - report label generation implementation.md`: arquitectura, archivos, tests y comandos.
+- `reports/stages/03_report_label_generation.md`: este registro de conocimiento y decisiones.
+- `reports/implementation/03_report_label_generation_implementation.md`: arquitectura, archivos, tests y comandos.
 
-## 14. Limitaciones
+## 14. Limitations
 
 - El gold set tiene 58 Studies y puede no representar todos los idiomas, centros o estilos.
 - Los grupos lingüísticos son heurísticos; texto mixto o transliterado puede clasificarse de forma imperfecta.
@@ -140,10 +140,10 @@ El artefacto final contiene 52,884 filas largas (4,407 Studies × 12 targets). P
 - Confidence ordena fuerza de evidencia; no está calibrada contra frecuencia clínica.
 - Report y gold pueden no codificar exactamente la misma definición o granularidad.
 
-## 15. Conclusiones
+## 15. Conclusions
 
 Queda establecida una primera política oficial, modular y auditable para `Report → supervisión`. Derived y official se mantienen separados, la evaluación precede al override y los estados no resueltos permanecen missing. Los resultados cuantifican cobertura y errores sin presentar el gold set pequeño como validación definitiva.
 
-## 16. Conexión con la siguiente etapa
+## 16. Next Stage Connection
 
 El siguiente componente puede consumir `final_label`, `final_source`, `confidence` y máscaras de missing por Study-target. La transición prevista es `report-derived + gold supervision → MRI preprocessing/representation → first visual baseline`. Esa etapa deberá usar exclusivamente información visual disponible en inferencia y queda fuera del alcance actual.

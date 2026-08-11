@@ -1,17 +1,17 @@
-# RSNA Knee Abnormality Detection
-## Caracterización inicial del dataset
+# 01 Dataset Characterization
+## Execution Context
 
 **Fecha de ejecución:** 2026-08-10T11:54:42-03:00.  
 **Directorio inspeccionado:** `data`.  
 **Convención estadística:** todas las varianzas y desviaciones estándar usan la convención poblacional (`ddof=0`).
 
-### 1. Resumen ejecutivo descriptivo
+## 1. Executive Summary
 
 El dataset local contiene 4.407 Studies en train y 3 en test. Las imágenes están organizadas como Study → Series → Slice/DICOM Instance. Se identificaron 24.386 Series tabulares y 819.635 archivos DICOM físicos. `train.csv` aporta un reporte por Study; los 12 targets aparecen únicamente para 58 de 4.407 Studies de train.
 
 La unidad clínica central y de unión es `StudyInstanceUID`. La unidad física mínima es el archivo DICOM (Slice/Instance), mientras que el template `sample_submission.csv` solicita una fila de predicciones por Study. Por ello, unidad de almacenamiento, unidad de label y unidad aparente de predicción no son equivalentes.
 
-#### Dimensiones generales
+### General Dimensions
 
 | Entidad | Cantidad |
 | --- | ---: |
@@ -27,7 +27,7 @@ La unidad clínica central y de unión es `StudyInstanceUID`. La unidad física 
 | Directorios relevantes (incluye data/) | 28.799 |
 | Tamaño físico estimado | 500.02 GiB |
 
-#### Estadísticas principales
+### Main Statistics
 
 | Métrica | N | Media | Varianza | SD | P25 | Mediana | P75 | P90 | P95 | P99 | Mín | Máx |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -37,7 +37,7 @@ La unidad clínica central y de unión es `StudyInstanceUID`. La unidad física 
 | Report length (words) | 4.407 | 148,92 | 9.442,91 | 97,17 | 76,00 | 129,00 | 202,00 | 292,00 | 336,00 | 430,00 | 7,00 | 685,00 |
 | Studies por PatientID observado | 4.410 | 1,00 | 0,00 | 0,00 | 1,00 | 1,00 | 1,00 | 1,00 | 1,00 | 1,00 | 1,00 | 1,00 |
 
-### 2. Estructura de archivos
+## 2. File Structure
 
 ```text
 data/
@@ -59,7 +59,7 @@ data/
 
 El recorrido físico fue exhaustivo para nombres y conteos: 819.640 archivos y 28.799 directorios. El tamaño estimado es 500.02 GiB; se calculó con el tamaño exacto de los 5 archivos raíz y una muestra determinista estratificada de 1.015 DICOM (0 vacíos dentro de lo inspeccionado).
 
-### 3. Dimensiones generales
+## 3. General Dimensions
 
 | Ratio | Valor |
 | --- | ---: |
@@ -70,7 +70,7 @@ El recorrido físico fue exhaustivo para nombres y conteos: 819.640 archivos y 2
 
 La cantidad de Patients se basa en `PatientID` leído en una instancia por cada Study; no existe Patient ID en los CSV. La cobertura se detalla más adelante.
 
-### 4. Diccionario de variables
+## 4. Data Dictionary
 
 | Variable | Archivo | Tipo | Nivel aparente | Valores únicos | Missing % | Ejemplos no nulos | Interpretación descriptiva |
 | --- | --- | --- | --- | ---: | ---: | --- | --- |
@@ -113,7 +113,7 @@ La cantidad de Patients se basa en `PatientID` leído en una instancia por cada 
 | Fat_Suppression | train_series.csv | int64 | Metadata técnica | 2 | 0,00% | 1; 0 | Indicador binario provisto para caracterizar supresión de grasa. |
 | Anatomical_Plane | train_series.csv | object | Metadata técnica | 3 | 0,00% | Sagittal; Axial; Coronal | Plano anatómico categórico provisto para la serie. |
 
-### 5. Identificadores y jerarquía
+## 5. Identifiers and Hierarchy
 
 | Archivo | Variable real | Nivel | Cardinalidad | Único en tabla | Filas en grupos duplicados |
 | --- | --- | --- | ---: | --- | ---: |
@@ -141,7 +141,7 @@ En headers DICOM leídos: discrepancias path/header de Study UID=0, Series UID=0
 
 Se observaron 4.410 PatientID únicos para 4.410 Studies con header legible; 0,00% de los Patients tienen más de un Study. La relación observada es uno-a-uno, por lo que `PatientID` podría funcionar como pseudónimo específico del examen y no permite demostrar longitudinalidad real. Al leerse una sola Series por Study, esta pasada tampoco puede detectar contradicciones de PatientID entre Series del mismo Study.
 
-### 6. Unidad de análisis y unidad de predicción
+## 6. Analysis and Prediction Units
 
 - **Unidad física de almacenamiento:** un archivo `.dcm` por Slice / DICOM Instance.
 - **Granularidad de `*_series.csv`:** una fila por Series.
@@ -151,7 +151,7 @@ Se observaron 4.410 PatientID únicos para 4.410 Studies con header legible; 0,0
 
 El Study funciona como unidad principal de análisis porque enlaza tablas, Series, DICOM, Report y, cuando están disponibles, targets. Patient sólo se recupera desde headers DICOM; Series y Slice son niveles subordinados de adquisición.
 
-### 7. Targets y prevalencias
+## 7. Targets and Prevalence
 
 Los 12 targets tienen dtype inferido `float64` por la presencia de missing, pero sus 58 valores observados son binarios (0/1). Hay 58 filas con los 12 targets completos y 0 con observación parcial.
 
@@ -184,11 +184,11 @@ Para `n_positive_labels`, calculado sólo en Studies con al menos un target obse
 | 8 | 1 |
 | 9 | 3 |
 
-![Prevalencia de targets](figures/target_prevalence.png)
+![Target prevalence](../../figures/01_dataset_characterization/target_prevalence.png)
 
-![Labels positivos por Study](figures/positive_labels_per_study.png)
+![Positive labels per Study](../../figures/01_dataset_characterization/positive_labels_per_study.png)
 
-### 8. Composición Study → Series
+## 8. Study-to-Series Composition
 
 La distribución se calculó exhaustivamente sobre directorios físicos. Frecuencias:
 
@@ -209,7 +209,7 @@ La distribución se calculó exhaustivamente sobre directorios físicos. Frecuen
 
 El mínimo observado fue 3 Series (1 Studies) y el máximo 14. El umbral P99 es 10,00; 103 Studies se ubican en o por encima de él. Son observaciones descriptivas, no una clasificación automática de outliers.
 
-![Series por Study](figures/series_per_study.png)
+![Series per Study](../../figures/01_dataset_characterization/series_per_study.png)
 
 Las categorías tabulares de adquisición son:
 
@@ -223,9 +223,9 @@ Las categorías tabulares de adquisición son:
 | Fat_Suppression | 1 | 14.019 | 57,49% |
 | Fat_Suppression | 0 | 10.367 | 42,51% |
 
-![Plano anatómico](figures/anatomical_plane.png)
+![Anatomical plane](../../figures/01_dataset_characterization/anatomical_plane.png)
 
-### 9. Composición Series → Slice
+## 9. Series-to-Slice Composition
 
 | Slices por Series | Series |
 | ---: | ---: |
@@ -292,9 +292,9 @@ Las categorías tabulares de adquisición son:
 
 Se observaron 287 Series con conteo menor o igual a P1 (15,00) y 314 con conteo mayor o igual a P99 (160,00). La cantidad por sí sola no permite concluir que una Series esté incompleta.
 
-![Slices por Series](figures/slices_per_series.png)
+![Slices per Series](../../figures/01_dataset_characterization/slices_per_series.png)
 
-### 10. Reportes radiológicos
+## 10. Radiology Reports
 
 `train.csv` contiene 4.407 reportes no missing asociados por fila a Study, 4.276 textos únicos y 177 filas pertenecientes a grupos de textos exactamente duplicados.
 
@@ -306,9 +306,9 @@ Se observaron 287 Series con conteo menor o igual a P1 (15,00) y 314 con conteo 
 
 La detección usa expresiones regulares simples y equivalentes frecuentes en inglés, español y neerlandés. No se estimaron longitudes de sección porque la estructura y el idioma son heterogéneos y una segmentación básica no resultó suficientemente robusta para presentarla como medición.
 
-![Longitud de reportes](figures/report_length_chars.png)
+![Report length](../../figures/01_dataset_characterization/report_length_chars.png)
 
-### 11. Metadata DICOM
+## 11. DICOM Metadata
 
 Se intentó leer una instancia determinista por Study sobre todos los Studies físicos, con `pydicom.dcmread(..., stop_before_pixels=True)`: 4.410 inspeccionadas, 4.410 correctamente leídas y 0 con problemas. Esta pasada cubre todos los Studies, pero sólo una Series y un Slice por Study.
 
@@ -373,7 +373,7 @@ Laterality combinada (`ImageLaterality` con fallback a `Laterality`):
 
 La disponibilidad se refiere a los headers inspeccionados. Para valores que pueden variar por slice (por ejemplo, posición o `InstanceNumber`), no representa una enumeración exhaustiva de todas las instancias.
 
-### 12. Missingness y completitud
+## 12. Missingness and Completeness
 
 | Partición | Studies | Con fila en series CSV | Con directorio físico | Con Report | Con targets | Con PatientID observado | Presentes en tabla + series CSV + físico |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -382,9 +382,9 @@ La disponibilidad se refiere a los headers inspeccionados. Para valores que pued
 
 El missingness más marcado en las variables principales corresponde a los targets de `train.csv`; los IDs, Report y campos de las tablas de Series no presentan missing. Los porcentajes DICOM por tag figuran en la sección anterior.
 
-![Missingness de train](figures/train_missingness.png)
+![Train missingness](../../figures/01_dataset_characterization/train_missingness.png)
 
-### 13. Duplicados e integridad básica
+## 13. Duplicates and Basic Integrity
 
 | Tabla | Filas | Filas exactamente duplicadas (adicionales) |
 | --- | ---: | ---: |
@@ -406,7 +406,7 @@ El missingness más marcado en las variables principales corresponde a los targe
 
 Los conteos de duplicados no implican por sí solos que las observaciones sean erróneas; identifican repeticiones que pueden revisarse posteriormente.
 
-### 14. Comparación descriptiva train/test
+## 14. Descriptive Train/Test Comparison
 
 | Métrica | Train | Test |
 | --- | ---: | ---: |
@@ -464,14 +464,14 @@ Frecuencias DICOM observables en la instancia inspeccionada por Study (hasta 10 
 
 Las diferencias anteriores son exclusivamente descriptivas. Test no contiene labels ni reportes, por lo que no se calculan prevalencias ni longitudes de texto para esa partición.
 
-### 15. Observaciones adicionales
+## 15. Additional Observations
 
 - `sample_submission.csv` contiene exactamente una fila por cada Study ID de test y 12 columnas con valores placeholder de 0,5.
 - `Fluid_Sensitive`, `Fat_Suppression` y `Anatomical_Plane` caracterizan Series en tablas separadas de los headers DICOM.
 - Los reportes muestran heterogeneidad de idioma y formato; aquí sólo se midieron presencia, duplicación y longitud, sin interpretación clínica.
 - Los targets faltantes no se trataron como negativos; toda prevalencia usa únicamente observaciones válidas.
 
-### 16. Limitaciones de esta caracterización
+## 16. Limitations
 
 - La metadata DICOM se extrajo de una instancia determinista por Study, sin PixelData. Los conteos físicos de Series y slices sí son exhaustivos.
 - El tamaño total es una estimación basada en 1.015 DICOM estratificados por partición; no se ejecutó `stat` sobre cada archivo por su costo observado.
@@ -481,7 +481,7 @@ Las diferencias anteriores son exclusivamente descriptivas. Test no contiene lab
 - No se calculó el número de `SeriesDescription` distintas por Study: la extracción de headers usa una sola Series por Study; `ProtocolName` resultó ausente en todos los headers inspeccionados.
 - No se cargaron píxeles ni se verificó la calidad visual de las imágenes.
 
-### 17. Glosario
+## 17. Glossary
 
 #### Patient
 
@@ -499,7 +499,7 @@ Conjunto de imágenes adquiridas bajo una configuración o secuencia común dent
 
 Imagen individual de una Series; múltiples slices representan posiciones dentro del volumen adquirido.
 
-#### MRI / resonancia magnética
+### MRI / Magnetic Resonance Imaging
 
 Técnica de imagen médica basada en campos magnéticos y radiofrecuencia.
 
@@ -603,7 +603,7 @@ Contusión, como denominación de un target.
 
 Fractura, como denominación de un target.
 
-### Reproducibilidad
+## Reproduction
 
 Desde la raíz del repositorio:
 

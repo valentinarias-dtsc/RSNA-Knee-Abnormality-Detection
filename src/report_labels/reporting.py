@@ -43,9 +43,9 @@ def write_stage_report(
     lang_display = languages[["language_group", "studies", "gold_studies", "resolved_rate"]]
     all_resolved_rate = supervision["derived_label"].notna().mean()
 
-    text = f"""# 03 - Generación reproducible de labels desde Report
+    text = f"""# 03 Report Label Generation
 
-## 1. Resumen ejecutivo
+## 1. Executive Summary
 
 Esta etapa implementa una política textual interpretable para transformar los {len(train):,} reportes de `train.csv` en estados auditables para los 12 targets. La política `{POLICY_VERSION}` reconoce evidencia target-específica, negación, normalidad e incertidumbre en varios grupos lingüísticos. La ausencia de mención se conserva como `unknown`.
 
@@ -53,15 +53,15 @@ Antes de cualquier override, la extracción se evaluó contra los 58 Studies con
 
 La etapa produce un contrato reusable para el futuro pipeline MRI, pero no procesa DICOM ni píxeles y no entrena ningún modelo visual.
 
-## 2. Conexión con la etapa anterior
+## 2. Previous Stage Connection
 
 La caracterización inicial estableció una fila por `StudyInstanceUID`, 4.407 reportes, 12 targets y sólo 58 filas completamente anotadas. La revisión posterior de notebooks públicos confirmó el flujo `Report → supervisión de entrenamiento → modelo MRI sin Report en inferencia`. Esos dos resultados motivan esta etapa 03 y fijan dos decisiones: el texto sólo construye supervisión y los labels oficiales tienen prioridad únicamente después de evaluar el extractor.
 
-## 3. Objetivo y preguntas
+## 3. Objective and Questions
 
 El objetivo fue construir supervisión reproducible desde `Report` sin usar MRI ni metadata de adquisición. Las preguntas operativas fueron: qué evidencia textual permite resolver cada target; cómo distinguir afirmación, negación, incertidumbre y silencio; qué cobertura ofrece una política multilingüe conservadora; cómo se comporta frente al gold set; y qué provenance necesita el siguiente componente.
 
-## 4. Datos utilizados
+## 4. Data and Inputs
 
 - Fuente: `data/train.csv`.
 - Unidad: `StudyInstanceUID`; {len(train):,} IDs únicos y ningún duplicado.
@@ -70,11 +70,11 @@ El objetivo fue construir supervisión reproducible desde `Report` sin usar MRI 
 - Gold: {train[list(TARGETS)].notna().all(axis=1).sum():,} Studies con los 12 labels completos.
 - Variables excluidas: DICOM, PixelData, tablas de Series, scanner y plano anatómico.
 
-## 5. Formulación del problema
+## 5. Problem Formulation
 
 Para cada par Study-target se guarda `status ∈ {{positive, negative, uncertain, unknown}}`. `derived_label` sólo vale 1 o 0 para estados positive/negative; uncertain y unknown permanecen missing. `derived_score` ordena evidencia explícita pero no es una probabilidad calibrada. `confidence` está en `[0,1]` y representa fuerza determinista de evidencia. `official_label` conserva el gold cuando existe. `final_label` usa official y, en su ausencia, un derived binario; `final_source` explicita `official`, `report_derived` o `unresolved`.
 
-## 6. Exploración textual relevante
+## 6. Relevant Text Exploration
 
 La medición por script y marcadores léxicos muestra heterogeneidad sustancial; los grupos son auxiliares reproducibles y no diagnósticos perfectos de idioma.
 
@@ -82,7 +82,7 @@ La medición por script y marcadores léxicos muestra heterogeneidad sustancial;
 
 Esta distribución descartó una solución English-only. La tasa `resolved_rate` se calcula sobre los 12 targets por Study y muestra dónde el léxico conservador deja mayor proporción sin resolver.
 
-## 7. Metodología
+## 7. Methodology
 
 1. Normalización Unicode determinista: case folding, remoción de diacríticos y espacios homogéneos, preservando escrituras griega y cirílica.
 2. Segmentación en cláusulas y contexto de secciones. Indicaciones, antecedentes y técnica se excluyen de las afirmaciones diagnósticas.
@@ -92,7 +92,7 @@ Esta distribución descartó una solución English-only. La tasa `resolved_rate`
 6. Evaluación derived vs official antes del override.
 7. Construcción final con prioridad official y persistencia de provenance.
 
-## 8. Decisiones
+## 8. Decisions
 
 - El silencio no es evidencia negativa: queda `unknown`.
 - La incertidumbre explícita no se binariza.
@@ -101,11 +101,11 @@ Esta distribución descartó una solución English-only. La tasa `resolved_rate`
 - Se usa CSV largo porque es interoperable con las dependencias existentes y no exige un motor Parquet adicional.
 - No se infiere Synovitis desde Effusion ni Contusion desde edema inespecífico: esas proxies aumentarían cobertura a costa de cambiar la semántica del target.
 
-## 9. Findings / resultados
+## 9. Findings and Results
 
 La política resolvió {supervision['derived_label'].notna().sum():,} de {len(supervision):,} pares Study-target ({all_resolved_rate:.1%}). Estados completos: positive={status_counts.get('positive', 0):,}, negative={status_counts.get('negative', 0):,}, uncertain={status_counts.get('uncertain', 0):,}, unknown={status_counts.get('unknown', 0):,}.
 
-### Evaluación observada sobre gold
+### Observed Evaluation on the Gold Set
 
 {_table(coverage)}
 
@@ -117,11 +117,11 @@ La figura muestra que coverage y unresolved dependen fuertemente del target; los
 
 La segunda figura separa cobertura de precision/recall/F1. Estas últimas se calculan únicamente entre casos binariamente resueltos; por eso no deben leerse sin la barra de coverage.
 
-## 10. Interpretación
+## 10. Interpretation
 
 Lo observado establece que una política léxica conservadora puede producir una fracción relevante de labels auditables sin convertir silencios en negativos. No establece que los scores sean probabilidades ni que pequeñas diferencias entre targets se generalicen. El tamaño N=58 amplifica la variabilidad y algunos gold labels pueden codificar una semántica más amplia o distinta de la frase explícita del reporte.
 
-## 11. Error analysis
+## 11. Error Analysis
 
 El artefacto de error analysis incluye FP, FN, unknown y uncertain con Report y evidencia. Resumen:
 
@@ -129,11 +129,11 @@ El artefacto de error analysis incluye FP, FN, unknown y uncertain con Report y 
 
 Los patrones esperables son vocabulario no cubierto, alcance imperfecto de negación, frases con varias estructuras, incertidumbre, variación lingüística y discrepancia report/gold. Una discordancia no se atribuye automáticamente al extractor: reporte y gold pueden representar criterios clínicos o ventanas de información diferentes.
 
-## 12. Supervisión final obtenida
+## 12. Final Supervision Output
 
 El artefacto final contiene {len(supervision):,} filas largas ({len(train):,} Studies × {len(TARGETS)} targets). Provenance final: official={final_counts.get('official', 0):,}, report_derived={final_counts.get('report_derived', 0):,}, unresolved={final_counts.get('unresolved', 0):,}. Hay {resolved_studies:,} Studies con los 12 `final_label` resueltos. Los {58 * 12:,} pares gold se preservan como official aun cuando la extracción textual discrepe.
 
-## 13. Artefactos y figuras
+## 13. Artifacts and Figures
 
 - `artifacts/03_report_label_generation/{artifacts['supervision'].name}`: artefacto principal largo; contiene derived, score, confidence, status, evidencia, official, final y provenance.
 - `artifacts/03_report_label_generation/{artifacts['metrics'].name}`: métricas por target calculadas antes del override.
@@ -143,9 +143,9 @@ El artefacto final contiene {len(supervision):,} filas largas ({len(train):,} St
 - `figures/03_report_label_generation/{figures['status'].name}`: composición de estados por target; se interpreta junto con coverage.
 - `figures/03_report_label_generation/{figures['metrics'].name}`: coverage y métricas gold por target; N=58 limita las conclusiones.
 - `reports/stages/{path.name}`: este registro de conocimiento y decisiones.
-- `reports/implementation/03 - report label generation implementation.md`: arquitectura, archivos, tests y comandos.
+- `reports/implementation/03_report_label_generation_implementation.md`: arquitectura, archivos, tests y comandos.
 
-## 14. Limitaciones
+## 14. Limitations
 
 - El gold set tiene 58 Studies y puede no representar todos los idiomas, centros o estilos.
 - Los grupos lingüísticos son heurísticos; texto mixto o transliterado puede clasificarse de forma imperfecta.
@@ -156,11 +156,11 @@ El artefacto final contiene {len(supervision):,} filas largas ({len(train):,} St
 - Confidence ordena fuerza de evidencia; no está calibrada contra frecuencia clínica.
 - Report y gold pueden no codificar exactamente la misma definición o granularidad.
 
-## 15. Conclusiones
+## 15. Conclusions
 
 Queda establecida una primera política oficial, modular y auditable para `Report → supervisión`. Derived y official se mantienen separados, la evaluación precede al override y los estados no resueltos permanecen missing. Los resultados cuantifican cobertura y errores sin presentar el gold set pequeño como validación definitiva.
 
-## 16. Conexión con la siguiente etapa
+## 16. Next Stage Connection
 
 El siguiente componente puede consumir `final_label`, `final_source`, `confidence` y máscaras de missing por Study-target. La transición prevista es `report-derived + gold supervision → MRI preprocessing/representation → first visual baseline`. Esa etapa deberá usar exclusivamente información visual disponible en inferencia y queda fuera del alcance actual.
 """
@@ -168,17 +168,17 @@ El siguiente componente puede consumir `final_label`, `final_source`, `confidenc
 
 
 def write_implementation_report(path: Path, artifacts: dict[str, Path], figures: dict[str, Path]) -> None:
-    text = f"""# 03 - Report label generation implementation
+    text = f"""# 03 Report Label Generation — Implementation
 
-## Resumen técnico
+## Technical Summary
 
 Se implementó la etapa 03 como módulos Python y un entry point sin notebook. La versión activa es `{POLICY_VERSION}`. El flujo lee únicamente `StudyInstanceUID`, `Report` y los 12 targets oficiales de `train.csv`; no importa ni consulta DICOM o tablas de Series.
 
-## Contexto
+## Stage Context
 
 El componente materializa la supervisión textual identificada por las etapas de caracterización y revisión de estrategia. Su salida es un contrato para entrenamiento MRI posterior, no un modelo predictivo.
 
-## Arquitectura
+## Architecture
 
 ```text
 train.csv
@@ -191,7 +191,7 @@ train.csv
    → artefactos + figuras + reportes
 ```
 
-## Archivos creados o modificados
+## Files Created or Modified
 
 - `src/report_labels/__init__.py`: API pública del paquete.
 - `src/report_labels/constants.py`: targets, dominios y política léxica multilingüe.
@@ -206,11 +206,11 @@ train.csv
 - `.gitignore`: excepciones acotadas para versionar outputs de esta etapa.
 - `README.md`: comando y contrato principal.
 
-## Módulos e interfaces
+## Modules and Responsibilities
 
 `ReportLabelExtractor.extract(report)` devuelve un `ExtractionResult` por target sin consultar gold. `build_supervision(train)` expande Studies a formato largo. `evaluate_gold(frame)` calcula métricas sólo con derived pre-override. `validate_supervision(frame, train, expected_studies)` protege cardinalidad, dominios, provenance, missing y prioridad official. `run_pipeline(...)` orquesta la etapa completa.
 
-## Orquestador / entry point
+## Entry Points
 
 Desde la raíz:
 
@@ -220,7 +220,7 @@ python scripts/generate_report_labels.py
 
 Los paths pueden cambiarse mediante argumentos `--train`, `--artifact-dir`, `--figure-dir`, `--stage-report` y `--implementation-report`.
 
-## Configuración
+## Configuration
 
 `policy_v1.json` declara versión, 12 targets, estados válidos, prioridad de fuentes, semántica de confidence, cardinalidades esperadas y prohibición de inputs MRI. Los léxicos ejecutables permanecen en Python para permitir tests y revisión de cambios.
 
@@ -232,11 +232,11 @@ Los tests cubren afirmación ACL, negación, incertidumbre, ausencia de mención
 python -m unittest discover -s tests -v
 ```
 
-## Dependencias
+## Dependencies
 
 Se reutilizan Python estándar, pandas, NumPy y Matplotlib ya presentes. Se eligió CSV largo en vez de Parquet para no incorporar `pyarrow` sólo por persistencia.
 
-## Artefactos generados
+## Generated Artifacts
 
 - `artifacts/03_report_label_generation/{artifacts['supervision'].name}`: supervisión larga principal.
 - `artifacts/03_report_label_generation/{artifacts['metrics'].name}`: métricas pre-override por target.
@@ -244,17 +244,17 @@ Se reutilizan Python estándar, pandas, NumPy y Matplotlib ya presentes. Se elig
 - `artifacts/03_report_label_generation/{artifacts['languages'].name}`: cobertura lingüística.
 - `artifacts/03_report_label_generation/{artifacts['metadata'].name}`: schema, hashes, versión y conteos.
 
-## Figuras generadas
+## Generated Figures
 
 - `figures/03_report_label_generation/{figures['status'].name}`: estados por target; utilizada en el reporte de etapa.
 - `figures/03_report_label_generation/{figures['metrics'].name}`: coverage y métricas gold; utilizada en el reporte de etapa.
 
-## Reportes generados
+## Generated Reports
 
-- `reports/stages/03 - report label generation.md`: resultados, decisiones e interpretación.
+- `reports/stages/03_report_label_generation.md`: resultados, decisiones e interpretación.
 - `reports/implementation/{path.name}`: este documento técnico.
 
-## Reproducibilidad
+## Reproduction
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -263,11 +263,11 @@ python scripts/generate_report_labels.py
 
 Los labels, métricas, errores y figuras son deterministas para input y código fijos. `execution_timestamp_utc` del metadata cambia en cada ejecución y está documentado como campo operativo.
 
-## Limitaciones técnicas
+## Technical Limitations
 
 La segmentación y el alcance de negación son basados en reglas; no existe parser clínico. Los léxicos requieren mantenimiento explícito y los grupos lingüísticos no sustituyen language identification validado. CSV no conserva tipos nullable tan estrictamente como Parquet, por lo que el schema se valida al generar y se registra en metadata.
 
-## Conexión con el siguiente componente
+## Interface With the Next Stage
 
 El pipeline MRI dispone de una fila por Study-target con `final_label`, `final_source`, `confidence` y missing explícito. Debe pivotar por `StudyInstanceUID`, construir máscaras de pérdida para unresolved y mantener mayor peso o tratamiento separado para `official`. El Report no forma parte del contrato de inferencia.
 """

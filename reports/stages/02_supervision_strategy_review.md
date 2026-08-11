@@ -1,6 +1,6 @@
-# Revisión de notebooks Kaggle: estrategia de supervisión
+# 02 Supervision Strategy Review
 
-## Conclusión
+## Executive Summary
 
 **Sí, con salvedades importantes.**
 
@@ -8,7 +8,7 @@ Los notebooks respaldan explícitamente el flujo central: usar `Report` para pro
 
 La principal salvedad es que los datos Study/Series no se utilizan, en general, para **derivar labels**: aparecen como inputs visuales, metadata auxiliar o incluso como una rama predictiva independiente. Además, algunos notebooks son de inferencia y consumen checkpoints ya entrenados, por lo que documentan la estrategia de supervisión pero no ejecutan íntegramente su construcción.
 
-## Evidencia por notebook
+## Evidence by Notebook
 
 **`0-899-let-me-cook.ipynb`**
 
@@ -50,7 +50,7 @@ La principal salvedad es que los datos Study/Series no se utilizan, en general, 
 - Inputs esperados en inferencia: MRI y, en algunas ramas, metadata DICOM/Series; `Report` no es requerido.
 - Evaluación respecto de la hipótesis: `explícita`.
 
-## Síntesis transversal
+## Cross-Notebook Synthesis
 
 El flujo predominante es:
 
@@ -58,6 +58,8 @@ El flujo predominante es:
 
 La metadata Study/Series aparece principalmente después de la construcción de los labels, como input del modelo o de ramas predictivas. No hay evidencia transversal suficiente para describirla como una fuente general de derivación de labels. El `Report` se mantiene como supervisión de entrenamiento y no como input necesario durante inferencia.
 
-## Implicación para el proyecto
+## Decision and Next Stage Connection
 
 **Continuar con una etapa específica de extracción/estimación de labels desde los reportes antes de desarrollar el baseline visual.**
+
+La caracterización que fundamenta esta revisión está en `reports/stages/01_dataset_characterization.md`. La implementación resultante se documenta en `reports/stages/03_report_label_generation.md`.
