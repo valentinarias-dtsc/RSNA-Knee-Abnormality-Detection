@@ -13,22 +13,25 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from .constants import POLICY_VERSION, TARGETS, VALID_FINAL_SOURCES, VALID_STATUSES
-from .evaluation import build_error_analysis, evaluate_gold
+from .constants import OUTPUT_VERSION, POLICY_VERSION, TARGETS, VALID_FINAL_SOURCES, VALID_STATUSES
+from .evaluation import audit_supervision_consistency, build_error_analysis, evaluate_gold
 from .extraction import ReportLabelExtractor, report_sha256
 from .reporting import write_implementation_report, write_stage_report
 
 
 ARTIFACT_FILES = {
-    "supervision": "supervision_long_v1.csv",
-    "metrics": "gold_metrics_v1.csv",
-    "errors": "error_analysis_v1.csv",
-    "languages": "language_summary_v1.csv",
-    "metadata": "run_metadata_v1.json",
+    "supervision": f"supervision_long_{OUTPUT_VERSION}.csv",
+    "metrics": f"gold_metrics_{OUTPUT_VERSION}.csv",
+    "errors": f"error_analysis_{OUTPUT_VERSION}.csv",
+    "languages": f"language_summary_{OUTPUT_VERSION}.csv",
+    "coverage": f"coverage_by_language_target_{OUTPUT_VERSION}.csv",
+    "audit_summary": f"consistency_audit_summary_{OUTPUT_VERSION}.csv",
+    "audit_issues": f"consistency_audit_issues_{OUTPUT_VERSION}.csv",
+    "metadata": f"run_metadata_{OUTPUT_VERSION}.json",
 }
 FIGURE_FILES = {
-    "status": "status_coverage_by_target_v1.png",
-    "metrics": "gold_metrics_by_target_v1.png",
+    "status": f"status_coverage_by_target_{OUTPUT_VERSION}.png",
+    "metrics": f"gold_metrics_by_target_{OUTPUT_VERSION}.png",
 }
 
 
@@ -155,6 +158,31 @@ def language_summary(train: pd.DataFrame, supervision: pd.DataFrame) -> pd.DataF
     return summary
 
 
+def coverage_by_language_target(supervision: pd.DataFrame) -> pd.DataFrame:
+    """Persist the full language-target coverage grid used for lexicon audits."""
+    counts = supervision.groupby(["language_group", "target", "status"]).size().unstack(fill_value=0)
+    for status in VALID_STATUSES:
+        if status not in counts:
+            counts[status] = 0
+    output = counts[list(VALID_STATUSES)].reset_index()
+    output["pairs"] = output[list(VALID_STATUSES)].sum(axis=1)
+    output["resolved"] = output["positive"] + output["negative"]
+    output["resolved_rate"] = output["resolved"] / output["pairs"]
+    language_order = supervision.groupby("language_group")["status"].apply(
+        lambda status: status.isin(["positive", "negative"]).mean()
+    ).sort_values().index
+    target_order = supervision.groupby("target")["status"].apply(
+        lambda status: status.isin(["positive", "negative"]).mean()
+    ).sort_values().index
+    output["language_coverage_rank"] = output["language_group"].map(
+        {value: rank + 1 for rank, value in enumerate(language_order)}
+    )
+    output["target_coverage_rank"] = output["target"].map(
+        {value: rank + 1 for rank, value in enumerate(target_order)}
+    )
+    return output.sort_values(["language_coverage_rank", "target_coverage_rank"])
+
+
 def _plot_status(supervision: pd.DataFrame, path: Path) -> None:
     table = supervision.groupby(["target", "status"]).size().unstack(fill_value=0).reindex(TARGETS)
     colors = {"positive": "#b2182b", "negative": "#2166ac", "uncertain": "#fdae61", "unknown": "#bdbdbd"}
@@ -216,6 +244,13 @@ def run_pipeline(
     metrics = evaluate_gold(supervision)
     errors = build_error_analysis(supervision, train)
     languages = language_summary(train, supervision)
+    coverage = coverage_by_language_target(supervision)
+    audit_summary, audit_issues = audit_supervision_consistency(supervision, train)
+    blocking_audit_issues = audit_issues[audit_issues["severity"].eq("error")]
+    if not blocking_audit_issues.empty:
+        raise ValueError(
+            f"supervision consistency audit failed with {len(blocking_audit_issues)} error(s)"
+        )
 
     paths = {key: artifact_dir / name for key, name in ARTIFACT_FILES.items()}
     figures = {key: figure_dir / name for key, name in FIGURE_FILES.items()}
@@ -223,6 +258,9 @@ def run_pipeline(
     metrics.to_csv(paths["metrics"], index=False, lineterminator="\n")
     errors.to_csv(paths["errors"], index=False, lineterminator="\n")
     languages.to_csv(paths["languages"], index=False, lineterminator="\n")
+    coverage.to_csv(paths["coverage"], index=False, lineterminator="\n")
+    audit_summary.to_csv(paths["audit_summary"], index=False, lineterminator="\n")
+    audit_issues.to_csv(paths["audit_issues"], index=False, lineterminator="\n")
     _plot_status(supervision, figures["status"])
     _plot_gold_metrics(metrics, figures["metrics"])
 
@@ -248,6 +286,10 @@ def run_pipeline(
             "positive_with_conflict": 0.70,
             "negative_explicit": 0.85,
             "uncertain_explicit": 0.50,
+            "positive_collective": 0.80,
+            "positive_collective_with_conflict": 0.65,
+            "negative_collective": 0.75,
+            "uncertain_collective": 0.45,
             "unknown": 0.0,
             "interpretation": "deterministic evidence-strength rank; not a calibrated probability",
         },
@@ -258,6 +300,9 @@ def run_pipeline(
     }
     paths["metadata"].write_text(json.dumps(metadata, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
-    write_stage_report(stage_report_path, train, supervision, metrics, errors, languages, paths, figures)
+    write_stage_report(
+        stage_report_path, train, supervision, metrics, errors, languages,
+        audit_summary, audit_issues, paths, figures,
+    )
     write_implementation_report(implementation_report_path, paths, figures)
     return {**paths, **{f"figure_{key}": value for key, value in figures.items()}, "stage_report": stage_report_path, "implementation_report": implementation_report_path}

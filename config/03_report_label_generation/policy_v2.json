@@ -1,0 +1,28 @@
+{
+  "stage": "03_report_label_generation",
+  "policy_version": "report-label-policy-v2.0.0",
+  "artifact_version": "v2",
+  "targets": [
+    "ACL", "MCL", "Medial Meniscus", "Lateral Meniscus",
+    "Medial OA", "Lateral OA", "PF OA", "Effusion",
+    "Synovitis", "Baker's", "Contusion", "Fracture"
+  ],
+  "states": ["positive", "negative", "uncertain", "unknown"],
+  "source_priority": ["official", "report_derived", "unresolved"],
+  "confidence_domain": [0.0, 1.0],
+  "confidence_is_calibrated_probability": false,
+  "expected_studies": 4407,
+  "expected_complete_gold_studies": 58,
+  "missing_mention_policy": "unknown",
+  "uncertainty_policy": "missing_binary_label",
+  "collective_mention_policy": {
+    "explicit_whole_group_negative": "propagate_to_represented_targets_with_reduced_confidence",
+    "explicit_whole_group_positive": "propagate_only_for_unambiguous_target_sets",
+    "ambiguous_member_positive": "unknown"
+  },
+  "line_wrap_policy": "join_same-indent lowercase continuations after comma or a long unpunctuated line; preserve blank-line boundaries",
+  "evidence_scope_policy": "associate pathology and normality with the nearest target anatomy inside each clause",
+  "evidence_persistence_policy": "persist decisive evidence first and include one visible conflicting clause when present",
+  "allowed_label_input_columns": ["StudyInstanceUID", "Report", "12 official target columns"],
+  "forbidden_label_inputs": ["PixelData", "DICOM metadata", "Series metadata", "scanner", "anatomical plane"]
+}

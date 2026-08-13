@@ -12,6 +12,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.report_labels.pipeline import run_pipeline
+from src.report_labels.constants import POLICY_CONFIG_NAME, POLICY_VERSION
 
 
 def parse_args() -> argparse.Namespace:
@@ -21,7 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--figure-dir", type=Path, default=ROOT / "figures" / "03_report_label_generation")
     parser.add_argument("--stage-report", type=Path, default=ROOT / "reports" / "stages" / "03_report_label_generation.md")
     parser.add_argument("--implementation-report", type=Path, default=ROOT / "reports" / "implementation" / "03_report_label_generation_implementation.md")
-    parser.add_argument("--config", type=Path, default=ROOT / "config" / "03_report_label_generation" / "policy_v1.json")
+    parser.add_argument("--config", type=Path, default=ROOT / "config" / "03_report_label_generation" / POLICY_CONFIG_NAME)
     parser.add_argument("--expected-studies", type=int)
     parser.add_argument("--expected-gold", type=int)
     return parser.parse_args()
@@ -30,7 +31,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
-    if config["policy_version"] != "report-label-policy-v1.0.0":
+    if config["policy_version"] != POLICY_VERSION:
         raise ValueError("configuration policy version does not match executable policy")
     expected_studies = args.expected_studies or int(config["expected_studies"])
     expected_gold = args.expected_gold or int(config["expected_complete_gold_studies"])

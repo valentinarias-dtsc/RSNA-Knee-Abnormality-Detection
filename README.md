@@ -27,7 +27,9 @@ python -m unittest discover -s tests -v
 python scripts/generate_report_labels.py
 ```
 
-El artefacto principal es `artifacts/03_report_label_generation/supervision_long_v1.csv`. Cada fila representa un par `StudyInstanceUID`-target y conserva estado, derived label/score, confidence, evidencia, official label, final label y provenance. `unknown` y `uncertain` permanecen missing salvo que exista un label official.
+El artefacto activo es `artifacts/03_report_label_generation/supervision_long_v2.csv`; los outputs `v1` se conservan para comparación y reproducibilidad. Cada fila representa un par `StudyInstanceUID`-target y conserva estado, derived label/score, confidence, evidencia, official label, final label y provenance. `unknown` y `uncertain` permanecen missing salvo que exista un label official.
+
+La cobertura detallada por combinación idioma-target se guarda en `coverage_by_language_target_v2.csv`. La consistencia completa de evidence, rationale, status, confidence y provenance se verifica en cada ejecución y se persiste en `consistency_audit_summary_v2.csv` y `consistency_audit_issues_v2.csv`.
 
 La implementación no usa DICOM, metadata de Series ni píxeles para derivar labels y no entrena modelos MRI.
 

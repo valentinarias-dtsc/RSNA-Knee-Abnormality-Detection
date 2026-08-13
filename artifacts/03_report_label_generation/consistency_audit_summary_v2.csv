@@ -1,0 +1,11 @@
+check,severity,evaluated_rows,issue_count,issue_rate,example_study_targets
+unique_study_target,error,52884,0,0.0,
+policy_version,error,52884,0,0.0,
+evidence_json_schema,error,52884,0,0.0,
+evidence_in_diagnostic_clause,error,52884,0,0.0,
+status_value_schema,error,52884,0,0.0,
+rationale_confidence_schema,error,52884,0,0.0,
+final_provenance_schema,error,52884,0,0.0,
+decisive_status_visible_in_evidence,error,22947,0,0.0,
+conflict_visible_in_evidence,warning,657,0,0.0,
+rationale_evidence_mode,warning,22947,0,0.0,

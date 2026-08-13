@@ -11,6 +11,7 @@ from .constants import DIAGNOSTIC_HEADERS, LANGUAGE_MARKERS, NON_DIAGNOSTIC_HEAD
 
 _SPECIAL_FOLD = str.maketrans({"ı": "i", "İ": "i", "ß": "ss", "đ": "d", "Đ": "d", "ø": "o", "æ": "ae"})
 _BOUNDARY = re.compile(r"(?<=[.!?;])\s*|\n+")
+_HYPHENS = re.compile(r"[-‐‑‒–—―]+")
 
 
 def normalize_text(value: object) -> str:
@@ -20,7 +21,42 @@ def normalize_text(value: object) -> str:
     text = unicodedata.normalize("NFKD", text)
     text = "".join(char for char in text if not unicodedata.combining(char))
     text = re.sub(r"[_/\\]+", " ", text)
+    text = _HYPHENS.sub(" ", text)
     return re.sub(r"[ \t]+", " ", text).strip()
+
+
+def _join_wrapped_lines(text: str) -> str:
+    """Join only high-confidence line wraps before clause segmentation.
+
+    Reports frequently wrap a sentence after a comma. Other newlines often delimit
+    structured findings, so v2 deliberately leaves them intact.
+    """
+    lines = text.splitlines()
+    if not lines:
+        return text
+    joined: list[str] = []
+    joined_indents: list[int] = []
+    join_allowed = True
+    for line in lines:
+        stripped = line.strip()
+        indent = len(line) - len(line.lstrip())
+        if not stripped:
+            join_allowed = False
+            continue
+        previous = joined[-1].rstrip() if joined else ""
+        unpunctuated_wrap = (
+            len(previous) >= 35
+            and not previous.endswith((".", "!", "?", ";", ":"))
+            and stripped[:1].islower()
+        )
+        same_indent = bool(joined_indents) and indent == joined_indents[-1]
+        if joined and join_allowed and same_indent and stripped[:1].islower() and (previous.endswith(",") or unpunctuated_wrap):
+            joined[-1] = f"{joined[-1].rstrip()} {stripped}"
+        else:
+            joined.append(stripped)
+            joined_indents.append(indent)
+        join_allowed = True
+    return "\n".join(joined)
 
 
 @lru_cache(maxsize=None)
@@ -61,9 +97,20 @@ class Clause:
 
 def segment_report(value: object) -> list[Clause]:
     """Split a report into local clauses while retaining coarse section context."""
-    normalized = normalize_text(value)
+    if not isinstance(value, str):
+        return []
+    normalized = normalize_text(_join_wrapped_lines(value))
     if not normalized:
         return []
+    # South-Slavic ordinal grades such as "I. stupnja" are not sentence ends.
+    normalized = re.sub(r"\b([ivx]+)\.\s+(?=(?:stupnja|stepena|grad)\b)", r"\1 ", normalized)
+    # Some structured English reports use semicolons as key-value separators.
+    normalized = re.sub(
+        r"\b((?:deep|superficial)\s+)?(acl|pcl|mcl|lcl)\s*;\s*"
+        r"(?=(?:high|low|grade|partial|complete|intact|normal|tear|sprain))",
+        r"\1\2: ",
+        normalized,
+    )
 
     fragments = [part.strip(" -\t") for part in _BOUNDARY.split(normalized) if part.strip()]
     clauses: list[Clause] = []
@@ -76,13 +123,17 @@ def segment_report(value: object) -> list[Clause]:
             continue
         raw_fragment = fragment
         header_part = raw_fragment.split(":", 1)[0].strip()
-        if contains_any(header_part, NON_DIAGNOSTIC_HEADERS):
+        can_define_section = ":" in raw_fragment or len(header_part.split()) <= 4
+        is_section_header = False
+        if can_define_section and contains_any(header_part, NON_DIAGNOSTIC_HEADERS):
             section, diagnostic = header_part[:80], False
-        elif contains_any(header_part, DIAGNOSTIC_HEADERS):
+            is_section_header = raw_fragment.rstrip().endswith(":")
+        elif can_define_section and contains_any(header_part, DIAGNOSTIC_HEADERS):
             section, diagnostic = header_part[:80], True
+            is_section_header = raw_fragment.rstrip().endswith(":")
 
         # Structured reports often put "Fracture:" and "None." on adjacent lines.
-        if raw_fragment.endswith(":") and index + 1 < len(fragments):
+        if raw_fragment.endswith(":") and not is_section_header and index + 1 < len(fragments):
             raw_fragment = f"{raw_fragment} {fragments[index + 1]}"
             skip_next = True
         clauses.append(Clause(raw_fragment, section, diagnostic))
