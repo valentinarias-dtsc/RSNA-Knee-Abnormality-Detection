@@ -1,0 +1,116 @@
+{
+  "stage": "03_report_label_generation",
+  "policy_version": "report-label-policy-v3.0.0",
+  "execution_timestamp_utc": "2026-08-13T16:10:55.619502+00:00",
+  "input": {
+    "path": "data/train.csv",
+    "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+  },
+  "v2_baseline": {
+    "path": "artifacts/03_report_label_generation/supervision_long_v2.csv",
+    "sha256": "f8c933297124013028a63cea542ac42a0b825ab21f662f09abdcd7c93da7e58c"
+  },
+  "configuration": {
+    "path": "config/03_report_label_generation/policy_v3.json",
+    "sha256": "c700441ecbffe500ef16fe59d98af925e1eaf37fdc348873f1720dcba27b6d46"
+  },
+  "counts": {
+    "studies": 4407,
+    "targets": 12,
+    "study_target_rows": 52884,
+    "gold_studies": 58,
+    "gold_study_target_rows": 696,
+    "binary_resolved": 24294,
+    "unknown": 28296
+  },
+  "policy_guarantees": {
+    "missing_mention": "unknown",
+    "gold_role": "single final frozen sentinel; excluded from rule discovery and corpus-only validation",
+    "ensemble_unit": "mention/proposition evidence, not label voting",
+    "confidence": "deterministic evidence-strength rank; not a calibrated probability"
+  },
+  "schema": {
+    "StudyInstanceUID": "object",
+    "report_sha256": "object",
+    "language_group": "object",
+    "target": "object",
+    "status": "object",
+    "derived_label": "Int64",
+    "derived_score": "float64",
+    "confidence": "float64",
+    "evidence": "object",
+    "rationale": "object",
+    "phenotypes": "object",
+    "detectors": "object",
+    "evidence_provenance": "object",
+    "official_label": "Int64",
+    "final_label": "Int64",
+    "final_source": "object",
+    "policy_version": "object"
+  },
+  "artifacts": {
+    "supervision": {
+      "path": "artifacts/03_report_label_generation/supervision_long_v3.csv",
+      "sha256": "c92d95176a167cea769cc915a624434486d696e7ea935d753d3ea6c26b0386d8"
+    },
+    "metrics": {
+      "path": "artifacts/03_report_label_generation/gold_metrics_v3.csv",
+      "sha256": "afb2756fde6529c5d027f07538dca4873748c2809bd0b0b742f3ec6ce8bb01c7"
+    },
+    "errors": {
+      "path": "artifacts/03_report_label_generation/error_analysis_v3.csv",
+      "sha256": "fec98b9f60cdffbdf72c0c3a2cb4656dc12a65666d5bc1c52b110c8904818570"
+    },
+    "languages": {
+      "path": "artifacts/03_report_label_generation/language_summary_v3.csv",
+      "sha256": "d3a6ca37a12c145089903c382090a5bbe0cc89a112f104b2fbbb6b3d1383f364"
+    },
+    "coverage": {
+      "path": "artifacts/03_report_label_generation/coverage_by_language_target_v3.csv",
+      "sha256": "cf4205dafeaa98c59c4fd5e59918cf37a36f6afe1fec5d74f3ef9f96e694de2e"
+    },
+    "coverage_delta": {
+      "path": "artifacts/03_report_label_generation/coverage_delta_v2_v3.csv",
+      "sha256": "ccfea87126e92cd92ed886845fecb082203b2ee4a06ca0569710a3e07092d474"
+    },
+    "transitions": {
+      "path": "artifacts/03_report_label_generation/status_transitions_v2_v3.csv",
+      "sha256": "95bef5f81ef43f62134e5e461b00d12031c60c8612f005daa61623c5defc783c"
+    },
+    "newly_resolved": {
+      "path": "artifacts/03_report_label_generation/newly_resolved_pairs_v2_v3.csv",
+      "sha256": "7f29727f2e3ba8c07984f125842ece41523934f034b0c20d49dbb0f3ed7d5645"
+    },
+    "detectors": {
+      "path": "artifacts/03_report_label_generation/detector_summary_v3.csv",
+      "sha256": "aa43c96261785403728b95bc73af93dbddfea9d82e23f5e790b9c2bd203adb21"
+    },
+    "templates": {
+      "path": "artifacts/03_report_label_generation/template_consistency_v3.csv",
+      "sha256": "4a66a65fbac7b5dc0da796c5bad06aaa7b7e7f4fa5d7ee05be909b2ea79d6e95"
+    },
+    "audit_summary": {
+      "path": "artifacts/03_report_label_generation/consistency_audit_summary_v3.csv",
+      "sha256": "f974c6c52512c0ff861d8b82134936246491ef25bb164698c4bb897f20f390af"
+    },
+    "audit_issues": {
+      "path": "artifacts/03_report_label_generation/consistency_audit_issues_v3.csv",
+      "sha256": "88f565f78e75c5e7aa02188a2219edcb0dd8c4bfcf3273140fe0234d2b1472a7"
+    }
+  },
+  "figures": {
+    "status": {
+      "path": "figures/03_report_label_generation/status_coverage_by_target_v3.png",
+      "sha256": "d9b8ff2e3874bc1055f1cf48a2ebcc1f3b1e507a90ec830539d137a322ddea5b"
+    },
+    "metrics": {
+      "path": "figures/03_report_label_generation/gold_metrics_by_target_v3.png",
+      "sha256": "a3a3bc4c6e745d67741ff4a3ad162c7f90d744d31336ad529a6d85f01a715303"
+    },
+    "delta": {
+      "path": "figures/03_report_label_generation/resolved_coverage_delta_v2_v3.png",
+      "sha256": "4e625b295bed889b88a142fe992dcb061c95a1e6c21586e989b2f3ed14f36981"
+    }
+  },
+  "reproducibility": "Semantic artifacts are deterministic for fixed input/code; execution_timestamp_utc changes per run."
+}

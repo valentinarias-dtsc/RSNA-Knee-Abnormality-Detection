@@ -1,0 +1,553 @@
+language_group,target,status_v2,status_v3,pairs
+cyrillic_script,ACL,negative,negative,149
+cyrillic_script,ACL,negative,positive,1
+cyrillic_script,ACL,positive,positive,36
+cyrillic_script,ACL,unknown,negative,1
+cyrillic_script,ACL,unknown,unknown,33
+cyrillic_script,Baker's,positive,positive,53
+cyrillic_script,Baker's,unknown,unknown,167
+cyrillic_script,Contusion,unknown,positive,19
+cyrillic_script,Contusion,unknown,unknown,201
+cyrillic_script,Effusion,negative,negative,75
+cyrillic_script,Effusion,positive,positive,134
+cyrillic_script,Effusion,unknown,unknown,11
+cyrillic_script,Fracture,negative,negative,9
+cyrillic_script,Fracture,positive,positive,13
+cyrillic_script,Fracture,unknown,unknown,198
+cyrillic_script,Lateral Meniscus,negative,negative,96
+cyrillic_script,Lateral Meniscus,positive,positive,24
+cyrillic_script,Lateral Meniscus,unknown,unknown,100
+cyrillic_script,Lateral OA,negative,negative,3
+cyrillic_script,Lateral OA,positive,positive,1
+cyrillic_script,Lateral OA,unknown,unknown,216
+cyrillic_script,MCL,negative,negative,118
+cyrillic_script,MCL,unknown,unknown,102
+cyrillic_script,Medial Meniscus,negative,negative,20
+cyrillic_script,Medial Meniscus,positive,positive,142
+cyrillic_script,Medial Meniscus,unknown,unknown,58
+cyrillic_script,Medial OA,negative,negative,1
+cyrillic_script,Medial OA,unknown,positive,4
+cyrillic_script,Medial OA,unknown,unknown,215
+cyrillic_script,PF OA,unknown,negative,50
+cyrillic_script,PF OA,unknown,positive,10
+cyrillic_script,PF OA,unknown,unknown,160
+cyrillic_script,Synovitis,positive,positive,1
+cyrillic_script,Synovitis,unknown,unknown,219
+dutch,ACL,negative,negative,98
+dutch,ACL,positive,positive,25
+dutch,ACL,uncertain,uncertain,1
+dutch,ACL,unknown,unknown,29
+dutch,Baker's,positive,positive,47
+dutch,Baker's,unknown,negative,1
+dutch,Baker's,unknown,positive,7
+dutch,Baker's,unknown,unknown,98
+dutch,Contusion,positive,positive,5
+dutch,Contusion,unknown,unknown,148
+dutch,Effusion,negative,negative,20
+dutch,Effusion,positive,positive,91
+dutch,Effusion,uncertain,uncertain,1
+dutch,Effusion,unknown,unknown,41
+dutch,Fracture,negative,negative,8
+dutch,Fracture,positive,positive,4
+dutch,Fracture,uncertain,uncertain,1
+dutch,Fracture,unknown,unknown,140
+dutch,Lateral Meniscus,negative,negative,84
+dutch,Lateral Meniscus,negative,positive,1
+dutch,Lateral Meniscus,positive,positive,15
+dutch,Lateral Meniscus,uncertain,uncertain,2
+dutch,Lateral Meniscus,unknown,positive,2
+dutch,Lateral Meniscus,unknown,unknown,49
+dutch,Lateral OA,negative,unknown,4
+dutch,Lateral OA,positive,positive,2
+dutch,Lateral OA,unknown,negative,28
+dutch,Lateral OA,unknown,positive,10
+dutch,Lateral OA,unknown,unknown,109
+dutch,MCL,negative,negative,64
+dutch,MCL,positive,positive,4
+dutch,MCL,unknown,unknown,85
+dutch,Medial Meniscus,negative,negative,62
+dutch,Medial Meniscus,negative,positive,1
+dutch,Medial Meniscus,positive,positive,50
+dutch,Medial Meniscus,uncertain,uncertain,1
+dutch,Medial Meniscus,unknown,positive,9
+dutch,Medial Meniscus,unknown,unknown,30
+dutch,Medial OA,negative,unknown,4
+dutch,Medial OA,positive,positive,5
+dutch,Medial OA,unknown,negative,26
+dutch,Medial OA,unknown,positive,30
+dutch,Medial OA,unknown,unknown,88
+dutch,PF OA,negative,negative,20
+dutch,PF OA,negative,positive,2
+dutch,PF OA,negative,uncertain,2
+dutch,PF OA,negative,unknown,2
+dutch,PF OA,positive,positive,22
+dutch,PF OA,unknown,negative,3
+dutch,PF OA,unknown,positive,40
+dutch,PF OA,unknown,unknown,62
+dutch,Synovitis,positive,positive,6
+dutch,Synovitis,unknown,unknown,147
+english,ACL,negative,negative,1013
+english,ACL,positive,positive,423
+english,ACL,uncertain,uncertain,14
+english,ACL,unknown,negative,11
+english,ACL,unknown,positive,6
+english,ACL,unknown,unknown,257
+english,Baker's,negative,negative,314
+english,Baker's,positive,positive,390
+english,Baker's,uncertain,uncertain,3
+english,Baker's,unknown,negative,3
+english,Baker's,unknown,positive,3
+english,Baker's,unknown,unknown,1011
+english,Contusion,negative,negative,405
+english,Contusion,positive,positive,158
+english,Contusion,uncertain,uncertain,11
+english,Contusion,unknown,negative,1
+english,Contusion,unknown,positive,10
+english,Contusion,unknown,unknown,1139
+english,Effusion,negative,negative,412
+english,Effusion,positive,positive,1024
+english,Effusion,uncertain,uncertain,3
+english,Effusion,unknown,negative,1
+english,Effusion,unknown,unknown,284
+english,Fracture,negative,negative,478
+english,Fracture,positive,positive,95
+english,Fracture,uncertain,uncertain,31
+english,Fracture,unknown,unknown,1120
+english,Lateral Meniscus,negative,negative,986
+english,Lateral Meniscus,negative,positive,3
+english,Lateral Meniscus,negative,uncertain,1
+english,Lateral Meniscus,positive,positive,334
+english,Lateral Meniscus,positive,unknown,1
+english,Lateral Meniscus,uncertain,positive,1
+english,Lateral Meniscus,uncertain,uncertain,45
+english,Lateral Meniscus,unknown,negative,2
+english,Lateral Meniscus,unknown,positive,1
+english,Lateral Meniscus,unknown,uncertain,3
+english,Lateral Meniscus,unknown,unknown,347
+english,Lateral OA,negative,negative,427
+english,Lateral OA,negative,positive,1
+english,Lateral OA,negative,unknown,10
+english,Lateral OA,positive,positive,219
+english,Lateral OA,unknown,negative,6
+english,Lateral OA,unknown,positive,14
+english,Lateral OA,unknown,unknown,1047
+english,MCL,negative,negative,818
+english,MCL,negative,positive,1
+english,MCL,negative,uncertain,1
+english,MCL,positive,positive,230
+english,MCL,uncertain,positive,1
+english,MCL,uncertain,uncertain,14
+english,MCL,unknown,negative,319
+english,MCL,unknown,positive,2
+english,MCL,unknown,unknown,338
+english,Medial Meniscus,negative,negative,606
+english,Medial Meniscus,negative,uncertain,1
+english,Medial Meniscus,positive,negative,2
+english,Medial Meniscus,positive,positive,751
+english,Medial Meniscus,positive,unknown,2
+english,Medial Meniscus,uncertain,uncertain,32
+english,Medial Meniscus,unknown,negative,2
+english,Medial Meniscus,unknown,positive,4
+english,Medial Meniscus,unknown,uncertain,1
+english,Medial Meniscus,unknown,unknown,323
+english,Medial OA,negative,negative,338
+english,Medial OA,negative,positive,2
+english,Medial OA,negative,unknown,4
+english,Medial OA,positive,positive,281
+english,Medial OA,unknown,negative,28
+english,Medial OA,unknown,positive,40
+english,Medial OA,unknown,uncertain,1
+english,Medial OA,unknown,unknown,1030
+english,PF OA,negative,negative,458
+english,PF OA,negative,positive,30
+english,PF OA,negative,uncertain,2
+english,PF OA,negative,unknown,64
+english,PF OA,positive,positive,414
+english,PF OA,uncertain,uncertain,1
+english,PF OA,unknown,negative,50
+english,PF OA,unknown,positive,65
+english,PF OA,unknown,uncertain,5
+english,PF OA,unknown,unknown,635
+english,Synovitis,negative,negative,14
+english,Synovitis,positive,positive,294
+english,Synovitis,uncertain,uncertain,8
+english,Synovitis,unknown,unknown,1408
+french,ACL,negative,negative,45
+french,ACL,negative,positive,2
+french,ACL,positive,positive,9
+french,ACL,uncertain,uncertain,1
+french,ACL,unknown,positive,1
+french,ACL,unknown,unknown,22
+french,Baker's,negative,negative,46
+french,Baker's,positive,positive,33
+french,Baker's,unknown,unknown,1
+french,Contusion,negative,negative,1
+french,Contusion,positive,positive,6
+french,Contusion,unknown,unknown,73
+french,Effusion,positive,positive,79
+french,Effusion,unknown,unknown,1
+french,Fracture,negative,negative,27
+french,Fracture,positive,positive,7
+french,Fracture,unknown,negative,1
+french,Fracture,unknown,unknown,45
+french,Lateral Meniscus,negative,negative,48
+french,Lateral Meniscus,negative,positive,5
+french,Lateral Meniscus,positive,positive,12
+french,Lateral Meniscus,unknown,negative,2
+french,Lateral Meniscus,unknown,positive,2
+french,Lateral Meniscus,unknown,unknown,11
+french,Lateral OA,negative,negative,4
+french,Lateral OA,positive,positive,9
+french,Lateral OA,unknown,unknown,67
+french,MCL,negative,negative,33
+french,MCL,positive,positive,5
+french,MCL,unknown,negative,23
+french,MCL,unknown,unknown,19
+french,Medial Meniscus,negative,negative,19
+french,Medial Meniscus,negative,positive,9
+french,Medial Meniscus,positive,positive,34
+french,Medial Meniscus,uncertain,uncertain,1
+french,Medial Meniscus,unknown,positive,4
+french,Medial Meniscus,unknown,unknown,13
+french,Medial OA,negative,negative,3
+french,Medial OA,negative,unknown,1
+french,Medial OA,positive,positive,13
+french,Medial OA,unknown,unknown,63
+french,PF OA,negative,negative,2
+french,PF OA,negative,positive,4
+french,PF OA,negative,unknown,7
+french,PF OA,positive,positive,14
+french,PF OA,unknown,positive,3
+french,PF OA,unknown,unknown,50
+french,Synovitis,positive,positive,9
+french,Synovitis,unknown,unknown,71
+german,ACL,negative,negative,152
+german,ACL,negative,positive,1
+german,ACL,positive,positive,2
+german,ACL,unknown,unknown,104
+german,Baker's,negative,negative,3
+german,Baker's,positive,positive,67
+german,Baker's,unknown,unknown,189
+german,Contusion,negative,negative,41
+german,Contusion,positive,positive,33
+german,Contusion,unknown,unknown,185
+german,Effusion,negative,negative,46
+german,Effusion,positive,positive,112
+german,Effusion,unknown,negative,1
+german,Effusion,unknown,unknown,100
+german,Fracture,negative,negative,39
+german,Fracture,positive,positive,1
+german,Fracture,unknown,negative,9
+german,Fracture,unknown,positive,1
+german,Fracture,unknown,unknown,209
+german,Lateral Meniscus,negative,negative,133
+german,Lateral Meniscus,negative,positive,1
+german,Lateral Meniscus,negative,uncertain,1
+german,Lateral Meniscus,positive,positive,10
+german,Lateral Meniscus,uncertain,uncertain,1
+german,Lateral Meniscus,unknown,negative,2
+german,Lateral Meniscus,unknown,positive,17
+german,Lateral Meniscus,unknown,uncertain,2
+german,Lateral Meniscus,unknown,unknown,92
+german,Lateral OA,negative,negative,11
+german,Lateral OA,negative,unknown,48
+german,Lateral OA,positive,positive,12
+german,Lateral OA,unknown,negative,3
+german,Lateral OA,unknown,positive,3
+german,Lateral OA,unknown,unknown,182
+german,MCL,negative,negative,128
+german,MCL,negative,uncertain,1
+german,MCL,positive,positive,5
+german,MCL,unknown,negative,1
+german,MCL,unknown,unknown,124
+german,Medial Meniscus,negative,negative,83
+german,Medial Meniscus,negative,positive,3
+german,Medial Meniscus,positive,positive,28
+german,Medial Meniscus,uncertain,uncertain,1
+german,Medial Meniscus,unknown,negative,4
+german,Medial Meniscus,unknown,positive,29
+german,Medial Meniscus,unknown,uncertain,4
+german,Medial Meniscus,unknown,unknown,107
+german,Medial OA,negative,negative,5
+german,Medial OA,negative,unknown,45
+german,Medial OA,positive,positive,18
+german,Medial OA,unknown,negative,3
+german,Medial OA,unknown,positive,6
+german,Medial OA,unknown,unknown,182
+german,PF OA,negative,negative,50
+german,PF OA,negative,positive,4
+german,PF OA,negative,unknown,4
+german,PF OA,positive,positive,37
+german,PF OA,unknown,negative,7
+german,PF OA,unknown,positive,34
+german,PF OA,unknown,unknown,123
+german,Synovitis,positive,positive,4
+german,Synovitis,unknown,negative,1
+german,Synovitis,unknown,positive,9
+german,Synovitis,unknown,unknown,245
+greek_script,ACL,negative,negative,85
+greek_script,ACL,positive,positive,57
+greek_script,ACL,unknown,positive,2
+greek_script,ACL,unknown,unknown,177
+greek_script,Baker's,positive,positive,104
+greek_script,Baker's,unknown,positive,1
+greek_script,Baker's,unknown,unknown,216
+greek_script,Contusion,positive,positive,36
+greek_script,Contusion,unknown,positive,16
+greek_script,Contusion,unknown,unknown,269
+greek_script,Effusion,negative,negative,34
+greek_script,Effusion,positive,positive,205
+greek_script,Effusion,unknown,positive,11
+greek_script,Effusion,unknown,unknown,71
+greek_script,Fracture,negative,negative,2
+greek_script,Fracture,positive,positive,43
+greek_script,Fracture,unknown,unknown,276
+greek_script,Lateral Meniscus,negative,negative,68
+greek_script,Lateral Meniscus,positive,positive,55
+greek_script,Lateral Meniscus,unknown,negative,6
+greek_script,Lateral Meniscus,unknown,unknown,192
+greek_script,Lateral OA,negative,negative,11
+greek_script,Lateral OA,negative,unknown,14
+greek_script,Lateral OA,positive,positive,20
+greek_script,Lateral OA,unknown,negative,1
+greek_script,Lateral OA,unknown,positive,8
+greek_script,Lateral OA,unknown,unknown,267
+greek_script,MCL,negative,negative,120
+greek_script,MCL,positive,positive,12
+greek_script,MCL,unknown,positive,2
+greek_script,MCL,unknown,unknown,187
+greek_script,Medial Meniscus,negative,negative,53
+greek_script,Medial Meniscus,positive,positive,121
+greek_script,Medial Meniscus,unknown,negative,4
+greek_script,Medial Meniscus,unknown,positive,2
+greek_script,Medial Meniscus,unknown,unknown,141
+greek_script,Medial OA,negative,negative,9
+greek_script,Medial OA,negative,unknown,2
+greek_script,Medial OA,positive,positive,32
+greek_script,Medial OA,unknown,positive,18
+greek_script,Medial OA,unknown,unknown,260
+greek_script,PF OA,negative,negative,5
+greek_script,PF OA,negative,positive,4
+greek_script,PF OA,negative,unknown,1
+greek_script,PF OA,positive,positive,4
+greek_script,PF OA,unknown,negative,3
+greek_script,PF OA,unknown,positive,46
+greek_script,PF OA,unknown,unknown,258
+greek_script,Synovitis,positive,positive,29
+greek_script,Synovitis,unknown,unknown,292
+latin_other,ACL,negative,negative,15
+latin_other,ACL,positive,positive,3
+latin_other,ACL,unknown,positive,1
+latin_other,ACL,unknown,unknown,3
+latin_other,Baker's,negative,negative,8
+latin_other,Baker's,positive,positive,2
+latin_other,Baker's,unknown,unknown,12
+latin_other,Contusion,unknown,unknown,22
+latin_other,Effusion,negative,negative,2
+latin_other,Effusion,positive,positive,15
+latin_other,Effusion,unknown,unknown,5
+latin_other,Fracture,negative,negative,3
+latin_other,Fracture,positive,positive,1
+latin_other,Fracture,unknown,unknown,18
+latin_other,Lateral Meniscus,negative,negative,17
+latin_other,Lateral Meniscus,positive,positive,1
+latin_other,Lateral Meniscus,unknown,positive,1
+latin_other,Lateral Meniscus,unknown,unknown,3
+latin_other,Lateral OA,negative,negative,4
+latin_other,Lateral OA,positive,positive,2
+latin_other,Lateral OA,unknown,unknown,16
+latin_other,MCL,negative,negative,14
+latin_other,MCL,positive,positive,3
+latin_other,MCL,unknown,positive,1
+latin_other,MCL,unknown,unknown,4
+latin_other,Medial Meniscus,negative,negative,12
+latin_other,Medial Meniscus,negative,positive,1
+latin_other,Medial Meniscus,positive,positive,1
+latin_other,Medial Meniscus,unknown,positive,2
+latin_other,Medial Meniscus,unknown,unknown,6
+latin_other,Medial OA,negative,negative,4
+latin_other,Medial OA,positive,positive,2
+latin_other,Medial OA,unknown,unknown,16
+latin_other,PF OA,negative,negative,2
+latin_other,PF OA,negative,positive,1
+latin_other,PF OA,negative,unknown,1
+latin_other,PF OA,positive,positive,3
+latin_other,PF OA,unknown,positive,1
+latin_other,PF OA,unknown,unknown,14
+latin_other,Synovitis,negative,negative,2
+latin_other,Synovitis,positive,positive,2
+latin_other,Synovitis,unknown,unknown,18
+south_slavic,ACL,negative,negative,131
+south_slavic,ACL,negative,positive,39
+south_slavic,ACL,negative,uncertain,9
+south_slavic,ACL,positive,positive,70
+south_slavic,ACL,uncertain,uncertain,11
+south_slavic,ACL,unknown,negative,32
+south_slavic,ACL,unknown,positive,52
+south_slavic,ACL,unknown,uncertain,11
+south_slavic,ACL,unknown,unknown,48
+south_slavic,Baker's,negative,negative,146
+south_slavic,Baker's,positive,positive,73
+south_slavic,Baker's,unknown,negative,69
+south_slavic,Baker's,unknown,positive,63
+south_slavic,Baker's,unknown,uncertain,1
+south_slavic,Baker's,unknown,unknown,51
+south_slavic,Contusion,positive,positive,2
+south_slavic,Contusion,unknown,positive,9
+south_slavic,Contusion,unknown,uncertain,1
+south_slavic,Contusion,unknown,unknown,391
+south_slavic,Effusion,negative,negative,86
+south_slavic,Effusion,positive,positive,265
+south_slavic,Effusion,uncertain,uncertain,2
+south_slavic,Effusion,unknown,unknown,50
+south_slavic,Fracture,negative,negative,3
+south_slavic,Fracture,positive,positive,15
+south_slavic,Fracture,uncertain,uncertain,2
+south_slavic,Fracture,unknown,positive,1
+south_slavic,Fracture,unknown,unknown,382
+south_slavic,Lateral Meniscus,negative,negative,210
+south_slavic,Lateral Meniscus,negative,positive,45
+south_slavic,Lateral Meniscus,positive,positive,69
+south_slavic,Lateral Meniscus,uncertain,uncertain,2
+south_slavic,Lateral Meniscus,unknown,negative,2
+south_slavic,Lateral Meniscus,unknown,positive,37
+south_slavic,Lateral Meniscus,unknown,uncertain,3
+south_slavic,Lateral Meniscus,unknown,unknown,35
+south_slavic,Lateral OA,positive,positive,16
+south_slavic,Lateral OA,unknown,negative,1
+south_slavic,Lateral OA,unknown,positive,16
+south_slavic,Lateral OA,unknown,unknown,370
+south_slavic,MCL,negative,negative,291
+south_slavic,MCL,negative,positive,2
+south_slavic,MCL,positive,positive,29
+south_slavic,MCL,uncertain,uncertain,1
+south_slavic,MCL,unknown,negative,6
+south_slavic,MCL,unknown,positive,6
+south_slavic,MCL,unknown,unknown,68
+south_slavic,Medial Meniscus,negative,negative,84
+south_slavic,Medial Meniscus,negative,positive,23
+south_slavic,Medial Meniscus,negative,uncertain,1
+south_slavic,Medial Meniscus,positive,positive,137
+south_slavic,Medial Meniscus,uncertain,positive,1
+south_slavic,Medial Meniscus,uncertain,uncertain,11
+south_slavic,Medial Meniscus,unknown,positive,60
+south_slavic,Medial Meniscus,unknown,uncertain,14
+south_slavic,Medial Meniscus,unknown,unknown,72
+south_slavic,Medial OA,positive,positive,20
+south_slavic,Medial OA,unknown,negative,1
+south_slavic,Medial OA,unknown,positive,37
+south_slavic,Medial OA,unknown,unknown,345
+south_slavic,PF OA,negative,positive,9
+south_slavic,PF OA,negative,unknown,68
+south_slavic,PF OA,positive,positive,13
+south_slavic,PF OA,unknown,negative,11
+south_slavic,PF OA,unknown,positive,70
+south_slavic,PF OA,unknown,unknown,232
+south_slavic,Synovitis,positive,positive,4
+south_slavic,Synovitis,unknown,unknown,399
+spanish,ACL,negative,negative,293
+spanish,ACL,positive,positive,47
+spanish,ACL,uncertain,uncertain,1
+spanish,ACL,unknown,positive,6
+spanish,ACL,unknown,unknown,331
+spanish,Baker's,negative,negative,251
+spanish,Baker's,positive,positive,88
+spanish,Baker's,uncertain,uncertain,5
+spanish,Baker's,unknown,unknown,334
+spanish,Contusion,positive,positive,37
+spanish,Contusion,unknown,unknown,641
+spanish,Effusion,negative,negative,171
+spanish,Effusion,positive,positive,282
+spanish,Effusion,unknown,unknown,225
+spanish,Fracture,negative,negative,6
+spanish,Fracture,positive,positive,52
+spanish,Fracture,uncertain,uncertain,2
+spanish,Fracture,unknown,unknown,618
+spanish,Lateral Meniscus,negative,negative,251
+spanish,Lateral Meniscus,negative,positive,1
+spanish,Lateral Meniscus,positive,positive,123
+spanish,Lateral Meniscus,uncertain,uncertain,2
+spanish,Lateral Meniscus,unknown,unknown,301
+spanish,Lateral OA,negative,negative,181
+spanish,Lateral OA,positive,positive,73
+spanish,Lateral OA,unknown,positive,1
+spanish,Lateral OA,unknown,unknown,423
+spanish,MCL,negative,negative,276
+spanish,MCL,negative,positive,2
+spanish,MCL,positive,positive,28
+spanish,MCL,unknown,positive,13
+spanish,MCL,unknown,uncertain,1
+spanish,MCL,unknown,unknown,358
+spanish,Medial Meniscus,negative,negative,220
+spanish,Medial Meniscus,positive,positive,230
+spanish,Medial Meniscus,uncertain,uncertain,6
+spanish,Medial Meniscus,unknown,unknown,222
+spanish,Medial OA,negative,negative,171
+spanish,Medial OA,positive,positive,90
+spanish,Medial OA,unknown,positive,1
+spanish,Medial OA,unknown,unknown,416
+spanish,PF OA,negative,negative,180
+spanish,PF OA,negative,positive,1
+spanish,PF OA,negative,unknown,3
+spanish,PF OA,positive,positive,84
+spanish,PF OA,unknown,negative,17
+spanish,PF OA,unknown,unknown,393
+spanish,Synovitis,negative,negative,4
+spanish,Synovitis,positive,positive,102
+spanish,Synovitis,unknown,unknown,572
+turkish,ACL,negative,negative,52
+turkish,ACL,negative,positive,2
+turkish,ACL,positive,positive,142
+turkish,ACL,unknown,positive,36
+turkish,ACL,unknown,uncertain,2
+turkish,ACL,unknown,unknown,313
+turkish,Baker's,positive,positive,58
+turkish,Baker's,unknown,unknown,489
+turkish,Contusion,positive,positive,21
+turkish,Contusion,unknown,positive,7
+turkish,Contusion,unknown,uncertain,2
+turkish,Contusion,unknown,unknown,517
+turkish,Effusion,negative,negative,128
+turkish,Effusion,negative,positive,3
+turkish,Effusion,positive,positive,201
+turkish,Effusion,unknown,negative,1
+turkish,Effusion,unknown,positive,128
+turkish,Effusion,unknown,unknown,86
+turkish,Fracture,positive,positive,14
+turkish,Fracture,uncertain,uncertain,3
+turkish,Fracture,unknown,positive,2
+turkish,Fracture,unknown,uncertain,1
+turkish,Fracture,unknown,unknown,527
+turkish,Lateral Meniscus,negative,negative,284
+turkish,Lateral Meniscus,negative,positive,1
+turkish,Lateral Meniscus,positive,positive,173
+turkish,Lateral Meniscus,uncertain,uncertain,1
+turkish,Lateral Meniscus,unknown,positive,18
+turkish,Lateral Meniscus,unknown,uncertain,1
+turkish,Lateral Meniscus,unknown,unknown,69
+turkish,Lateral OA,negative,unknown,1
+turkish,Lateral OA,positive,positive,29
+turkish,Lateral OA,unknown,positive,2
+turkish,Lateral OA,unknown,unknown,515
+turkish,MCL,negative,negative,409
+turkish,MCL,negative,positive,5
+turkish,MCL,positive,positive,66
+turkish,MCL,unknown,positive,30
+turkish,MCL,unknown,unknown,37
+turkish,Medial Meniscus,negative,negative,112
+turkish,Medial Meniscus,positive,positive,352
+turkish,Medial Meniscus,unknown,positive,14
+turkish,Medial Meniscus,unknown,uncertain,1
+turkish,Medial Meniscus,unknown,unknown,68
+turkish,Medial OA,positive,positive,54
+turkish,Medial OA,unknown,positive,9
+turkish,Medial OA,unknown,unknown,484
+turkish,PF OA,negative,negative,2
+turkish,PF OA,negative,positive,1
+turkish,PF OA,negative,unknown,29
+turkish,PF OA,positive,positive,59
+turkish,PF OA,unknown,negative,4
+turkish,PF OA,unknown,positive,40
+turkish,PF OA,unknown,unknown,412
+turkish,Synovitis,positive,positive,26
+turkish,Synovitis,unknown,unknown,521

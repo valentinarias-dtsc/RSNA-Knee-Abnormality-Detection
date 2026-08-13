@@ -8,7 +8,7 @@ Pipeline reproducible para construir supervisión de 12 hallazgos de rodilla y p
 | --- | --- | --- | --- |
 | 01 Dataset characterization | Completed | [Report](reports/stages/01_dataset_characterization.md) | [Implementation](reports/implementation/01_dataset_characterization_implementation.md) |
 | 02 Supervision strategy review | Completed | [Report](reports/stages/02_supervision_strategy_review.md) | Documentation-only review |
-| 03 Report label generation | Completed | [Report](reports/stages/03_report_label_generation.md) | [Implementation](reports/implementation/03_report_label_generation_implementation.md) |
+| 03 Report label generation | Completed (v3) | [Report](reports/stages/03_report_label_generation_v3.md) | [Implementation](reports/implementation/03_report_label_generation_v3_implementation.md) |
 | 04 MRI preprocessing and representation | Next | Not started | Not started |
 | 05 Visual baseline | Future | Not started | Not started |
 
@@ -24,12 +24,13 @@ Desde la raíz del repositorio:
 
 ```powershell
 python -m unittest discover -s tests -v
-python scripts/generate_report_labels.py
+python scripts/generate_report_labels.py --policy v3
+python scripts/generate_report_labels.py --policy v2
 ```
 
-El artefacto activo es `artifacts/03_report_label_generation/supervision_long_v2.csv`; los outputs `v1` se conservan para comparación y reproducibilidad. Cada fila representa un par `StudyInstanceUID`-target y conserva estado, derived label/score, confidence, evidencia, official label, final label y provenance. `unknown` y `uncertain` permanecen missing salvo que exista un label official.
+El artefacto activo es `artifacts/03_report_label_generation/supervision_long_v3.csv`; v2 y v1 se conservan para comparación y reproducibilidad. Cada fila representa un par `StudyInstanceUID`-target y conserva estado, derived label/score, confidence, evidencia, phenotype, detector, provenance estructurada, official label, final label y fuente final. `unknown` y `uncertain` permanecen missing salvo que exista un label official.
 
-La cobertura detallada por combinación idioma-target se guarda en `coverage_by_language_target_v2.csv`. La consistencia completa de evidence, rationale, status, confidence y provenance se verifica en cada ejecución y se persiste en `consistency_audit_summary_v2.csv` y `consistency_audit_issues_v2.csv`.
+La cobertura detallada por combinación idioma-target se guarda en `coverage_by_language_target_v3.csv`; los deltas y transiciones respecto de v2 tienen artefactos propios. La consistencia de evidence, proposition, phenotype, detector, status, confidence y provenance se verifica exhaustivamente en cada ejecución.
 
 La implementación no usa DICOM, metadata de Series ni píxeles para derivar labels y no entrena modelos MRI.
 

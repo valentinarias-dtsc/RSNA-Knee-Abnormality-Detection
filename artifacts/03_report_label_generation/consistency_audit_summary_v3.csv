@@ -1,0 +1,13 @@
+check,severity,evaluated_rows,issue_count,passed
+unique_study_target,error,52884,0,True
+policy_version,error,52884,0,True
+status_value_schema,error,52884,0,True
+missing_mention_unknown,error,28296,0,True
+binary_status_mapping,error,24294,0,True
+uncertain_is_unresolved,error,294,0,True
+evidence_json_schema,error,52884,0,True
+provenance_json_schema,error,52884,0,True
+evidence_in_diagnostic_view,error,24588,0,True
+winning_status_in_provenance,error,24588,0,True
+phenotype_detector_alignment,error,24588,0,True
+final_provenance_schema,error,52884,0,True

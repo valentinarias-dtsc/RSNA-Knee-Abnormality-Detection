@@ -1,0 +1,995 @@
+language_group,target,status,phenotype,detector,view,propositions
+english,Effusion,positive,joint_effusion,v3_morphology,strict,1257
+english,Medial Meniscus,positive,tear,v3_target,strict,1033
+english,Medial Meniscus,positive,tear,v2_exact,strict,1025
+english,MCL,negative,normal_structure,v3_target,strict,928
+english,ACL,negative,abnormality_absent,v2_exact,strict,867
+english,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,782
+english,Lateral Meniscus,negative,normal_structure,v3_target,strict,771
+english,ACL,negative,normal_structure,v3_target,strict,757
+english,PF OA,positive,chondral_abnormality,v3_target,strict,726
+english,Effusion,positive,abnormality,v2_exact,strict,675
+english,MCL,negative,abnormality_absent,v2_exact,strict,614
+english,Fracture,negative,fracture_absent,v3_morphology,strict,502
+english,Baker's,positive,baker_cyst,v3_morphology,strict,490
+english,PF OA,positive,chondral_abnormality,v2_exact,strict,484
+english,Synovitis,positive,abnormality,v2_exact,strict,477
+english,ACL,positive,tear,v3_target,strict,463
+english,Fracture,negative,abnormality_absent,v2_exact,strict,457
+english,Lateral Meniscus,positive,tear,v2_exact,strict,438
+english,Lateral Meniscus,positive,tear,v3_target,strict,436
+english,ACL,positive,tear,v2_exact,strict,433
+english,Lateral OA,negative,abnormality_absent,v2_exact,strict,427
+english,Effusion,negative,joint_effusion_absent,v3_morphology,strict,424
+english,Contusion,negative,bone_contusion_absent,v3_morphology,strict,410
+english,Contusion,negative,abnormality_absent,v2_exact,strict,403
+english,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,388
+english,Medial OA,positive,chondral_abnormality,v3_target,strict,388
+english,Effusion,negative,abnormality_absent,v2_exact,strict,378
+english,PF OA,negative,abnormality_absent,v2_exact,strict,365
+spanish,Medial Meniscus,positive,tear,v2_exact,strict,365
+spanish,Medial Meniscus,positive,tear,v3_target,strict,362
+spanish,Effusion,positive,abnormality,v2_exact,strict,343
+english,Medial Meniscus,negative,normal_structure,v3_target,strict,342
+turkish,Effusion,positive,joint_effusion,v3_morphology,strict,337
+english,Medial OA,negative,abnormality_absent,v2_exact,strict,335
+english,PF OA,negative,normal_cartilage,v3_target,strict,326
+english,Baker's,negative,abnormality_absent,v2_exact,strict,323
+south_slavic,Effusion,positive,abnormality,v2_exact,strict,303
+english,Lateral OA,negative,chondral_abnormality_absent,v3_target,strict,286
+turkish,Lateral Meniscus,negative,normal_structure,v3_target,strict,284
+turkish,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,282
+spanish,MCL,negative,abnormality_absent,v2_collective,strict,274
+spanish,ACL,negative,abnormality_absent,v2_collective,strict,272
+spanish,Baker's,negative,abnormality_absent,v2_exact,strict,271
+english,Medial OA,positive,chondral_abnormality,v2_exact,strict,270
+english,Medial OA,negative,chondral_abnormality_absent,v3_target,strict,269
+turkish,MCL,negative,normal_structure,v3_target,strict,268
+english,Baker's,negative,baker_cyst_absent,v3_morphology,strict,262
+turkish,MCL,negative,abnormality_absent,v2_exact,strict,259
+english,Lateral OA,positive,chondral_abnormality,v3_target,strict,257
+english,PF OA,negative,chondral_abnormality_absent,v3_target,strict,250
+english,Contusion,positive,bone_contusion,v3_morphology,strict,244
+cyrillic_script,Effusion,positive,abnormality,v2_exact,strict,228
+english,MCL,negative,abnormality_absent,v2_collective,strict,228
+english,Baker's,positive,abnormality,v2_exact,strict,225
+english,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,224
+english,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,216
+cyrillic_script,Medial Meniscus,positive,abnormality,v3_target,strict,212
+turkish,Medial Meniscus,positive,tear,v3_target,strict,212
+english,Lateral OA,positive,chondral_abnormality,v2_exact,strict,206
+turkish,Medial Meniscus,positive,tear,v2_exact,strict,205
+turkish,Effusion,positive,abnormality,v2_exact,strict,199
+south_slavic,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,198
+turkish,Medial Meniscus,positive,degeneration,v3_target,strict,196
+english,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,192
+cyrillic_script,Medial Meniscus,positive,abnormality,v2_exact,strict,186
+turkish,Medial Meniscus,positive,degeneration,v2_exact,strict,182
+english,ACL,negative,abnormality_absent,v2_collective,strict,179
+south_slavic,Medial Meniscus,positive,tear,v3_target,strict,178
+spanish,Effusion,negative,abnormality_absent,v2_exact,strict,171
+greek_script,Effusion,positive,abnormality,v2_exact,strict,170
+spanish,Medial OA,negative,abnormality_absent,v2_collective,strict,165
+spanish,Lateral OA,negative,abnormality_absent,v2_collective,strict,164
+south_slavic,MCL,negative,abnormality_absent,v2_exact,strict,163
+turkish,Lateral Meniscus,positive,degeneration,v3_target,strict,160
+english,MCL,positive,sprain,v3_target,strict,157
+greek_script,Effusion,positive,joint_effusion,v3_morphology,strict,155
+spanish,Lateral Meniscus,positive,tear,v3_target,strict,155
+turkish,MCL,negative,abnormality_absent,v2_collective,strict,155
+spanish,Lateral Meniscus,positive,tear,v2_exact,strict,155
+english,MCL,positive,sprain,v2_exact,strict,154
+english,Lateral OA,negative,normal_cartilage,v3_target,strict,153
+south_slavic,ACL,negative,normal_structure,v3_target,strict,150
+south_slavic,MCL,negative,normal_structure,v3_target,strict,150
+german,ACL,negative,abnormality_absent,v2_collective,strict,148
+south_slavic,Baker's,negative,abnormality_absent,v2_exact,strict,146
+english,Medial Meniscus,positive,degeneration,v3_target,strict,145
+english,Fracture,positive,fracture,v2_exact,strict,145
+english,Fracture,positive,fracture,v3_morphology,strict,143
+english,ACL,negative,abnormality_absent,v3_target,strict,143
+south_slavic,Medial Meniscus,positive,tear,v2_exact,strict,138
+turkish,ACL,positive,degeneration,v3_target,strict,136
+cyrillic_script,ACL,negative,abnormality_absent,v2_collective,strict,134
+spanish,Synovitis,positive,abnormality,v2_exact,strict,133
+turkish,Lateral Meniscus,positive,degeneration,v2_exact,strict,133
+turkish,Effusion,negative,joint_effusion_absent,v3_morphology,strict,132
+south_slavic,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,132
+south_slavic,MCL,negative,abnormality_absent,v2_collective,strict,131
+spanish,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,128
+turkish,Effusion,negative,abnormality_absent,v2_exact,strict,128
+spanish,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,127
+spanish,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,127
+spanish,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,123
+greek_script,MCL,negative,abnormality_absent,v2_collective,strict,120
+cyrillic_script,MCL,negative,abnormality_absent,v2_collective,strict,119
+spanish,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,115
+english,Medial Meniscus,positive,degeneration,v2_exact,strict,114
+spanish,PF OA,negative,normal_cartilage,v3_target,strict,113
+greek_script,Baker's,positive,baker_cyst,v3_morphology,strict,113
+german,Effusion,positive,abnormality,v2_exact,strict,112
+spanish,Medial Meniscus,negative,abnormality_absent,v3_target,strict,112
+english,ACL,positive,abnormality,v2_exact,strict,112
+french,Effusion,positive,abnormality,v2_exact,strict,110
+german,Effusion,positive,joint_effusion,v3_morphology,strict,107
+english,MCL,positive,tear,v3_target,strict,104
+spanish,PF OA,negative,abnormality_absent,v2_collective,strict,104
+greek_script,Medial Meniscus,positive,tear,v2_exact,strict,101
+english,MCL,positive,tear,v2_exact,strict,101
+english,ACL,positive,degeneration,v2_exact,strict,99
+south_slavic,Effusion,negative,abnormality_absent,v2_exact,strict,99
+dutch,Effusion,positive,abnormality,v2_exact,strict,98
+dutch,PF OA,positive,chondral_abnormality,v3_target,strict,97
+english,ACL,positive,abnormality,v3_target,strict,96
+south_slavic,Baker's,positive,baker_cyst,v3_morphology,strict,96
+english,ACL,positive,degeneration,v3_target,strict,95
+south_slavic,PF OA,positive,chondral_abnormality,v3_target,strict,95
+cyrillic_script,Baker's,positive,abnormality,v2_exact,strict,95
+english,Medial OA,negative,normal_cartilage,v3_target,strict,95
+turkish,MCL,positive,sprain,v3_target,strict,94
+south_slavic,ACL,positive,degeneration,v3_target,strict,93
+spanish,Fracture,positive,fracture,v3_morphology,strict,92
+cyrillic_script,Lateral Meniscus,negative,normal_structure,v3_target,strict,90
+spanish,Baker's,positive,abnormality,v2_exact,strict,90
+spanish,Medial OA,positive,chondral_abnormality,v3_target,strict,90
+spanish,Fracture,positive,fracture,v2_exact,strict,90
+turkish,ACL,positive,tear,v3_target,strict,88
+german,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,87
+german,PF OA,positive,chondral_abnormality,v3_target,strict,86
+cyrillic_script,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,85
+german,Lateral Meniscus,negative,normal_structure,v3_target,strict,85
+greek_script,Medial Meniscus,positive,tear,v3_target,strict,84
+spanish,PF OA,positive,chondral_abnormality,v3_target,strict,81
+greek_script,Baker's,positive,abnormality,v2_exact,strict,81
+south_slavic,ACL,negative,abnormality_absent,v2_exact,strict,80
+greek_script,ACL,negative,abnormality_absent,v2_collective,strict,80
+turkish,Baker's,positive,baker_cyst,v3_morphology,strict,79
+south_slavic,Lateral Meniscus,positive,degeneration,v3_target,strict,78
+cyrillic_script,Effusion,negative,abnormality_absent,v2_exact,strict,78
+spanish,PF OA,negative,abnormality_absent,v2_exact,strict,77
+south_slavic,Lateral Meniscus,positive,tear,v3_target,strict,75
+spanish,ACL,positive,tear,v3_target,strict,74
+south_slavic,Baker's,negative,baker_cyst_absent,v3_morphology,strict,74
+spanish,Medial OA,positive,chondral_abnormality,v2_exact,strict,73
+english,Lateral Meniscus,uncertain,tear,v3_target,strict,73
+spanish,ACL,positive,tear,v2_exact,strict,73
+south_slavic,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,72
+spanish,PF OA,positive,chondral_abnormality,v2_exact,strict,72
+english,MCL,positive,abnormality,v2_exact,strict,71
+turkish,PF OA,positive,chondral_abnormality,v3_target,strict,71
+english,Lateral Meniscus,positive,degeneration,v3_target,strict,71
+south_slavic,Baker's,positive,abnormality,v2_exact,strict,70
+turkish,ACL,positive,degeneration,v2_exact,strict,70
+turkish,Lateral Meniscus,positive,tear,v3_target,strict,70
+english,Medial Meniscus,negative,abnormality_absent,v3_target,strict,69
+english,Lateral Meniscus,uncertain,tear,v2_exact,strict,69
+south_slavic,Lateral Meniscus,negative,normal_structure,v3_target,strict,67
+english,Contusion,positive,abnormality,v2_exact,strict,67
+turkish,ACL,positive,tear,v2_exact,strict,67
+german,MCL,negative,normal_structure,v3_target,strict,67
+greek_script,Medial OA,positive,chondral_abnormality,v3_target,strict,67
+german,MCL,negative,abnormality_absent,v2_exact,strict,66
+german,Baker's,positive,baker_cyst,v3_morphology,strict,66
+south_slavic,ACL,positive,tear,v3_target,strict,66
+turkish,Lateral Meniscus,positive,tear,v2_exact,strict,63
+german,Baker's,positive,abnormality,v2_exact,strict,63
+south_slavic,Medial Meniscus,negative,abnormality_absent,v3_target,strict,63
+greek_script,PF OA,positive,chondral_abnormality,v3_target,strict,62
+dutch,Medial Meniscus,positive,degeneration,v3_target,strict,62
+south_slavic,Lateral Meniscus,positive,tear,v2_exact,strict,62
+turkish,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,61
+english,Medial Meniscus,uncertain,tear,v2_exact,strict,61
+english,Medial Meniscus,uncertain,tear,v3_target,strict,61
+german,MCL,negative,abnormality_absent,v2_collective,strict,61
+english,MCL,positive,abnormality,v3_target,strict,60
+english,Effusion,positive,joint_effusion,v3_morphology,linked,60
+dutch,Baker's,positive,baker_cyst,v3_morphology,strict,60
+spanish,Lateral OA,positive,chondral_abnormality,v3_target,strict,58
+turkish,MCL,positive,sprain,v2_exact,strict,58
+greek_script,Contusion,positive,bone_contusion,v3_morphology,strict,58
+south_slavic,ACL,positive,tear,v2_exact,strict,58
+south_slavic,Medial OA,positive,chondral_abnormality,v3_target,strict,58
+turkish,Medial Meniscus,positive,abnormality,v3_target,strict,56
+english,Lateral Meniscus,positive,degeneration,v2_exact,strict,56
+turkish,Medial Meniscus,positive,abnormality,v2_exact,strict,55
+dutch,ACL,negative,abnormality_absent,v2_collective,strict,55
+french,Baker's,negative,abnormality_absent,v2_exact,strict,55
+dutch,MCL,negative,abnormality_absent,v2_collective,strict,54
+greek_script,Fracture,positive,fracture,v3_morphology,strict,53
+turkish,Medial Meniscus,negative,normal_structure,v3_target,strict,53
+english,Baker's,positive,tear,v2_exact,strict,52
+spanish,Lateral OA,positive,chondral_abnormality,v2_exact,strict,52
+south_slavic,ACL,negative,abnormality_absent,v2_collective,strict,52
+turkish,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,51
+dutch,Medial Meniscus,positive,degeneration,v2_exact,strict,51
+cyrillic_script,PF OA,negative,normal_cartilage,v3_target,strict,50
+greek_script,Fracture,positive,fracture,v2_exact,strict,50
+german,Fracture,negative,fracture_absent,v3_morphology,strict,49
+french,Medial Meniscus,positive,degeneration,v3_target,strict,49
+south_slavic,Medial Meniscus,positive,degeneration,v3_target,strict,48
+german,PF OA,negative,abnormality_absent,v2_exact,strict,48
+greek_script,Medial Meniscus,positive,degeneration,v3_target,strict,48
+german,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,48
+german,Effusion,negative,abnormality_absent,v2_exact,strict,46
+german,Contusion,negative,bone_contusion_absent,v3_morphology,strict,45
+french,MCL,negative,normal_structure,v3_target,strict,45
+spanish,MCL,positive,tear,v3_target,strict,45
+spanish,Medial OA,positive,chondral_abnormality,v2_collective,strict,45
+french,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,45
+german,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,45
+spanish,Lateral OA,positive,chondral_abnormality,v2_collective,strict,45
+turkish,ACL,negative,abnormality_absent,v2_exact,strict,45
+english,Fracture,uncertain,fracture,v3_morphology,strict,45
+greek_script,Lateral Meniscus,positive,tear,v2_exact,strict,44
+dutch,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,44
+greek_script,ACL,positive,tear,v2_exact,strict,44
+turkish,ACL,negative,normal_structure,v3_target,strict,44
+dutch,ACL,negative,normal_structure,v3_target,strict,44
+dutch,Medial OA,positive,chondral_abnormality,v3_target,strict,43
+greek_script,ACL,positive,tear,v3_target,strict,43
+dutch,Lateral Meniscus,negative,normal_structure,v3_target,strict,43
+german,Medial Meniscus,negative,normal_structure,v3_target,strict,43
+dutch,ACL,negative,abnormality_absent,v2_exact,strict,43
+cyrillic_script,ACL,positive,abnormality,v3_target,strict,42
+english,Fracture,uncertain,fracture,v2_exact,strict,42
+german,Effusion,negative,joint_effusion_absent,v3_morphology,strict,42
+spanish,MCL,positive,tear,v2_exact,strict,41
+cyrillic_script,ACL,positive,abnormality,v2_exact,strict,41
+german,Contusion,negative,abnormality_absent,v2_exact,strict,41
+dutch,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,40
+dutch,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,40
+spanish,Contusion,positive,abnormality,v2_exact,strict,39
+greek_script,Lateral Meniscus,negative,normal_structure,v3_target,strict,39
+german,PF OA,negative,normal_cartilage,v3_target,strict,39
+german,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,39
+german,Fracture,negative,abnormality_absent,v2_exact,strict,38
+german,PF OA,positive,chondral_abnormality,v2_exact,strict,38
+turkish,Baker's,positive,abnormality,v2_exact,strict,37
+spanish,PF OA,positive,chondral_abnormality,v2_collective,strict,36
+german,Medial Meniscus,positive,degeneration,v3_target,strict,36
+greek_script,Synovitis,positive,synovitis,v3_morphology,strict,36
+cyrillic_script,Lateral Meniscus,positive,abnormality,v3_target,strict,35
+german,Contusion,positive,bone_contusion,v3_morphology,strict,35
+greek_script,Lateral OA,positive,chondral_abnormality,v3_target,strict,34
+turkish,Contusion,positive,bone_contusion,v3_morphology,strict,33
+greek_script,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,33
+dutch,Baker's,positive,abnormality,v2_exact,strict,33
+french,MCL,negative,abnormality_absent,v2_exact,strict,33
+greek_script,Effusion,negative,joint_effusion_absent,v3_morphology,strict,33
+greek_script,Lateral Meniscus,positive,tear,v3_target,strict,33
+greek_script,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,33
+french,Lateral Meniscus,negative,normal_structure,v3_target,strict,32
+south_slavic,Lateral OA,positive,chondral_abnormality,v3_target,strict,31
+greek_script,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,31
+french,Baker's,positive,abnormality,v2_exact,strict,31
+turkish,Medial OA,positive,degeneration,v2_exact,strict,31
+turkish,Medial OA,positive,chondral_abnormality,v3_target,strict,30
+cyrillic_script,Contusion,positive,bone_contusion,v3_morphology,strict,30
+south_slavic,MCL,negative,abnormality_absent,v3_target,strict,29
+english,Effusion,negative,joint_effusion_absent,v3_morphology,linked,29
+french,Fracture,negative,fracture_absent,v3_morphology,strict,29
+french,Medial Meniscus,positive,abnormality,v3_target,strict,28
+turkish,PF OA,positive,chondral_abnormality,v2_exact,strict,28
+french,Medial Meniscus,positive,abnormality,v2_exact,strict,28
+cyrillic_script,Lateral Meniscus,positive,abnormality,v2_exact,strict,28
+turkish,PF OA,positive,degeneration,v2_exact,strict,28
+cyrillic_script,Medial Meniscus,positive,tear,v2_exact,strict,27
+french,ACL,negative,abnormality_absent,v2_exact,strict,27
+cyrillic_script,Medial Meniscus,positive,tear,v3_target,strict,27
+spanish,Medial Meniscus,positive,abnormality,v3_target,strict,26
+turkish,Lateral OA,positive,degeneration,v2_exact,strict,26
+french,PF OA,positive,chondral_abnormality,v3_target,strict,26
+greek_script,Effusion,negative,abnormality_absent,v2_exact,strict,26
+dutch,Lateral OA,negative,chondral_abnormality_absent,v3_target,strict,26
+german,PF OA,negative,chondral_abnormality_absent,v3_target,strict,25
+english,Lateral OA,positive,abnormality,v2_exact,strict,25
+cyrillic_script,Medial Meniscus,negative,normal_structure,v3_target,strict,25
+german,Medial OA,positive,chondral_abnormality,v3_target,strict,25
+south_slavic,ACL,uncertain,tear,v3_target,strict,25
+dutch,Effusion,negative,abnormality_absent,v2_exact,strict,24
+dutch,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,24
+spanish,Medial Meniscus,positive,abnormality,v2_exact,strict,24
+english,MCL,negative,abnormality_absent,v3_target,strict,24
+cyrillic_script,Fracture,positive,fracture,v3_morphology,strict,24
+dutch,PF OA,positive,chondral_abnormality,v2_exact,strict,24
+south_slavic,Medial Meniscus,uncertain,tear,v3_target,strict,24
+spanish,ACL,negative,abnormality_absent,v2_exact,strict,24
+turkish,Fracture,positive,fracture,v3_morphology,strict,24
+dutch,Medial Meniscus,negative,normal_structure,v3_target,strict,23
+south_slavic,MCL,positive,tear,v3_target,strict,23
+dutch,Medial OA,negative,chondral_abnormality_absent,v3_target,strict,23
+german,Contusion,positive,abnormality,v2_exact,strict,23
+french,Fracture,negative,fracture_absent,v3_morphology,linked,23
+english,ACL,uncertain,tear,v3_target,strict,22
+turkish,Synovitis,positive,synovitis,v3_morphology,strict,22
+cyrillic_script,Fracture,positive,fracture,v2_exact,strict,22
+french,ACL,negative,normal_structure,v3_target,strict,22
+turkish,Fracture,positive,fracture,v2_exact,strict,22
+greek_script,Medial Meniscus,positive,degeneration,v2_exact,strict,22
+greek_script,Contusion,positive,abnormality,v2_exact,strict,22
+english,Contusion,uncertain,bone_contusion,v3_morphology,strict,22
+turkish,Medial OA,positive,degeneration,v3_target,strict,22
+dutch,Medial Meniscus,positive,abnormality,v3_target,strict,21
+spanish,ACL,negative,abnormality_absent,v3_target,strict,21
+dutch,ACL,positive,abnormality,v2_exact,strict,21
+english,Medial OA,positive,abnormality,v2_exact,strict,21
+turkish,MCL,positive,abnormality,v3_target,strict,21
+spanish,Lateral Meniscus,positive,tear,v2_collective,strict,21
+french,Medial Meniscus,positive,degeneration,v2_exact,strict,20
+french,ACL,negative,abnormality_absent,v2_collective,strict,20
+greek_script,Lateral Meniscus,positive,degeneration,v3_target,strict,20
+dutch,PF OA,negative,abnormality_absent,v2_exact,strict,20
+dutch,PF OA,negative,chondral_abnormality_absent,v3_target,strict,20
+cyrillic_script,ACL,negative,abnormality_absent,v2_exact,strict,20
+english,ACL,uncertain,tear,v2_exact,strict,20
+dutch,ACL,positive,abnormality,v3_target,strict,20
+dutch,Medial Meniscus,positive,abnormality,v2_exact,strict,20
+spanish,Lateral Meniscus,positive,abnormality,v3_target,strict,20
+spanish,Baker's,positive,tear,v2_exact,strict,20
+greek_script,ACL,positive,degeneration,v3_target,strict,19
+south_slavic,MCL,positive,tear,v2_exact,strict,19
+spanish,Lateral Meniscus,positive,abnormality,v2_exact,strict,19
+german,Medial Meniscus,positive,degeneration,v2_exact,strict,19
+french,Baker's,positive,tear,v2_exact,strict,19
+greek_script,Medial Meniscus,negative,normal_structure,v3_target,strict,18
+greek_script,Synovitis,positive,abnormality,v2_exact,strict,18
+spanish,Lateral OA,negative,normal_cartilage,v3_target,strict,18
+south_slavic,Fracture,positive,fracture,v2_exact,strict,18
+english,Medial Meniscus,positive,abnormality,v2_exact,strict,18
+english,Medial Meniscus,positive,abnormality,v3_target,strict,18
+spanish,Medial OA,positive,abnormality,v2_exact,strict,18
+turkish,MCL,positive,abnormality,v2_exact,strict,17
+german,Medial Meniscus,positive,abnormality,v3_target,strict,17
+south_slavic,Medial OA,positive,chondral_abnormality,v2_exact,strict,17
+english,ACL,positive,tear,v3_target,linked,17
+spanish,Lateral OA,negative,abnormality_absent,v2_exact,strict,17
+turkish,Synovitis,positive,abnormality,v2_exact,strict,17
+german,Medial OA,positive,chondral_abnormality,v2_exact,strict,17
+english,Medial Meniscus,positive,extrusion,v3_target,strict,17
+greek_script,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,17
+south_slavic,Fracture,positive,fracture,v3_morphology,strict,16
+german,Lateral OA,positive,chondral_abnormality,v3_target,strict,16
+latin_other,Effusion,positive,abnormality,v2_exact,strict,16
+spanish,ACL,positive,tear,v3_target,linked,16
+french,Lateral Meniscus,positive,abnormality,v3_target,strict,16
+cyrillic_script,Medial Meniscus,positive,degeneration,v2_exact,strict,16
+german,Lateral Meniscus,positive,degeneration,v3_target,strict,16
+turkish,Contusion,positive,abnormality,v2_exact,strict,16
+greek_script,ACL,positive,degeneration,v2_exact,strict,16
+dutch,Effusion,positive,chondral_abnormality,v2_exact,strict,16
+french,Lateral Meniscus,positive,abnormality,v2_exact,strict,16
+turkish,Lateral Meniscus,positive,abnormality,v3_target,strict,16
+south_slavic,Lateral OA,positive,chondral_abnormality,v2_exact,strict,15
+south_slavic,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,15
+english,MCL,uncertain,abnormality,v3_target,strict,15
+spanish,Medial Meniscus,positive,tear,v3_target,linked,15
+english,Medial Meniscus,positive,extrusion,v2_exact,strict,15
+english,Synovitis,negative,abnormality_absent,v2_exact,strict,15
+french,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,15
+french,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,15
+french,ACL,positive,abnormality,v3_target,strict,14
+south_slavic,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,14
+french,Medial OA,positive,chondral_abnormality,v3_target,strict,14
+spanish,MCL,positive,sprain,v3_target,strict,14
+french,ACL,positive,abnormality,v2_exact,strict,14
+turkish,Medial OA,positive,chondral_abnormality,v2_exact,strict,13
+cyrillic_script,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,13
+french,MCL,negative,abnormality_absent,v3_target,strict,13
+english,Lateral Meniscus,positive,abnormality,v3_target,strict,13
+greek_script,MCL,positive,sprain,v3_target,strict,13
+south_slavic,ACL,negative,abnormality_absent,v3_target,strict,13
+french,Synovitis,positive,abnormality,v2_exact,strict,13
+cyrillic_script,ACL,positive,tear,v2_exact,strict,13
+cyrillic_script,ACL,positive,tear,v3_target,strict,13
+english,Medial Meniscus,positive,tear,v2_collective,strict,13
+german,Synovitis,positive,synovitis,v3_morphology,strict,13
+turkish,Lateral Meniscus,positive,abnormality,v2_exact,strict,13
+cyrillic_script,PF OA,positive,chondral_abnormality,v3_target,strict,13
+dutch,Lateral Meniscus,positive,abnormality,v3_target,strict,13
+south_slavic,Medial Meniscus,uncertain,tear,v2_exact,strict,12
+dutch,Lateral OA,positive,chondral_abnormality,v3_target,strict,12
+spanish,Baker's,uncertain,abnormality,v2_exact,strict,12
+south_slavic,PF OA,negative,normal_cartilage,v3_target,strict,12
+english,PF OA,uncertain,chondral_abnormality,v3_target,strict,12
+south_slavic,ACL,positive,degeneration,v2_exact,strict,12
+cyrillic_script,ACL,negative,normal_structure,v3_target,strict,12
+latin_other,MCL,negative,abnormality_absent,v2_collective,strict,12
+french,Lateral Meniscus,positive,degeneration,v3_target,strict,11
+turkish,PF OA,positive,degeneration,v3_target,strict,11
+german,Lateral OA,positive,chondral_abnormality,v2_exact,strict,11
+english,PF OA,positive,chondral_abnormality,v3_target,linked,11
+german,Lateral OA,negative,abnormality_absent,v2_exact,strict,11
+latin_other,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,11
+english,Synovitis,uncertain,abnormality,v2_exact,strict,11
+greek_script,Lateral OA,negative,abnormality_absent,v2_exact,strict,11
+cyrillic_script,Fracture,negative,fracture_absent,v3_morphology,strict,11
+french,Fracture,positive,fracture,v3_morphology,strict,11
+french,Fracture,positive,fracture,v2_exact,strict,11
+french,Effusion,positive,tear,v2_exact,strict,11
+dutch,Lateral Meniscus,positive,degeneration,v3_target,strict,11
+english,Lateral Meniscus,positive,abnormality,v2_exact,strict,11
+south_slavic,Contusion,positive,bone_contusion,v3_morphology,strict,11
+spanish,MCL,positive,sprain,v3_target,linked,11
+english,MCL,uncertain,tear,v3_target,strict,11
+latin_other,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,11
+german,Medial Meniscus,positive,extrusion,v3_target,strict,10
+greek_script,Baker's,positive,tear,v2_exact,strict,10
+english,Medial Meniscus,positive,tear,v3_target,linked,10
+turkish,MCL,positive,tear,v2_exact,strict,10
+cyrillic_script,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,10
+dutch,Lateral Meniscus,positive,degeneration,v2_exact,strict,10
+latin_other,ACL,negative,abnormality_absent,v2_collective,strict,10
+dutch,Lateral Meniscus,positive,abnormality,v2_exact,strict,10
+cyrillic_script,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,10
+spanish,Medial Meniscus,positive,degeneration,v3_target,strict,10
+dutch,Fracture,negative,abnormality_absent,v2_exact,strict,10
+south_slavic,ACL,uncertain,tear,v2_exact,strict,10
+south_slavic,PF OA,positive,chondral_abnormality,v2_exact,strict,10
+spanish,Contusion,positive,fracture,v2_exact,strict,10
+french,Medial Meniscus,negative,normal_structure,v3_target,strict,10
+greek_script,Lateral Meniscus,positive,degeneration,v2_exact,strict,10
+french,PF OA,positive,chondral_abnormality,v2_exact,strict,10
+dutch,MCL,negative,abnormality_absent,v2_exact,strict,10
+greek_script,MCL,positive,sprain,v2_exact,strict,10
+dutch,ACL,positive,degeneration,v3_target,strict,9
+dutch,ACL,positive,degeneration,v2_exact,strict,9
+turkish,MCL,positive,tear,v3_target,strict,9
+french,Lateral OA,positive,chondral_abnormality,v2_exact,strict,9
+dutch,MCL,negative,normal_structure,v3_target,strict,9
+spanish,Lateral OA,positive,abnormality,v2_exact,strict,9
+french,Medial OA,positive,chondral_abnormality,v2_exact,strict,9
+english,ACL,positive,sprain,v2_exact,strict,9
+english,Lateral Meniscus,positive,tear,v2_collective,strict,9
+south_slavic,Effusion,positive,tear,v2_exact,strict,9
+english,Contusion,positive,bone_contusion,v3_morphology,linked,9
+english,Effusion,uncertain,joint_effusion,v3_morphology,strict,9
+dutch,Medial Meniscus,positive,extrusion,v3_target,strict,9
+english,MCL,uncertain,abnormality,v2_exact,strict,9
+greek_script,Effusion,negative,joint_effusion_absent,v3_morphology,linked,9
+english,Medial Meniscus,positive,degeneration,v2_collective,strict,9
+english,Medial Meniscus,negative,normal_structure,v3_target,linked,9
+english,PF OA,positive,abnormality,v2_exact,strict,9
+german,Lateral OA,negative,chondral_abnormality_absent,v3_target,strict,9
+english,PF OA,positive,degeneration,v2_exact,strict,9
+turkish,Medial Meniscus,positive,degeneration,v2_collective,strict,9
+cyrillic_script,ACL,positive,degeneration,v3_target,strict,9
+cyrillic_script,ACL,positive,degeneration,v2_exact,strict,9
+cyrillic_script,ACL,negative,abnormality_absent,v3_target,strict,9
+turkish,ACL,positive,sprain,v3_target,strict,8
+english,Synovitis,positive,chondral_abnormality,v2_exact,strict,8
+spanish,Fracture,negative,fracture_absent,v3_morphology,strict,8
+south_slavic,Medial Meniscus,negative,normal_structure,v3_target,strict,8
+english,Medial OA,positive,chondral_abnormality,v2_collective,strict,8
+spanish,Medial OA,negative,normal_cartilage,v3_target,strict,8
+spanish,Medial OA,negative,abnormality_absent,v2_exact,strict,8
+spanish,PF OA,negative,chondral_abnormality_absent,v3_target,strict,8
+spanish,PF OA,positive,abnormality,v2_exact,strict,8
+turkish,ACL,positive,sprain,v2_exact,strict,8
+greek_script,PF OA,negative,abnormality_absent,v2_collective,strict,8
+cyrillic_script,Fracture,negative,abnormality_absent,v2_exact,strict,8
+cyrillic_script,Medial Meniscus,positive,degeneration,v3_target,strict,8
+greek_script,Medial OA,negative,abnormality_absent,v2_collective,strict,8
+english,MCL,positive,avulsion,v3_target,strict,8
+latin_other,Effusion,positive,joint_effusion,v3_morphology,strict,8
+latin_other,Baker's,negative,abnormality_absent,v2_exact,strict,8
+english,ACL,uncertain,abnormality,v3_target,strict,7
+german,Lateral Meniscus,positive,abnormality,v3_target,strict,7
+english,ACL,positive,sprain,v3_target,strict,7
+english,MCL,uncertain,tear,v2_exact,strict,7
+english,MCL,positive,avulsion,v2_exact,strict,7
+french,Lateral OA,positive,chondral_abnormality,v3_target,strict,7
+greek_script,Effusion,positive,chondral_abnormality,v2_exact,strict,7
+greek_script,Medial OA,positive,tear,v2_exact,strict,7
+turkish,Medial OA,positive,abnormality,v2_exact,strict,7
+english,MCL,positive,degeneration,v3_target,strict,7
+spanish,Medial Meniscus,positive,degeneration,v2_exact,strict,7
+french,Contusion,positive,abnormality,v2_exact,strict,7
+greek_script,ACL,negative,abnormality_absent,v2_exact,strict,7
+dutch,Synovitis,positive,abnormality,v2_exact,strict,7
+spanish,Lateral Meniscus,positive,degeneration,v3_target,strict,7
+turkish,ACL,negative,abnormality_absent,v2_collective,strict,7
+greek_script,Medial OA,positive,degeneration,v2_exact,strict,7
+english,Contusion,positive,chondral_abnormality,v2_exact,strict,6
+english,Fracture,negative,fracture_absent,v3_morphology,linked,6
+english,Contusion,positive,fracture,v2_exact,strict,6
+spanish,Lateral Meniscus,positive,abnormality,v3_target,linked,6
+english,ACL,positive,avulsion,v2_exact,strict,6
+south_slavic,MCL,positive,abnormality,v3_target,strict,6
+latin_other,PF OA,positive,chondral_abnormality,v3_target,strict,6
+south_slavic,MCL,positive,degeneration,v3_target,strict,6
+german,Medial Meniscus,positive,abnormality,v2_exact,strict,6
+spanish,Medial Meniscus,uncertain,tear,v3_target,strict,6
+spanish,Medial Meniscus,uncertain,tear,v2_exact,strict,6
+french,MCL,positive,abnormality,v3_target,strict,6
+french,Medial Meniscus,positive,extrusion,v2_exact,strict,6
+english,ACL,positive,avulsion,v3_target,strict,6
+french,Medial Meniscus,positive,extrusion,v3_target,strict,6
+south_slavic,ACL,uncertain,degeneration,v3_target,strict,6
+greek_script,Effusion,positive,tear,v2_exact,strict,6
+turkish,PF OA,negative,normal_cartilage,v3_target,strict,6
+english,Lateral OA,positive,chondral_abnormality,v3_target,linked,6
+french,MCL,positive,abnormality,v2_exact,strict,6
+greek_script,Medial OA,positive,chondral_abnormality,v2_exact,strict,6
+english,MCL,positive,degeneration,v2_exact,strict,6
+latin_other,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,6
+latin_other,Lateral Meniscus,negative,abnormality_absent,v2_exact,strict,6
+french,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,5
+greek_script,Medial Meniscus,positive,extrusion,v2_exact,strict,5
+turkish,Synovitis,positive,sprain,v2_exact,strict,5
+greek_script,Medial Meniscus,positive,extrusion,v3_target,strict,5
+greek_script,Lateral OA,positive,degeneration,v2_exact,strict,5
+english,Lateral OA,positive,degeneration,v2_exact,strict,5
+german,Lateral Meniscus,positive,abnormality,v2_exact,strict,5
+english,Contusion,uncertain,fracture,v2_exact,strict,5
+spanish,Lateral Meniscus,positive,degeneration,v2_exact,strict,5
+english,Synovitis,positive,tear,v2_exact,strict,5
+spanish,ACL,negative,abnormality_absent,v3_target,linked,5
+french,ACL,negative,abnormality_absent,v3_target,strict,5
+english,Medial OA,negative,normal_cartilage,v3_target,linked,5
+spanish,Medial Meniscus,negative,normal_structure,v3_target,strict,5
+spanish,Synovitis,negative,abnormality_absent,v2_exact,strict,5
+french,Medial Meniscus,negative,abnormality_absent,v2_collective,strict,5
+spanish,ACL,positive,degeneration,v2_exact,strict,5
+spanish,Lateral Meniscus,uncertain,tear,v3_target,strict,5
+spanish,Lateral Meniscus,uncertain,tear,v2_exact,strict,5
+spanish,ACL,positive,degeneration,v3_target,strict,5
+english,Medial OA,positive,degeneration,v2_exact,strict,5
+english,PF OA,positive,chondral_abnormality,v2_collective,strict,5
+greek_script,Medial Meniscus,negative,abnormality_absent,v3_target,strict,5
+greek_script,Medial Meniscus,negative,normal_structure,v3_target,linked,5
+english,Medial Meniscus,positive,avulsion,v2_exact,strict,5
+german,Medial OA,negative,abnormality_absent,v2_exact,strict,5
+greek_script,ACL,negative,abnormality_absent,v3_target,strict,5
+english,Medial Meniscus,positive,avulsion,v3_target,strict,5
+latin_other,ACL,negative,abnormality_absent,v2_exact,strict,5
+english,Effusion,positive,tear,v2_exact,strict,5
+south_slavic,MCL,positive,abnormality,v2_exact,strict,5
+english,Baker's,uncertain,baker_cyst,v3_morphology,strict,5
+dutch,Contusion,positive,abnormality,v2_exact,strict,4
+dutch,Effusion,positive,degeneration,v2_exact,strict,4
+german,Lateral Meniscus,positive,degeneration,v2_exact,strict,4
+german,Lateral Meniscus,positive,extrusion,v3_target,strict,4
+cyrillic_script,Medial OA,positive,chondral_abnormality,v3_target,strict,4
+turkish,Fracture,uncertain,fracture,v3_morphology,strict,4
+turkish,ACL,positive,abnormality,v3_target,strict,4
+french,Medial Meniscus,negative,abnormality_absent,v3_target,strict,4
+german,Lateral OA,negative,normal_cartilage,v3_target,strict,4
+spanish,MCL,negative,abnormality_absent,v2_exact,strict,4
+spanish,Medial Meniscus,uncertain,abnormality,v2_exact,strict,4
+spanish,Medial Meniscus,uncertain,abnormality,v3_target,strict,4
+spanish,Lateral Meniscus,positive,tear,v3_target,linked,4
+spanish,Lateral Meniscus,positive,extrusion,v3_target,strict,4
+german,Medial Meniscus,positive,extrusion,v2_exact,strict,4
+spanish,Lateral Meniscus,positive,extrusion,v2_exact,strict,4
+south_slavic,Synovitis,positive,abnormality,v2_exact,strict,4
+south_slavic,Medial Meniscus,positive,tear,v3_target,linked,4
+spanish,Lateral Meniscus,negative,normal_structure,v3_target,strict,4
+dutch,PF OA,negative,normal_cartilage,v3_target,strict,4
+german,Medial OA,negative,chondral_abnormality_absent,v3_target,strict,4
+german,Synovitis,positive,abnormality,v2_exact,strict,4
+english,Medial Meniscus,positive,degeneration,v3_target,linked,4
+spanish,ACL,negative,normal_structure,v3_target,strict,4
+spanish,Fracture,negative,abnormality_absent,v2_exact,strict,4
+south_slavic,Lateral Meniscus,positive,degeneration,v2_exact,strict,4
+english,Lateral Meniscus,uncertain,abnormality,v3_target,strict,4
+south_slavic,MCL,positive,degeneration,v2_exact,strict,4
+south_slavic,Lateral Meniscus,uncertain,tear,v3_target,strict,4
+latin_other,Medial OA,negative,abnormality_absent,v2_collective,strict,4
+german,ACL,negative,abnormality_absent,v2_exact,strict,4
+latin_other,PF OA,positive,chondral_abnormality,v2_exact,strict,4
+latin_other,ACL,negative,normal_structure,v3_target,strict,4
+latin_other,ACL,positive,abnormality,v3_target,strict,4
+english,MCL,positive,sprain,v3_target,linked,4
+german,ACL,negative,normal_structure,v3_target,strict,4
+latin_other,Lateral OA,negative,abnormality_absent,v2_collective,strict,4
+greek_script,Lateral Meniscus,negative,normal_structure,v3_target,linked,4
+greek_script,Lateral OA,negative,chondral_abnormality_absent,v3_target,strict,4
+greek_script,MCL,positive,tear,v2_exact,strict,4
+greek_script,Lateral OA,positive,chondral_abnormality,v2_exact,strict,4
+greek_script,Lateral OA,positive,tear,v2_exact,strict,4
+greek_script,MCL,positive,tear,v3_target,strict,4
+english,Lateral OA,positive,chondral_abnormality,v2_collective,strict,4
+french,Lateral Meniscus,positive,degeneration,v2_exact,strict,4
+french,Lateral OA,negative,abnormality_absent,v2_exact,strict,4
+french,Lateral OA,negative,normal_cartilage,v3_target,strict,4
+french,Fracture,negative,abnormality_absent,v2_exact,strict,4
+greek_script,Medial Meniscus,positive,tear,v2_collective,strict,3
+turkish,Synovitis,positive,tear,v2_exact,strict,3
+turkish,Fracture,uncertain,fracture,v2_exact,strict,3
+dutch,Fracture,positive,chondral_abnormality,v2_exact,strict,3
+greek_script,Medial Meniscus,positive,fracture,v2_exact,strict,3
+dutch,Effusion,uncertain,abnormality,v2_exact,strict,3
+dutch,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,3
+greek_script,Lateral Meniscus,positive,tear,v2_collective,strict,3
+dutch,MCL,positive,sprain,v2_exact,strict,3
+spanish,Medial Meniscus,positive,extrusion,v3_target,strict,3
+greek_script,Fracture,negative,fracture_absent,v3_morphology,strict,3
+spanish,Medial Meniscus,positive,extrusion,v2_exact,strict,3
+german,MCL,positive,tear,v2_exact,strict,3
+german,Lateral Meniscus,uncertain,degeneration,v3_target,strict,3
+greek_script,Medial OA,negative,normal_cartilage,v3_target,strict,3
+greek_script,MCL,negative,normal_structure,v3_target,strict,3
+greek_script,Lateral OA,negative,normal_cartilage,v3_target,strict,3
+spanish,PF OA,positive,chondral_abnormality,v3_target,linked,3
+dutch,MCL,positive,sprain,v3_target,strict,3
+german,Medial OA,negative,normal_cartilage,v3_target,strict,3
+english,Lateral Meniscus,positive,degeneration,v2_collective,strict,3
+south_slavic,Effusion,uncertain,abnormality,v2_exact,strict,3
+german,Baker's,positive,tear,v2_exact,strict,3
+german,Baker's,negative,baker_cyst_absent,v3_morphology,strict,3
+english,PF OA,uncertain,chondral_abnormality,v2_exact,strict,3
+french,Synovitis,positive,tear,v2_exact,strict,3
+french,Medial OA,positive,degeneration,v2_exact,strict,3
+french,Medial OA,negative,abnormality_absent,v2_exact,strict,3
+french,Medial OA,negative,normal_cartilage,v3_target,strict,3
+latin_other,Synovitis,positive,abnormality,v2_exact,strict,3
+spanish,ACL,positive,abnormality,v3_target,strict,3
+french,Medial OA,positive,chondral_abnormality,v3_target,linked,3
+english,Lateral Meniscus,uncertain,abnormality,v2_exact,strict,3
+english,Lateral Meniscus,positive,extrusion,v3_target,strict,3
+spanish,Lateral Meniscus,positive,degeneration,v2_collective,strict,3
+latin_other,Medial OA,positive,chondral_abnormality,v2_exact,strict,3
+english,Medial OA,negative,abnormality_absent,v2_collective,strict,3
+german,Medial Meniscus,uncertain,degeneration,v3_target,strict,3
+dutch,Medial OA,positive,chondral_abnormality,v2_exact,strict,3
+spanish,Fracture,uncertain,fracture,v2_exact,strict,3
+dutch,Medial OA,negative,normal_cartilage,v3_target,strict,3
+english,Medial OA,positive,chondral_abnormality,v3_target,linked,3
+spanish,Fracture,uncertain,fracture,v3_morphology,strict,3
+english,Medial OA,positive,abnormality,v2_collective,strict,3
+latin_other,MCL,negative,normal_structure,v3_target,strict,3
+spanish,MCL,negative,abnormality_absent,v3_target,strict,3
+latin_other,Fracture,negative,abnormality_absent,v2_exact,strict,3
+latin_other,Fracture,negative,fracture_absent,v3_morphology,strict,3
+latin_other,MCL,negative,abnormality_absent,v2_exact,strict,3
+latin_other,Effusion,negative,abnormality_absent,v2_exact,strict,3
+south_slavic,Lateral Meniscus,negative,abnormality_absent,v3_target,linked,3
+south_slavic,Lateral Meniscus,positive,tear,v2_collective,strict,3
+english,Fracture,positive,avulsion,v2_exact,strict,3
+english,ACL,uncertain,degeneration,v2_exact,strict,3
+english,Contusion,uncertain,abnormality,v2_exact,strict,3
+cyrillic_script,Lateral OA,negative,normal_cartilage,v3_target,strict,3
+cyrillic_script,Lateral Meniscus,positive,tear,v2_exact,strict,3
+cyrillic_script,Lateral Meniscus,positive,tear,v3_target,strict,3
+cyrillic_script,Lateral OA,negative,abnormality_absent,v2_exact,strict,3
+german,Contusion,positive,chondral_abnormality,v2_exact,strict,3
+greek_script,Contusion,positive,fracture,v2_exact,strict,3
+german,Contusion,positive,fracture,v2_exact,strict,3
+greek_script,Contusion,positive,sprain,v2_exact,strict,3
+south_slavic,Fracture,uncertain,fracture,v3_morphology,strict,3
+south_slavic,Fracture,uncertain,fracture,v2_exact,strict,3
+south_slavic,Fracture,negative,fracture_absent,v3_morphology,strict,3
+english,ACL,uncertain,tear,v3_target,linked,3
+english,Baker's,uncertain,abnormality,v2_exact,strict,3
+south_slavic,Synovitis,positive,synovitis,v3_morphology,strict,3
+south_slavic,PF OA,positive,chondral_abnormality,v3_target,linked,3
+english,ACL,negative,normal_structure,v3_target,linked,3
+english,ACL,uncertain,sprain,v3_target,strict,3
+english,ACL,uncertain,degeneration,v3_target,strict,3
+english,ACL,uncertain,sprain,v2_exact,strict,3
+south_slavic,Fracture,negative,abnormality_absent,v2_exact,strict,3
+german,Baker's,negative,abnormality_absent,v2_exact,strict,3
+english,ACL,uncertain,abnormality,v2_exact,strict,3
+cyrillic_script,Medial Meniscus,negative,abnormality_absent,v3_target,strict,3
+english,MCL,positive,tear,v3_target,linked,2
+dutch,Baker's,positive,degeneration,v2_exact,strict,2
+turkish,Contusion,uncertain,bone_contusion,v3_morphology,strict,2
+cyrillic_script,Effusion,positive,chondral_abnormality,v2_exact,strict,2
+spanish,Medial Meniscus,positive,tear,v2_collective,strict,2
+latin_other,Baker's,positive,abnormality,v2_exact,strict,2
+latin_other,ACL,positive,abnormality,v2_exact,strict,2
+french,ACL,positive,avulsion,v3_target,linked,2
+french,Baker's,positive,chondral_abnormality,v2_exact,strict,2
+greek_script,Synovitis,positive,chondral_abnormality,v2_exact,strict,2
+greek_script,Fracture,negative,abnormality_absent,v2_exact,strict,2
+greek_script,Lateral Meniscus,positive,extrusion,v3_target,strict,2
+french,ACL,positive,abnormality,v3_target,linked,2
+french,ACL,positive,degeneration,v3_target,strict,2
+spanish,Medial OA,positive,chondral_abnormality,v3_target,linked,2
+greek_script,PF OA,negative,chondral_abnormality_absent,v3_target,strict,2
+greek_script,PF OA,negative,normal_cartilage,v3_target,strict,2
+german,MCL,positive,abnormality,v2_exact,strict,2
+german,MCL,positive,abnormality,v3_target,strict,2
+german,MCL,positive,tear,v3_target,strict,2
+dutch,Lateral Meniscus,positive,extrusion,v3_target,strict,2
+turkish,ACL,negative,abnormality_absent,v3_target,strict,2
+greek_script,Lateral OA,positive,abnormality,v2_exact,strict,2
+greek_script,MCL,negative,normal_structure,v3_target,linked,2
+dutch,Contusion,positive,bone_contusion,v3_morphology,strict,2
+turkish,Lateral Meniscus,uncertain,tear,v3_target,strict,2
+turkish,Lateral OA,positive,chondral_abnormality,v2_exact,strict,2
+turkish,Lateral OA,positive,chondral_abnormality,v3_target,strict,2
+cyrillic_script,Medial Meniscus,positive,chondral_abnormality,v2_exact,strict,2
+greek_script,Medial Meniscus,positive,degeneration,v3_target,linked,2
+turkish,Lateral OA,positive,degeneration,v3_target,strict,2
+dutch,Lateral OA,negative,normal_cartilage,v3_target,strict,2
+spanish,Lateral OA,positive,chondral_abnormality,v3_target,linked,2
+spanish,MCL,positive,abnormality,v3_target,strict,2
+spanish,MCL,positive,abnormality,v2_exact,strict,2
+spanish,MCL,negative,normal_structure,v3_target,strict,2
+english,Lateral Meniscus,negative,normal_structure,v3_target,linked,2
+french,Effusion,negative,abnormality_absent,v2_exact,strict,2
+french,Medial Meniscus,uncertain,abnormality,v2_exact,strict,2
+french,Medial Meniscus,uncertain,abnormality,v3_target,strict,2
+english,Lateral OA,positive,abnormality,v2_collective,strict,2
+south_slavic,ACL,positive,sprain,v3_target,strict,2
+south_slavic,Baker's,negative,baker_cyst_absent,v3_morphology,linked,2
+south_slavic,Baker's,positive,baker_cyst,v3_morphology,linked,2
+english,Lateral Meniscus,uncertain,degeneration,v3_target,strict,2
+english,Lateral Meniscus,positive,tear,v3_target,linked,2
+english,Medial Meniscus,uncertain,abnormality,v2_exact,strict,2
+english,Lateral Meniscus,positive,extrusion,v2_exact,strict,2
+english,Medial Meniscus,uncertain,abnormality,v3_target,strict,2
+english,Medial Meniscus,uncertain,degeneration,v3_target,strict,2
+english,Medial Meniscus,uncertain,tear,v2_collective,strict,2
+spanish,Baker's,uncertain,tear,v2_exact,strict,2
+dutch,PF OA,uncertain,chondral_abnormality,v3_target,strict,2
+german,ACL,positive,degeneration,v3_target,strict,2
+english,PF OA,uncertain,chondral_abnormality,v3_target,linked,2
+latin_other,Synovitis,negative,abnormality_absent,v2_exact,strict,2
+latin_other,PF OA,negative,normal_cartilage,v3_target,strict,2
+spanish,Lateral Meniscus,uncertain,tear,v3_target,linked,2
+spanish,Medial Meniscus,uncertain,tear,v3_target,linked,2
+latin_other,Lateral OA,positive,chondral_abnormality,v2_exact,strict,2
+english,PF OA,positive,degeneration,v3_target,strict,2
+latin_other,MCL,positive,sprain,v3_target,strict,2
+latin_other,Medial OA,positive,chondral_abnormality,v3_target,strict,2
+latin_other,PF OA,negative,abnormality_absent,v2_exact,strict,2
+german,Medial Meniscus,uncertain,abnormality,v3_target,strict,2
+dutch,Medial Meniscus,negative,abnormality_absent,v3_target,strict,2
+dutch,Medial Meniscus,uncertain,abnormality,v3_target,strict,2
+spanish,Fracture,positive,fracture,v3_morphology,linked,2
+latin_other,Effusion,negative,joint_effusion_absent,v3_morphology,strict,2
+greek_script,Contusion,positive,tear,v2_exact,strict,2
+south_slavic,Medial OA,positive,chondral_abnormality,v2_collective,strict,2
+south_slavic,PF OA,positive,abnormality,v2_exact,strict,2
+south_slavic,Effusion,positive,degeneration,v2_exact,strict,2
+south_slavic,Effusion,positive,chondral_abnormality,v2_exact,strict,2
+south_slavic,Contusion,positive,abnormality,v2_exact,strict,2
+south_slavic,Effusion,uncertain,tear,v2_exact,strict,2
+spanish,ACL,positive,abnormality,v2_exact,strict,2
+english,Baker's,positive,chondral_abnormality,v2_exact,strict,2
+south_slavic,Medial Meniscus,positive,tear,v2_collective,strict,2
+south_slavic,Medial Meniscus,positive,abnormality,v3_target,strict,2
+south_slavic,Medial Meniscus,positive,degeneration,v2_exact,strict,2
+south_slavic,Lateral Meniscus,uncertain,tear,v2_exact,strict,2
+english,Effusion,uncertain,abnormality,v2_exact,strict,2
+english,Effusion,positive,chondral_abnormality,v2_exact,strict,2
+english,MCL,uncertain,sprain,v3_target,strict,2
+english,MCL,uncertain,degeneration,v3_target,strict,2
+greek_script,Baker's,positive,baker_cyst,v3_morphology,linked,2
+south_slavic,Medial Meniscus,uncertain,degeneration,v3_target,strict,2
+south_slavic,Medial Meniscus,positive,degeneration,v3_target,linked,2
+turkish,PF OA,negative,abnormality_absent,v2_exact,strict,2
+turkish,Medial Meniscus,positive,extrusion,v2_exact,strict,2
+turkish,PF OA,positive,tear,v2_exact,strict,2
+turkish,Medial Meniscus,positive,extrusion,v3_target,strict,2
+turkish,Medial Meniscus,uncertain,tear,v3_target,strict,2
+cyrillic_script,ACL,negative,abnormality_absent,v3_target,linked,2
+german,Fracture,positive,fracture,v3_morphology,strict,2
+german,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,2
+english,Medial OA,positive,tear,v2_exact,strict,2
+english,Medial OA,uncertain,chondral_abnormality,v3_target,strict,2
+turkish,Lateral Meniscus,negative,abnormality_absent,v2_collective,strict,2
+dutch,ACL,uncertain,abnormality,v2_exact,strict,1
+dutch,ACL,positive,sprain,v3_target,strict,1
+dutch,ACL,positive,sprain,v2_exact,strict,1
+dutch,ACL,negative,abnormality_absent,v3_target,strict,1
+cyrillic_script,Synovitis,positive,chondral_abnormality,v2_exact,strict,1
+cyrillic_script,Synovitis,positive,abnormality,v2_exact,strict,1
+cyrillic_script,PF OA,negative,chondral_abnormality_absent,v3_target,strict,1
+german,Lateral Meniscus,positive,tear,v2_exact,strict,1
+turkish,Medial Meniscus,uncertain,tear,v2_exact,strict,1
+french,Effusion,positive,chondral_abnormality,v2_exact,strict,1
+cyrillic_script,Lateral OA,positive,chondral_abnormality,v3_target,strict,1
+turkish,Medial Meniscus,positive,sprain,v2_collective,strict,1
+cyrillic_script,Lateral OA,positive,chondral_abnormality,v2_exact,strict,1
+turkish,Synovitis,positive,fracture,v2_exact,strict,1
+turkish,PF OA,positive,abnormality,v2_exact,strict,1
+turkish,Medial OA,positive,tear,v2_exact,strict,1
+south_slavic,MCL,uncertain,tear,v3_target,strict,1
+south_slavic,MCL,uncertain,tear,v2_exact,strict,1
+south_slavic,MCL,uncertain,sprain,v3_target,linked,1
+south_slavic,MCL,positive,tear,v3_target,linked,1
+south_slavic,MCL,positive,sprain,v2_exact,strict,1
+english,Synovitis,uncertain,fracture,v2_exact,strict,1
+english,MCL,uncertain,sprain,v2_exact,strict,1
+greek_script,Contusion,negative,bone_contusion_absent,v3_morphology,strict,1
+greek_script,Baker's,positive,degeneration,v2_exact,strict,1
+greek_script,Baker's,positive,chondral_abnormality,v2_exact,strict,1
+greek_script,ACL,positive,sprain,v3_target,strict,1
+greek_script,ACL,positive,degeneration,v3_target,linked,1
+english,ACL,uncertain,degeneration,v3_target,linked,1
+south_slavic,Medial OA,positive,abnormality,v2_exact,strict,1
+south_slavic,Medial OA,negative,normal_cartilage,v3_target,strict,1
+south_slavic,Medial Meniscus,uncertain,tear,v3_target,linked,1
+south_slavic,Medial Meniscus,uncertain,sprain,v3_target,strict,1
+south_slavic,Medial Meniscus,uncertain,sprain,v3_target,linked,1
+south_slavic,Medial Meniscus,uncertain,abnormality,v3_target,strict,1
+south_slavic,Medial Meniscus,uncertain,abnormality,v2_exact,strict,1
+south_slavic,Medial Meniscus,positive,sprain,v3_target,strict,1
+south_slavic,Medial Meniscus,positive,degeneration,v2_collective,strict,1
+english,Contusion,positive,tear,v2_exact,strict,1
+english,Baker's,uncertain,tear,v2_exact,strict,1
+english,Baker's,uncertain,baker_cyst,v3_morphology,linked,1
+south_slavic,MCL,positive,abnormality,v3_target,linked,1
+south_slavic,Lateral OA,positive,degeneration,v2_exact,strict,1
+south_slavic,Lateral OA,negative,normal_cartilage,v3_target,strict,1
+south_slavic,Lateral Meniscus,uncertain,degeneration,v3_target,strict,1
+english,Fracture,positive,fracture,v3_morphology,linked,1
+english,Effusion,uncertain,joint_effusion,v3_morphology,linked,1
+english,Effusion,uncertain,fracture,v2_exact,strict,1
+south_slavic,Lateral Meniscus,positive,degeneration,v3_target,linked,1
+south_slavic,Lateral Meniscus,positive,degeneration,v2_collective,strict,1
+south_slavic,Lateral Meniscus,negative,normal_structure,v3_target,linked,1
+greek_script,Contusion,positive,bone_contusion,v3_morphology,linked,1
+english,Medial Meniscus,positive,abnormality,v3_target,linked,1
+german,Fracture,positive,fracture,v2_exact,strict,1
+german,Contusion,positive,tear,v2_exact,strict,1
+german,Contusion,positive,bone_contusion,v3_morphology,linked,1
+french,Contusion,positive,fracture,v2_exact,strict,1
+english,ACL,positive,avulsion,v3_target,linked,1
+south_slavic,PF OA,positive,chondral_abnormality,v2_collective,strict,1
+south_slavic,PF OA,negative,chondral_abnormality_absent,v3_target,strict,1
+english,Baker's,positive,baker_cyst,v3_morphology,linked,1
+german,Baker's,positive,chondral_abnormality,v2_exact,strict,1
+south_slavic,Effusion,positive,fracture,v2_exact,strict,1
+south_slavic,Effusion,positive,extrusion,v2_exact,strict,1
+south_slavic,Contusion,uncertain,bone_contusion,v3_morphology,strict,1
+south_slavic,Baker's,uncertain,baker_cyst,v3_morphology,strict,1
+south_slavic,Baker's,positive,tear,v2_exact,strict,1
+german,Medial OA,positive,degeneration,v2_exact,strict,1
+english,Medial OA,positive,fracture,v2_exact,strict,1
+spanish,ACL,negative,normal_structure,v3_target,linked,1
+french,PF OA,negative,chondral_abnormality_absent,v3_target,strict,1
+french,PF OA,negative,abnormality_absent,v2_exact,strict,1
+french,Medial Meniscus,positive,abnormality,v3_target,linked,1
+english,Lateral Meniscus,positive,avulsion,v3_target,strict,1
+english,Lateral Meniscus,positive,avulsion,v2_exact,strict,1
+english,Lateral Meniscus,negative,abnormality_absent,v3_target,linked,1
+english,Fracture,uncertain,fracture,v3_morphology,linked,1
+south_slavic,Baker's,positive,chondral_abnormality,v2_exact,strict,1
+south_slavic,ACL,uncertain,degeneration,v2_exact,strict,1
+south_slavic,ACL,positive,tear,v3_target,linked,1
+spanish,Contusion,positive,tear,v2_exact,strict,1
+spanish,Contusion,positive,sprain,v2_exact,strict,1
+spanish,ACL,uncertain,tear,v3_target,strict,1
+spanish,ACL,uncertain,tear,v3_target,linked,1
+spanish,ACL,positive,abnormality,v3_target,linked,1
+english,Medial Meniscus,uncertain,tear,v3_target,linked,1
+english,Medial Meniscus,positive,extrusion,v3_target,linked,1
+german,Synovitis,uncertain,synovitis,v3_morphology,strict,1
+german,Synovitis,positive,synovitis,v3_morphology,linked,1
+german,Synovitis,negative,synovitis_absent,v3_morphology,strict,1
+south_slavic,ACL,positive,degeneration,v3_target,linked,1
+south_slavic,ACL,negative,normal_structure,v3_target,linked,1
+english,PF OA,positive,tear,v2_exact,strict,1
+english,PF OA,positive,tear,v2_collective,strict,1
+german,ACL,positive,tear,v3_target,strict,1
+german,ACL,positive,tear,v2_exact,strict,1
+german,ACL,positive,degeneration,v2_exact,strict,1
+french,PF OA,positive,degeneration,v2_exact,strict,1
+german,Medial Meniscus,negative,abnormality_absent,v3_target,strict,1
+german,MCL,uncertain,tear,v3_target,strict,1
+spanish,Lateral Meniscus,positive,extrusion,v3_target,linked,1
+dutch,Synovitis,positive,sprain,v2_exact,strict,1
+dutch,Synovitis,positive,degeneration,v2_exact,strict,1
+dutch,Synovitis,positive,chondral_abnormality,v2_exact,strict,1
+dutch,PF OA,positive,degeneration,v2_exact,strict,1
+dutch,Medial OA,uncertain,chondral_abnormality,v3_target,strict,1
+dutch,Medial OA,positive,degeneration,v2_exact,strict,1
+spanish,Fracture,uncertain,fracture,v3_morphology,linked,1
+spanish,Effusion,positive,tear,v2_exact,strict,1
+dutch,Medial Meniscus,uncertain,chondral_abnormality,v2_exact,strict,1
+dutch,Medial Meniscus,positive,sprain,v2_exact,strict,1
+dutch,Medial Meniscus,positive,chondral_abnormality,v2_exact,strict,1
+english,Medial OA,positive,degeneration,v2_collective,strict,1
+english,Medial OA,negative,chondral_abnormality_absent,v3_target,linked,1
+german,Medial Meniscus,uncertain,extrusion,v3_target,strict,1
+german,Medial Meniscus,uncertain,abnormality,v2_exact,strict,1
+french,PF OA,positive,chondral_abnormality,v3_target,linked,1
+french,PF OA,negative,normal_cartilage,v3_target,strict,1
+latin_other,Medial Meniscus,positive,tear,v3_target,strict,1
+latin_other,Medial Meniscus,positive,tear,v2_collective,strict,1
+latin_other,Medial Meniscus,positive,sprain,v3_target,strict,1
+latin_other,Medial Meniscus,positive,degeneration,v3_target,strict,1
+latin_other,Medial Meniscus,negative,abnormality_absent,v3_target,strict,1
+latin_other,Medial Meniscus,negative,abnormality_absent,v2_exact,strict,1
+latin_other,MCL,positive,tear,v3_target,strict,1
+latin_other,MCL,positive,tear,v2_exact,strict,1
+latin_other,MCL,positive,sprain,v3_target,linked,1
+latin_other,MCL,positive,sprain,v2_exact,strict,1
+dutch,Lateral OA,positive,degeneration,v2_exact,strict,1
+dutch,Lateral OA,positive,chondral_abnormality,v2_exact,strict,1
+dutch,Lateral Meniscus,uncertain,degeneration,v3_target,strict,1
+dutch,Lateral Meniscus,uncertain,degeneration,v2_exact,strict,1
+dutch,Lateral Meniscus,uncertain,abnormality,v3_target,strict,1
+spanish,Medial Meniscus,positive,abnormality,v3_target,linked,1
+spanish,MCL,uncertain,sprain,v3_target,strict,1
+spanish,MCL,uncertain,sprain,v3_target,linked,1
+spanish,MCL,positive,sprain,v2_exact,strict,1
+latin_other,MCL,positive,abnormality,v3_target,strict,1
+latin_other,MCL,positive,abnormality,v2_exact,strict,1
+latin_other,Lateral OA,positive,chondral_abnormality,v3_target,strict,1
+latin_other,Lateral Meniscus,positive,tear,v3_target,strict,1
+latin_other,Lateral Meniscus,positive,tear,v2_collective,strict,1
+latin_other,Fracture,positive,fracture,v3_morphology,strict,1
+latin_other,Fracture,positive,fracture,v2_exact,strict,1
+latin_other,Baker's,positive,tear,v2_exact,strict,1
+latin_other,Baker's,positive,baker_cyst,v3_morphology,strict,1
+english,PF OA,positive,fracture,v2_exact,strict,1
+english,PF OA,positive,degeneration,v2_collective,strict,1
+english,PF OA,positive,abnormality,v2_collective,strict,1
+english,PF OA,negative,chondral_abnormality_absent,v3_target,linked,1
+french,MCL,positive,avulsion,v3_target,strict,1
+french,MCL,positive,avulsion,v2_exact,strict,1
+dutch,Fracture,positive,abnormality,v2_exact,strict,1
+dutch,MCL,positive,abnormality,v2_exact,strict,1
+dutch,MCL,negative,abnormality_absent,v3_target,strict,1
+latin_other,Baker's,negative,baker_cyst_absent,v3_morphology,strict,1
+latin_other,ACL,positive,degeneration,v3_target,strict,1
+latin_other,ACL,positive,avulsion,v2_exact,strict,1
+greek_script,Lateral Meniscus,positive,extrusion,v2_exact,strict,1
+greek_script,Effusion,positive,joint_effusion,v3_morphology,linked,1
+greek_script,Effusion,positive,degeneration,v2_exact,strict,1
+greek_script,PF OA,positive,tear,v2_collective,strict,1
+greek_script,PF OA,positive,chondral_abnormality,v3_target,linked,1
+greek_script,PF OA,positive,chondral_abnormality,v2_collective,strict,1
+french,Baker's,uncertain,abnormality,v2_exact,strict,1
+french,ACL,uncertain,abnormality,v3_target,strict,1
+french,ACL,uncertain,abnormality,v2_exact,strict,1
+german,MCL,negative,normal_structure,v3_target,linked,1
+german,Lateral OA,positive,abnormality,v2_exact,strict,1
+german,Lateral Meniscus,uncertain,abnormality,v3_target,strict,1
+german,Lateral Meniscus,uncertain,abnormality,v2_exact,strict,1
+greek_script,PF OA,positive,abnormality,v2_collective,strict,1
+greek_script,PF OA,negative,abnormality_absent,v2_exact,strict,1
+greek_script,Medial OA,positive,chondral_abnormality,v2_collective,strict,1
+greek_script,Medial OA,positive,abnormality,v2_collective,strict,1
+english,Lateral OA,uncertain,chondral_abnormality,v3_target,strict,1
+greek_script,MCL,negative,abnormality_absent,v2_exact,strict,1
+english,MCL,uncertain,degeneration,v2_exact,strict,1
+english,MCL,uncertain,avulsion,v3_target,strict,1
+english,MCL,uncertain,avulsion,v2_exact,strict,1
+dutch,ACL,uncertain,abnormality,v3_target,strict,1
+turkish,ACL,uncertain,tear,v3_target,strict,1
+turkish,ACL,uncertain,degeneration,v3_target,strict,1
+turkish,ACL,positive,abnormality,v2_exact,strict,1
+dutch,Lateral Meniscus,uncertain,abnormality,v2_exact,strict,1
+dutch,Lateral Meniscus,positive,tear,v3_target,strict,1
+dutch,Lateral Meniscus,positive,tear,v2_exact,strict,1
+dutch,Fracture,uncertain,chondral_abnormality,v2_exact,strict,1
+french,Contusion,positive,degeneration,v2_exact,strict,1
+french,Contusion,negative,abnormality_absent,v2_exact,strict,1
+turkish,Medial Meniscus,uncertain,abnormality,v3_target,strict,1
+turkish,Medial Meniscus,uncertain,abnormality,v2_exact,strict,1
+turkish,Medial Meniscus,positive,tear,v2_collective,strict,1
+turkish,Effusion,positive,tear,v3_morphology,strict,1
+turkish,Effusion,positive,degeneration,v2_exact,strict,1
+turkish,Contusion,positive,chondral_abnormality,v2_exact,strict,1
+dutch,Effusion,uncertain,chondral_abnormality,v2_exact,strict,1
+dutch,Contusion,positive,chondral_abnormality,v2_exact,strict,1
+dutch,Baker's,positive,chondral_abnormality,v2_exact,strict,1
+dutch,Baker's,negative,baker_cyst_absent,v3_morphology,strict,1
+dutch,Baker's,negative,baker_cyst_absent,v3_morphology,linked,1
+english,Lateral OA,uncertain,chondral_abnormality,v2_exact,strict,1
+english,Lateral OA,positive,tear,v3_target,strict,1
+english,Lateral OA,positive,tear,v2_exact,strict,1
+english,Lateral OA,positive,tear,v2_collective,strict,1
+greek_script,Medial OA,negative,chondral_abnormality_absent,v3_target,strict,1
+greek_script,Medial OA,negative,abnormality_absent,v2_exact,strict,1
+greek_script,Medial Meniscus,positive,abnormality,v3_target,strict,1
+cyrillic_script,Medial OA,negative,normal_cartilage,v3_target,strict,1
+cyrillic_script,Medial OA,negative,abnormality_absent,v2_exact,strict,1
+french,Fracture,uncertain,fracture,v3_morphology,strict,1
+french,Fracture,uncertain,fracture,v2_exact,strict,1
+cyrillic_script,Lateral Meniscus,positive,degeneration,v2_exact,strict,1
+cyrillic_script,Lateral Meniscus,positive,chondral_abnormality,v2_exact,strict,1
+cyrillic_script,Lateral Meniscus,negative,abnormality_absent,v3_target,strict,1
+turkish,MCL,positive,fracture,v2_exact,strict,1
+turkish,MCL,positive,degeneration,v3_target,strict,1
+turkish,MCL,positive,degeneration,v2_exact,strict,1
+turkish,MCL,negative,abnormality_absent,v3_target,strict,1
+turkish,Lateral OA,positive,tear,v2_exact,strict,1
+turkish,Lateral Meniscus,uncertain,tear,v2_exact,strict,1
+turkish,Lateral Meniscus,positive,sprain,v2_exact,strict,1

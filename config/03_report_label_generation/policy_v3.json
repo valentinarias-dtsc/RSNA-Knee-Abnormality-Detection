@@ -1,0 +1,27 @@
+{
+  "stage": "03_report_label_generation",
+  "policy_version": "report-label-policy-v3.0.0",
+  "artifact_version": "v3",
+  "targets": [
+    "ACL", "MCL", "Medial Meniscus", "Lateral Meniscus",
+    "Medial OA", "Lateral OA", "PF OA", "Effusion",
+    "Synovitis", "Baker's", "Contusion", "Fracture"
+  ],
+  "states": ["positive", "negative", "uncertain", "unknown"],
+  "source_priority": ["official", "report_derived", "unresolved"],
+  "expected_studies": 4407,
+  "expected_complete_gold_studies": 58,
+  "missing_mention_policy": "unknown",
+  "uncertainty_policy": "missing_binary_label",
+  "ensemble_unit": "mention_and_proposition_evidence",
+  "language_routing": "non_exclusive_hypotheses_with_common_exact_branch",
+  "segmentation_views": ["strict_clause", "high_confidence_linked_clause"],
+  "morphology_policy": "target_and_language_scoped_corpus_observed_roots_with_exclusions",
+  "target_reconciliation": "target_specific_over_collective; positive_then_uncertain_then_negative; conflicts_reduce_confidence",
+  "phenotype_policy": "extract_separately_then_preserve_v2_binary_mapping",
+  "contusion_proxy_policy": "generic_bone_marrow_edema_is_insufficient",
+  "synovitis_proxy_policy": "synovial_plica_cyst_tenosynovitis_and_chondromatosis_are_insufficient",
+  "gold_usage": "single_final_frozen_sentinel_after_corpus_only_validation",
+  "allowed_label_input_columns": ["StudyInstanceUID", "Report", "12 official target columns"],
+  "forbidden_label_inputs": ["PixelData", "DICOM metadata", "Series metadata", "scanner", "anatomical plane"]
+}
