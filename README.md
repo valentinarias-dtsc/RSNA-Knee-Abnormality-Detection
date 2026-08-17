@@ -25,6 +25,7 @@ Desde la raíz del repositorio:
 ```powershell
 python -m unittest discover -s tests -v
 python scripts/generate_report_labels.py --policy v3
+python scripts/inspect_report_label_corpus.py
 python scripts/generate_report_labels.py --policy v2
 ```
 
@@ -33,6 +34,8 @@ El artefacto activo es `artifacts/03_report_label_generation/supervision_long_v3
 La cobertura detallada por combinación idioma-target se guarda en `coverage_by_language_target_v3.csv`; los deltas y transiciones respecto de v2 tienen artefactos propios. La consistencia de evidence, proposition, phenotype, detector, status, confidence y provenance se verifica exhaustivamente en cada ejecución.
 
 La implementación no usa DICOM, metadata de Series ni píxeles para derivar labels y no entrena modelos MRI.
+
+La inspección descriptiva y reproducible del corpus derivado por v3 se documenta en [Report-label corpus inspection for NLP modeling evidence](reports/stages/03_report_label_corpus_inspection_v3.md). Sus tablas auditables y metadata de ejecución se escriben bajo `artifacts/03_report_label_generation/corpus_inspection_v3/` sin modificar la policy ni los labels existentes.
 
 ## Repository Migration
 

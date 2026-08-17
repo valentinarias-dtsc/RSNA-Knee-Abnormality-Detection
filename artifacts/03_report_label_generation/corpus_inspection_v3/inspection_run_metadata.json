@@ -1,0 +1,816 @@
+{
+  "stage": "03_report_label_generation",
+  "inspection_version": "report-label-corpus-inspection-v1.0.0",
+  "policy_version": "report-label-policy-v3.0.0",
+  "execution_timestamp_utc": "2026-08-17T17:21:51.743862+00:00",
+  "scope": "descriptive corpus and report-derived supervision inspection",
+  "excluded_inputs": [
+    "official_label values",
+    "final_label overrides",
+    "PixelData",
+    "DICOM metadata",
+    "Series metadata",
+    "scanner",
+    "anatomical plane",
+    "external models",
+    "embeddings"
+  ],
+  "inputs_and_reviewed_sources": [
+    {
+      "path": "data/train.csv",
+      "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+    },
+    {
+      "path": "artifacts/03_report_label_generation/supervision_long_v3.csv",
+      "sha256": "c92d95176a167cea769cc915a624434486d696e7ea935d753d3ea6c26b0386d8"
+    },
+    {
+      "path": "config/03_report_label_generation/policy_v3.json",
+      "sha256": "c700441ecbffe500ef16fe59d98af925e1eaf37fdc348873f1720dcba27b6d46"
+    },
+    {
+      "path": "src/report_labels/text.py",
+      "sha256": "5caa127d2e5eb74dffd86903f94c993dee6445e3729fbdf6d776e210fcf174fc"
+    },
+    {
+      "path": "src/report_labels/extraction.py",
+      "sha256": "b9440b9bb064444341c4ddf86e93f9c791d99cf677c28968a61353134d1cf8cf"
+    },
+    {
+      "path": "src/report_labels/v3/schema.py",
+      "sha256": "c97037a64a66ba607287fae24d7cc0af718a24bfc495589c4dcc970743a004f9"
+    },
+    {
+      "path": "src/report_labels/v3/text.py",
+      "sha256": "1dad4c75bded22cacfa452a51947270356455673740d1405aae9ed2a95b70fed"
+    },
+    {
+      "path": "src/report_labels/v3/extraction.py",
+      "sha256": "919632605128db23bb3ba4a679590b8df1610c451004b5c77d57f2b4e8c6af06"
+    },
+    {
+      "path": "src/report_labels/v3/reconciliation.py",
+      "sha256": "a5721d978d2ead88c9d2214e9329a68f406eea4072ac4184bbea1579888d8f5a"
+    },
+    {
+      "path": "src/report_labels/v3/evaluation.py",
+      "sha256": "067396968bff1b649afc7968c0fb15c88fa77bc98d9424ec959a5799bd467b5d"
+    },
+    {
+      "path": "src/report_labels/v3/pipeline.py",
+      "sha256": "8f703be859af0fd57777b8e32976543af934b8ca20746b82c3e2643841cde583"
+    },
+    {
+      "path": "src/report_labels/v3/inspection.py",
+      "sha256": "3ebb3c7a118a7bdeeb6f26dde6f7c18886d49f1d0e243cbc105c3caf0dd92923"
+    },
+    {
+      "path": "src/report_labels/v3/inspection_reporting.py",
+      "sha256": "39067b569b59f6a835e728ce3d8527c7f3f2c8701997fdbaa5015c87866ee269"
+    },
+    {
+      "path": "scripts/generate_report_labels.py",
+      "sha256": "46c8338d923fb8a6553cf4f0b874c45276a2fc6e3e4178e1894d8a33608e4d70"
+    },
+    {
+      "path": "scripts/inspect_report_label_corpus.py",
+      "sha256": "cf2d96864cc0e1b152d87c75419fa93facd6dd048b6aa913098c45c326bb7f4a"
+    },
+    {
+      "path": "tests/test_report_labels_v3.py",
+      "sha256": "26d266db91c8aed6b85fd3ad409f8f0b24b92cf6010c7d563f0bf3056b58b67f"
+    },
+    {
+      "path": "tests/test_report_label_corpus_inspection.py",
+      "sha256": "6de3f27c779660781a2ff9717deb07c172c310229f46c623fa374722ce5e41c2"
+    },
+    {
+      "path": "reports/stages/03_report_label_generation_v3.md",
+      "sha256": "58589485c3cfab22ad01d1a6b9aabd294397c248f02699c03c27cd23e25c361f"
+    },
+    {
+      "path": "reports/implementation/03_report_label_generation_v3_implementation.md",
+      "sha256": "efd1a7dca7faa9e0f34da4daaaa3bfa8db68cc152cebfabfee1fc5c4d59951a0"
+    }
+  ],
+  "parameters": {
+    "seed": 20260817,
+    "audit_sample_max_rows": 600,
+    "similarity_max_pairs_per_stratum": 20000,
+    "ngram_top_k": 100,
+    "duplicate_group_text_limit": 1000,
+    "simple_tokenization": "normalize_text followed by Unicode regex \\b\\w+\\b",
+    "text_similarity": "raw exact, normalized exact, and token-set Jaccard",
+    "template_modes": [
+      "exact",
+      "numeric_normalized"
+    ],
+    "study_target_source": "status/derived_label/evidence_provenance; official/final values excluded"
+  },
+  "counts": {
+    "studies": 4407,
+    "study_target_pairs": 52884,
+    "strict_views": 79781,
+    "linked_views": 2578,
+    "mentions": 52604,
+    "propositions": 41811,
+    "selected_evidence_entries": 38706,
+    "selected_winning_evidence_entries": 38184,
+    "binary_resolved": 24294,
+    "status_counts": {
+      "positive": 11118,
+      "negative": 13176,
+      "uncertain": 294,
+      "unknown": 28296
+    },
+    "template_checks": {
+      "exact_duplicated_families": 53,
+      "numeric_normalized_duplicated_families": 53
+    },
+    "semantic_frame_count": 34
+  },
+  "outputs": {
+    "corpus_unit_counts": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/corpus_unit_counts.csv",
+      "sha256": "8d299db90ea894a0291514cd276a954c143f8ec62c0249957bb406a9f91f982e",
+      "rows": 125,
+      "schema": {
+        "unit": "object",
+        "target": "object",
+        "status": "object",
+        "count": "int64",
+        "denominator": "object",
+        "mean": "float64",
+        "std": "float64",
+        "median": "float64",
+        "min": "float64",
+        "max": "float64",
+        "p05": "float64",
+        "p25": "float64",
+        "p75": "float64",
+        "p95": "float64",
+        "p99": "float64"
+      }
+    },
+    "text_length_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/text_length_summary.csv",
+      "sha256": "cfb5c36df44ec15f32e60828af921e2e0bf1b61b1346e4d7cc4f829d45d304d6",
+      "rows": 8,
+      "schema": {
+        "unit": "object",
+        "measure": "object",
+        "count": "int64",
+        "mean": "float64",
+        "std": "float64",
+        "median": "float64",
+        "min": "float64",
+        "max": "float64",
+        "p05": "float64",
+        "p25": "float64",
+        "p75": "float64",
+        "p95": "float64",
+        "p99": "float64"
+      }
+    },
+    "target_status_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/target_status_summary.csv",
+      "sha256": "1cb1176e9420c0e22c68441d1dff15d5d4c693f68a778a5716d3aba28baaf153",
+      "rows": 12,
+      "schema": {
+        "target": "object",
+        "pairs": "int64",
+        "positive": "int64",
+        "positive_rate": "float64",
+        "negative": "int64",
+        "negative_rate": "float64",
+        "uncertain": "int64",
+        "uncertain_rate": "float64",
+        "unknown": "int64",
+        "unknown_rate": "float64",
+        "binary_resolved": "int64",
+        "binary_resolved_rate": "float64",
+        "positive_over_binary_resolved": "float64",
+        "negative_over_binary_resolved": "float64"
+      }
+    },
+    "language_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/language_summary.csv",
+      "sha256": "a817ee3df6190acb1a49d00ad36829ab1339c4659daebe097cdab8b79c190300",
+      "rows": 10,
+      "schema": {
+        "language_group": "object",
+        "reports": "int64",
+        "study_target_pairs": "int64",
+        "positive": "int64",
+        "negative": "int64",
+        "uncertain": "int64",
+        "unknown": "int64",
+        "binary_resolved": "int64",
+        "resolved_rate": "float64",
+        "strict_views": "int64",
+        "linked_views": "int64",
+        "mentions": "int64",
+        "propositions": "int64"
+      }
+    },
+    "language_hypothesis_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/language_hypothesis_summary.csv",
+      "sha256": "dab95a03d347dff2a1fc528556a71e1c0b4de0ba4c5b7bef5966a76eb8cea210",
+      "rows": 10,
+      "schema": {
+        "language_hypothesis": "object",
+        "reports": "int64",
+        "study_target_pairs": "int64",
+        "positive": "int64",
+        "negative": "int64",
+        "uncertain": "int64",
+        "unknown": "int64",
+        "resolved_rate": "float64",
+        "strict_views": "int64",
+        "linked_views": "int64",
+        "mentions": "int64",
+        "propositions": "int64",
+        "non_exclusive_denominator": "object"
+      }
+    },
+    "language_target_status_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/language_target_status_summary.csv",
+      "sha256": "435247b6b7f15db8ff199f785dab58f5017d426e7f6000e1f1bd9a6a6d6364ea",
+      "rows": 120,
+      "schema": {
+        "language_group": "object",
+        "target": "object",
+        "pairs": "int64",
+        "positive": "int64",
+        "negative": "int64",
+        "uncertain": "int64",
+        "unknown": "int64",
+        "binary_resolved": "int64",
+        "resolved_rate": "float64"
+      }
+    },
+    "detector_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/detector_summary.csv",
+      "sha256": "0a889a6a7adbbf946cad6741148d52ec151c7b3759906482f56bd3d7175d9ce6",
+      "rows": 4075,
+      "schema": {
+        "unit": "object",
+        "detector": "object",
+        "target": "object",
+        "status": "object",
+        "phenotype": "object",
+        "language": "object",
+        "rule": "object",
+        "count": "int64",
+        "unique_studies": "int64",
+        "unique_study_target_pairs": "int64",
+        "non_additivity_note": "object"
+      }
+    },
+    "detector_combination_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/detector_combination_summary.csv",
+      "sha256": "aadc49e7b7a4d4fa09eb47f954d81864e3706ed90785e123209178a80b52bad5",
+      "rows": 9,
+      "schema": {
+        "detector_combination": "object",
+        "detector_count": "int64",
+        "detector_count_bucket": "object",
+        "propositions": "int64",
+        "selected_propositions": "int64",
+        "unique_studies": "int64",
+        "targets": "object",
+        "statuses": "object",
+        "phenotypes": "object"
+      }
+    },
+    "confidence_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/confidence_summary.csv",
+      "sha256": "419af48653f50b2102a8ee23870242807dde74e50e527d3e7c3b75ad14684672",
+      "rows": 221,
+      "schema": {
+        "unit": "object",
+        "dimension": "object",
+        "value": "object",
+        "count": "int64",
+        "mean": "float64",
+        "std": "float64",
+        "median": "float64",
+        "min": "float64",
+        "max": "float64",
+        "p05": "float64",
+        "p25": "float64",
+        "p75": "float64",
+        "p95": "float64",
+        "p99": "float64",
+        "unique_confidence_values": "object",
+        "interpretation": "object"
+      }
+    },
+    "phenotype_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/phenotype_summary.csv",
+      "sha256": "87b884114095a64997a841ee0c46c63f10dfe89069a59121305e66491c0e6d93",
+      "rows": 21,
+      "schema": {
+        "phenotype": "object",
+        "propositions": "int64",
+        "unique_studies": "int64",
+        "selected_pair_participations": "int64",
+        "selected_winning_pair_participations": "int64",
+        "targets": "object",
+        "statuses": "object",
+        "detectors": "object",
+        "languages": "object",
+        "rules": "object"
+      }
+    },
+    "target_phenotype_status": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/target_phenotype_status.csv",
+      "sha256": "10b51aa2b4c6041b161e630bc592bc01a56a048614e76275de90d42ada0b1e62",
+      "rows": 142,
+      "schema": {
+        "target": "object",
+        "phenotype": "object",
+        "status": "object",
+        "propositions": "int64",
+        "proportion_within_target_status_propositions": "float64",
+        "target_status_proposition_denominator": "int64",
+        "selected_winning_evidence_instances": "int64"
+      }
+    },
+    "rule_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/rule_summary.csv",
+      "sha256": "6a5b83956fe4e92e3c405f253d1319abf7535c886af37741d46ade5385eff744",
+      "rows": 36,
+      "schema": {
+        "rule": "object",
+        "is_explicit_rule": "bool",
+        "mentions": "int64",
+        "propositions": "int64",
+        "unique_studies": "int64",
+        "selected_pair_participations": "int64",
+        "selected_winning_pair_participations": "int64",
+        "detectors": "object",
+        "targets": "object",
+        "languages": "object",
+        "phenotypes": "object",
+        "statuses": "object",
+        "cumulative_selected_participation_share": "float64",
+        "cumulative_note": "object"
+      }
+    },
+    "duplicate_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/duplicate_summary.csv",
+      "sha256": "9706826ecb06a26e08aa34e2515367120451244ea09ecfa6a81a1bcde89eadc8",
+      "rows": 4,
+      "schema": {
+        "level": "object",
+        "total_instances": "int64",
+        "unique_texts": "int64",
+        "duplicated_instances_excess": "int64",
+        "duplicate_rate_excess": "float64",
+        "instances_in_duplicate_groups": "int64",
+        "duplicate_groups": "int64",
+        "mean_duplicate_group_size": "float64",
+        "median_duplicate_group_size": "float64",
+        "max_duplicate_group_size": "int64",
+        "duplicate_definition": "object"
+      }
+    },
+    "duplicate_group_size_distribution": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/duplicate_group_size_distribution.csv",
+      "sha256": "85c8e72e044c57276879b96cb26bd1fb6abf3851f407a8fa82b3ac40bd7429ca",
+      "rows": 297,
+      "schema": {
+        "level": "object",
+        "group_size": "int64",
+        "groups": "int64",
+        "instances": "int64"
+      }
+    },
+    "duplicate_groups": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/duplicate_groups.csv",
+      "sha256": "2c09bf33d2aa9a8d409edf2f41966184ac90bb206cb8068c25c29c45f08247dc",
+      "rows": 9155,
+      "schema": {
+        "level": "object",
+        "group_sha256": "object",
+        "group_size": "int64",
+        "unique_studies": "int64",
+        "normalized_text": "object",
+        "example_text": "object",
+        "instance_ids": "object",
+        "StudyInstanceUIDs": "object"
+      }
+    },
+    "template_family_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/template_family_summary.csv",
+      "sha256": "daba9c7a1e23aa58755fc2ae5d91f95e78cc86836dbf02a546fc651efd206094",
+      "rows": 8518,
+      "schema": {
+        "template_mode": "object",
+        "template_family_sha256": "object",
+        "reports": "int64",
+        "is_duplicated_family": "bool",
+        "StudyInstanceUIDs": "object",
+        "languages": "object",
+        "target_status_counts": "object",
+        "homogeneous_across_each_target": "bool",
+        "heterogeneous_target_count": "int64",
+        "heterogeneous_targets": "object"
+      }
+    },
+    "lexical_diversity_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/lexical_diversity_summary.csv",
+      "sha256": "c1e2f9a6c079691a6761e984f33c1696e83611c380adcf1ead19bd6ef7ef827e",
+      "rows": 35,
+      "schema": {
+        "target": "object",
+        "status": "object",
+        "evidence_instances": "int64",
+        "unique_normalized_texts": "int64",
+        "duplicated_instances_excess": "int64",
+        "duplicate_rate_excess": "float64",
+        "total_simple_tokens": "int64",
+        "unique_tokens": "int64",
+        "type_token_ratio": "float64",
+        "ttr_note": "object",
+        "unigram_top_10_coverage": "float64",
+        "unigram_top_10_actual_n": "int64",
+        "unigram_top_25_coverage": "float64",
+        "unigram_top_25_actual_n": "int64",
+        "unigram_top_50_coverage": "float64",
+        "unigram_top_50_actual_n": "int64",
+        "unigram_top_100_coverage": "float64",
+        "unigram_top_100_actual_n": "int64",
+        "bigram_top_10_coverage": "float64",
+        "bigram_top_10_actual_n": "int64",
+        "bigram_top_25_coverage": "float64",
+        "bigram_top_25_actual_n": "int64",
+        "bigram_top_50_coverage": "float64",
+        "bigram_top_50_actual_n": "int64",
+        "bigram_top_100_coverage": "float64",
+        "bigram_top_100_actual_n": "int64"
+      }
+    },
+    "ngram_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/ngram_summary.csv",
+      "sha256": "fff3b092295387a76a356fda4315a8286c23dea28b6a495033e40cb869ef2e30",
+      "rows": 6645,
+      "schema": {
+        "target": "object",
+        "status": "object",
+        "ngram_order": "int64",
+        "rank": "int64",
+        "ngram": "object",
+        "count": "int64",
+        "share": "float64",
+        "cumulative_share": "float64",
+        "total_ngram_occurrences": "int64"
+      }
+    },
+    "text_similarity_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/text_similarity_summary.csv",
+      "sha256": "cebf4072e16dc00e065404335ea37a79823385081a2a6acfb2aab603b82bbede",
+      "rows": 35,
+      "schema": {
+        "target": "object",
+        "status": "object",
+        "evidence_instances": "int64",
+        "possible_pairs": "int64",
+        "evaluated_pairs": "int64",
+        "pair_sampling": "object",
+        "raw_exact_match_rate": "float64",
+        "normalized_exact_match_rate": "float64",
+        "jaccard_mean": "float64",
+        "jaccard_std": "float64",
+        "jaccard_median": "float64",
+        "jaccard_min": "float64",
+        "jaccard_max": "float64",
+        "jaccard_p05": "float64",
+        "jaccard_p25": "float64",
+        "jaccard_p75": "float64",
+        "jaccard_p95": "float64",
+        "jaccard_p99": "float64",
+        "method": "object"
+      }
+    },
+    "evidence_target_status_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/evidence_target_status_summary.csv",
+      "sha256": "b250e6856795c4c7353d1a65d5dfd2bca8587d40949cf3d45637ec6c28025093",
+      "rows": 35,
+      "schema": {
+        "target": "object",
+        "status": "object",
+        "evidence_instances": "int64",
+        "unique_normalized_evidence": "int64",
+        "proportion_duplicated_excess": "float64",
+        "detectors": "object",
+        "phenotypes": "object",
+        "rules": "object",
+        "languages": "object"
+      }
+    },
+    "evidence_inventory": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/evidence_inventory.csv",
+      "sha256": "83aeff2dde99809144e4e6fc6df37924586ac0e291a7035a4c718a75dbc757f4",
+      "rows": 38706,
+      "schema": {
+        "StudyInstanceUID": "object",
+        "target": "object",
+        "final_status": "object",
+        "selected_order": "int64",
+        "proposition_status": "object",
+        "is_winning_status": "bool",
+        "evidence": "object",
+        "normalized_evidence": "object",
+        "phenotype": "object",
+        "detectors": "object",
+        "detector_combination": "object",
+        "detector_count": "int64",
+        "views": "object",
+        "view_support": "object",
+        "languages": "object",
+        "language_combination": "object",
+        "sections": "object",
+        "source_indices": "object",
+        "source_clause_count": "int64",
+        "spans": "object",
+        "proposition_confidence": "float64",
+        "final_confidence": "float64",
+        "collective": "bool",
+        "rules": "object",
+        "rule_combination": "object",
+        "report_language_group": "object",
+        "rationale": "object",
+        "has_conflict": "bool",
+        "resolution_mode": "object",
+        "characters": "int64",
+        "simple_tokens": "int64",
+        "report_sha256": "object"
+      }
+    },
+    "conflict_cases": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/conflict_cases.csv",
+      "sha256": "1006e5ae0dbd9e882c7e678d889900bf3b0ed82365e9d9dbf157bc6a802616b7",
+      "rows": 522,
+      "schema": {
+        "StudyInstanceUID": "object",
+        "target": "object",
+        "winning_status": "object",
+        "conflicting_statuses": "object",
+        "confidence": "float64",
+        "language_group": "object",
+        "detectors": "object",
+        "phenotypes": "object",
+        "rules": "object",
+        "rationale": "object",
+        "evidence_provenance": "object"
+      }
+    },
+    "collective_evidence_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/collective_evidence_summary.csv",
+      "sha256": "bb672b9940cc8d2f7aba47b85b1934f1699fd4d8d1565911b29830dd0927ae4a",
+      "rows": 224,
+      "schema": {
+        "record_type": "object",
+        "target": "object",
+        "status": "object",
+        "rule_combination": "object",
+        "language_combination": "object",
+        "phenotype": "object",
+        "confidence": "float64",
+        "mentions": "int64",
+        "propositions": "int64",
+        "unique_studies": "int64",
+        "selected_propositions": "int64",
+        "selected_winning_propositions": "int64",
+        "selected_study_target_pairs": "int64"
+      }
+    },
+    "view_kind_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/view_kind_summary.csv",
+      "sha256": "ef0535e3ba89e0751d1ac824aed7669882fd0b658714bcbef6df8c6c6718f061",
+      "rows": 371,
+      "schema": {
+        "record_type": "object",
+        "view_kind": "object",
+        "support_scope": "object",
+        "target": "object",
+        "status": "object",
+        "detector": "object",
+        "rule": "object",
+        "phenotype": "object",
+        "views": "float64",
+        "mentions": "float64",
+        "propositions": "int64",
+        "selected_pair_participations": "float64"
+      }
+    },
+    "linked_view_dependency_cases": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/linked_view_dependency_cases.csv",
+      "sha256": "93a225f98067f9d21419aefe1e73b0983f570a3def1ee8f0f5a26c71dec31e77",
+      "rows": 691,
+      "schema": {
+        "StudyInstanceUID": "object",
+        "target": "object",
+        "view_support": "object",
+        "dependency_type": "object",
+        "final_status": "object",
+        "selected_order": "int64",
+        "proposition_status": "object",
+        "is_winning_status": "bool",
+        "evidence": "object",
+        "normalized_evidence": "object",
+        "phenotype": "object",
+        "detectors": "object",
+        "detector_combination": "object",
+        "detector_count": "int64",
+        "views": "object",
+        "languages": "object",
+        "language_combination": "object",
+        "sections": "object",
+        "source_indices": "object",
+        "source_clause_count": "int64",
+        "spans": "object",
+        "proposition_confidence": "float64",
+        "final_confidence": "float64",
+        "collective": "bool",
+        "rules": "object",
+        "rule_combination": "object",
+        "report_language_group": "object",
+        "rationale": "object",
+        "has_conflict": "bool",
+        "resolution_mode": "object",
+        "characters": "int64",
+        "simple_tokens": "int64",
+        "report_sha256": "object",
+        "Report": "object"
+      }
+    },
+    "context_structure_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/context_structure_summary.csv",
+      "sha256": "1f64cb03868ad5f74928db6bcde63cd115fc07bcdf70c94d69c519bb0fd211ce",
+      "rows": 375,
+      "schema": {
+        "context_structure": "object",
+        "target": "object",
+        "status": "object",
+        "detector": "object",
+        "phenotype": "object",
+        "rule": "object",
+        "selected_evidence_instances": "int64",
+        "unique_study_target_pairs": "int64"
+      }
+    },
+    "negation_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/negation_summary.csv",
+      "sha256": "35278d56841e64fafd26b542147b3bf06f993a7d4685518a98a523a0f3ece503",
+      "rows": 377,
+      "schema": {
+        "negation_type": "object",
+        "target": "object",
+        "report_language_group": "object",
+        "detector_combination": "object",
+        "rule_combination": "object",
+        "phenotype": "object",
+        "evidence_instances": "int64",
+        "unique_evidence_texts": "int64",
+        "unique_studies": "int64",
+        "example_evidence": "object",
+        "classification_basis": "object"
+      }
+    },
+    "uncertain_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/uncertain_summary.csv",
+      "sha256": "c43b9a02e52803b3aa8d51220700bb165b55215f77dbe1d79b747e17fe7b63d4",
+      "rows": 164,
+      "schema": {
+        "target": "object",
+        "language_group": "object",
+        "detector": "object",
+        "rule": "object",
+        "phenotype": "object",
+        "uncertainty_pattern": "object",
+        "evidence_instances": "int64",
+        "unique_evidence_texts": "int64",
+        "duplicate_rate_excess": "float64",
+        "example_evidence": "object"
+      }
+    },
+    "unknown_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/unknown_summary.csv",
+      "sha256": "fbd32f10f413a398588f172c76a441e72310307bd631dd1edcdf0f58c1930ff6",
+      "rows": 120,
+      "schema": {
+        "target": "object",
+        "language_group": "object",
+        "pairs": "int64",
+        "unknown": "int64",
+        "unknown_rate": "float64",
+        "mean_report_characters": "float64",
+        "mean_report_simple_tokens": "float64",
+        "mean_clauses": "float64",
+        "median_clauses": "float64",
+        "mean_strict_views": "float64",
+        "mean_linked_views": "float64",
+        "reports_with_other_binary_resolved_target": "int64",
+        "mean_other_binary_resolved_targets": "float64",
+        "interpretation_limit": "object"
+      }
+    },
+    "clause_usage_summary": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/clause_usage_summary.csv",
+      "sha256": "2cc5f36eaeee1053bb4466c870a67fa4b90284475a43c139ff466dafdde94925",
+      "rows": 3,
+      "schema": {
+        "usage_category": "object",
+        "diagnostic_strict_clauses": "int64",
+        "unique_normalized_texts": "int64",
+        "unique_studies": "int64",
+        "mean_characters": "float64",
+        "mean_simple_tokens": "float64",
+        "semantic_label_created": "bool"
+      }
+    },
+    "study_level_distribution": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/study_level_distribution.csv",
+      "sha256": "2080ed98d7fd91704375d1d6a3426d240f8c1f6ed420aeb06f7de677ef592b33",
+      "rows": 4407,
+      "schema": {
+        "StudyInstanceUID": "object",
+        "positive_targets": "int64",
+        "negative_targets": "int64",
+        "uncertain_targets": "int64",
+        "unknown_targets": "int64",
+        "binary_resolved_targets": "int64",
+        "propositions": "int64",
+        "selected_evidence_instances": "int64",
+        "unique_evidence_fragments": "int64"
+      }
+    },
+    "target_cooccurrence": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/target_cooccurrence.csv",
+      "sha256": "6fb81d52073dc827d796c5abc2860c8867794621f9b9b03b67c16d52c89a9544",
+      "rows": 432,
+      "schema": {
+        "matrix_type": "object",
+        "row_target": "object",
+        "column_target": "object",
+        "study_count": "int64",
+        "denominator_studies": "int64"
+      }
+    },
+    "effective_example_structure": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/effective_example_structure.csv",
+      "sha256": "6d07b8d24c21405bad657d0e8dde9234705eb02aa476d51201b79aff0f0f2a08",
+      "rows": 35,
+      "schema": {
+        "target": "object",
+        "status": "object",
+        "raw_evidence_count": "int64",
+        "unique_normalized_evidence_count": "int64",
+        "unique_report_count": "int64",
+        "unique_exact_template_family_count": "int64",
+        "unique_numeric_normalized_template_family_count": "int64",
+        "detector_rule_combination_count": "int64",
+        "detector_rule_combinations": "object",
+        "language_group_count": "int64",
+        "language_groups": "object",
+        "note": "object"
+      }
+    },
+    "audit_sample": {
+      "path": "artifacts/03_report_label_generation/corpus_inspection_v3/audit_sample.csv",
+      "sha256": "bc9b2c5d49f2db161f4fbe42c88a0fa493aedc7c5833eb1791ba13ca45d63702",
+      "rows": 600,
+      "schema": {
+        "sample_id": "object",
+        "StudyInstanceUID": "object",
+        "target": "object",
+        "final_status": "object",
+        "proposition_status": "object",
+        "evidence": "object",
+        "phenotype": "object",
+        "detector_combination": "object",
+        "rule_combination": "object",
+        "report_language_group": "object",
+        "has_conflict": "bool",
+        "view_support": "object",
+        "collective": "bool",
+        "rationale": "object",
+        "stratum_id": "object",
+        "sample_rank_hash": "object",
+        "sample_source": "object",
+        "Report": "object",
+        "seed": "int64",
+        "judgment": "object",
+        "review_note": "object"
+      }
+    },
+    "report": {
+      "path": "reports/stages/03_report_label_corpus_inspection_v3.md",
+      "sha256": "a7c454057d2cadef4e56520e527c4846a40f91d5a4aa51d610430bd3cc5f43a7"
+    }
+  },
+  "reproducibility": "CSV semantics are deterministic for fixed inputs, code, and parameters. Only execution_timestamp_utc and the metadata file hash vary by run."
+}
