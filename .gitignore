@@ -51,3 +51,6 @@ private/*
 !artifacts/03_report_label_generation/
 !artifacts/03_report_label_generation/*.csv
 !artifacts/03_report_label_generation/*.json
+!artifacts/03_report_label_generation/corpus_inspection_v3/
+!artifacts/03_report_label_generation/corpus_inspection_v3/*.csv
+!artifacts/03_report_label_generation/corpus_inspection_v3/*.json
