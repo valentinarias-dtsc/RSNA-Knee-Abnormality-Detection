@@ -1,0 +1,376 @@
+context_structure,target,status,detector,phenotype,rule,selected_evidence_instances,unique_study_target_pairs
+collective,ACL,negative,v2_collective,abnormality_absent,cruciate_and_collateral_ligaments,81,81
+collective,ACL,negative,v2_collective,abnormality_absent,cruciate_and_collateral_ligaments|cruciate_ligaments,272,272
+collective,ACL,negative,v2_collective,abnormality_absent,cruciate_ligaments,604,602
+collective,Lateral Meniscus,negative,v2_collective,abnormality_absent,both_menisci,39,39
+collective,Lateral Meniscus,negative,v2_collective,abnormality_absent,both_menisci_negative_only,240,239
+collective,Lateral Meniscus,negative,v2_collective,abnormality_absent,both_menisci|both_menisci_negative_only,224,224
+collective,Lateral Meniscus,positive,v2_collective,degeneration,both_menisci,7,6
+collective,Lateral Meniscus,positive,v2_collective,tear,both_menisci,30,22
+collective,Lateral OA,negative,v2_collective,abnormality_absent,tibiofemoral_compartments,168,168
+collective,Lateral OA,positive,v2_collective,abnormality,tibiofemoral_compartments,1,1
+collective,Lateral OA,positive,v2_collective,chondral_abnormality,tibiofemoral_compartments,46,28
+collective,Lateral OA,positive,v2_collective,tear,lateral_and_patellofemoral_compartments,1,1
+collective,MCL,negative,v2_collective,abnormality_absent,collateral_ligaments,802,799
+collective,MCL,negative,v2_collective,abnormality_absent,collateral_ligaments|cruciate_and_collateral_ligaments,112,112
+collective,MCL,negative,v2_collective,abnormality_absent,cruciate_and_collateral_ligaments,240,240
+collective,Medial Meniscus,negative,v2_collective,abnormality_absent,both_menisci,106,106
+collective,Medial Meniscus,negative,v2_collective,abnormality_absent,both_menisci_negative_only,236,236
+collective,Medial Meniscus,negative,v2_collective,abnormality_absent,both_menisci|both_menisci_negative_only,229,229
+collective,Medial Meniscus,positive,v2_collective,degeneration,both_menisci,19,18
+collective,Medial Meniscus,positive,v2_collective,sprain,both_menisci,1,1
+collective,Medial Meniscus,positive,v2_collective,tear,both_menisci,22,21
+collective,Medial Meniscus,uncertain,v2_collective,tear,both_menisci,2,2
+collective,Medial OA,negative,v2_collective,abnormality_absent,tibiofemoral_compartments,180,180
+collective,Medial OA,positive,v2_collective,abnormality,tibiofemoral_compartments,4,4
+collective,Medial OA,positive,v2_collective,chondral_abnormality,tibiofemoral_compartments,45,27
+collective,Medial OA,positive,v2_collective,degeneration,tibiofemoral_compartments,1,1
+collective,PF OA,negative,v2_collective,abnormality_absent,tibiofemoral_compartments,112,112
+collective,PF OA,positive,v2_collective,abnormality,tibiofemoral_compartments,2,2
+collective,PF OA,positive,v2_collective,chondral_abnormality,tibiofemoral_compartments,42,27
+collective,PF OA,positive,v2_collective,degeneration,tibiofemoral_compartments,1,1
+collective,PF OA,positive,v2_collective,tear,lateral_and_patellofemoral_compartments,1,1
+collective,PF OA,positive,v2_collective,tear,tibiofemoral_compartments,1,1
+linked_two_clauses,ACL,negative,v3_target,abnormality_absent,target_local_association,7,7
+linked_two_clauses,ACL,negative,v3_target,normal_structure,target_local_normality,8,8
+linked_two_clauses,ACL,negative,v3_target|v2_exact,abnormality_absent,target_local_association,2,2
+linked_two_clauses,ACL,positive,v3_target,abnormality,target_local_association,3,3
+linked_two_clauses,ACL,positive,v3_target,avulsion,target_local_association,3,2
+linked_two_clauses,ACL,positive,v3_target,degeneration,target_local_association,2,2
+linked_two_clauses,ACL,positive,v3_target,tear,target_local_association,34,29
+linked_two_clauses,ACL,positive,v3_target|v2_exact,degeneration,target_local_association,2,2
+linked_two_clauses,ACL,positive,v3_target|v2_exact,tear,target_local_association,27,27
+linked_two_clauses,ACL,uncertain,v3_target,degeneration,target_local_association,1,1
+linked_two_clauses,ACL,uncertain,v3_target,tear,target_local_association,4,4
+linked_two_clauses,ACL,uncertain,v3_target|v2_exact,tear,target_local_association,1,1
+linked_two_clauses,Baker's,negative,v3_morphology,baker_cyst_absent,baker_sl,2,2
+linked_two_clauses,Baker's,negative,v3_morphology,baker_cyst_absent,baker_variants,1,1
+linked_two_clauses,Baker's,positive,v3_morphology,baker_cyst,baker_el,3,3
+linked_two_clauses,Baker's,positive,v3_morphology,baker_cyst,baker_sl,1,1
+linked_two_clauses,Baker's,positive,v3_morphology,baker_cyst,baker_sl|baker_variants,1,1
+linked_two_clauses,Baker's,positive,v3_morphology,baker_cyst,baker_variants,46,45
+linked_two_clauses,Baker's,uncertain,v3_morphology,baker_cyst,baker_variants,2,2
+linked_two_clauses,Contusion,negative,v3_morphology,bone_contusion_absent,contusion_en,1,1
+linked_two_clauses,Contusion,positive,v3_morphology,bone_contusion,contusion_en,19,19
+linked_two_clauses,Contusion,uncertain,v3_morphology,bone_contusion,contusion_en,2,2
+linked_two_clauses,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_de_root,1,1
+linked_two_clauses,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_el_root,9,9
+linked_two_clauses,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_en_plural,29,29
+linked_two_clauses,Effusion,positive,v3_morphology,joint_effusion,effusion_el_root,3,3
+linked_two_clauses,Effusion,positive,v3_morphology,joint_effusion,effusion_en_plural,74,72
+linked_two_clauses,Effusion,uncertain,v3_morphology,joint_effusion,effusion_en_plural,1,1
+linked_two_clauses,Fracture,negative,v3_morphology,fracture_absent,fracture_en,9,9
+linked_two_clauses,Fracture,negative,v3_morphology,fracture_absent,fracture_en|fracture_fr,23,23
+linked_two_clauses,Fracture,positive,v3_morphology,fracture,fracture_en,3,3
+linked_two_clauses,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_en,15,15
+linked_two_clauses,Fracture,uncertain,v3_morphology,fracture,fracture_en,2,2
+linked_two_clauses,Fracture,uncertain,v3_morphology|v2_exact,fracture,fracture_en,2,2
+linked_two_clauses,Lateral Meniscus,negative,v3_target,abnormality_absent,target_local_association,3,3
+linked_two_clauses,Lateral Meniscus,negative,v3_target,normal_structure,target_local_normality,13,12
+linked_two_clauses,Lateral Meniscus,negative,v3_target|v2_exact,abnormality_absent,target_local_association,3,3
+linked_two_clauses,Lateral Meniscus,positive,v3_target,abnormality,target_local_association,7,7
+linked_two_clauses,Lateral Meniscus,positive,v3_target,degeneration,target_local_association,1,1
+linked_two_clauses,Lateral Meniscus,positive,v3_target,extrusion,target_local_association,1,1
+linked_two_clauses,Lateral Meniscus,positive,v3_target,tear,target_local_association,6,6
+linked_two_clauses,Lateral Meniscus,positive,v3_target|v2_exact,abnormality,target_local_association,12,12
+linked_two_clauses,Lateral Meniscus,positive,v3_target|v2_exact,avulsion,target_local_association,1,1
+linked_two_clauses,Lateral Meniscus,positive,v3_target|v2_exact,degeneration,target_local_association,6,6
+linked_two_clauses,Lateral Meniscus,positive,v3_target|v2_exact,extrusion,target_local_association,2,2
+linked_two_clauses,Lateral Meniscus,positive,v3_target|v2_exact,tear,target_local_association,15,15
+linked_two_clauses,Lateral Meniscus,uncertain,v3_target,tear,target_local_association,2,2
+linked_two_clauses,Lateral Meniscus,uncertain,v3_target|v2_exact,abnormality,target_local_association,1,1
+linked_two_clauses,Lateral Meniscus,uncertain,v3_target|v2_exact,tear,target_local_association,2,2
+linked_two_clauses,Lateral OA,negative,v3_target,normal_cartilage,compartment_normality,1,1
+linked_two_clauses,Lateral OA,positive,v3_target,chondral_abnormality,compartment_scope,12,12
+linked_two_clauses,Lateral OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,7,7
+linked_two_clauses,MCL,negative,v3_target,normal_structure,target_local_normality,5,5
+linked_two_clauses,MCL,negative,v3_target|v2_exact,abnormality_absent,target_local_association,1,1
+linked_two_clauses,MCL,positive,v3_target,abnormality,target_local_association,1,1
+linked_two_clauses,MCL,positive,v3_target,sprain,target_local_association,16,16
+linked_two_clauses,MCL,positive,v3_target,tear,target_local_association,3,3
+linked_two_clauses,MCL,positive,v3_target|v2_exact,abnormality,target_local_association,5,5
+linked_two_clauses,MCL,positive,v3_target|v2_exact,sprain,target_local_association,3,3
+linked_two_clauses,MCL,positive,v3_target|v2_exact,tear,target_local_association,18,17
+linked_two_clauses,MCL,uncertain,v3_target,sprain,target_local_association,2,2
+linked_two_clauses,MCL,uncertain,v3_target|v2_exact,tear,target_local_association,1,1
+linked_two_clauses,Medial Meniscus,negative,v3_target,normal_structure,target_local_normality,16,16
+linked_two_clauses,Medial Meniscus,negative,v3_target|v2_exact,abnormality_absent,target_local_association,4,4
+linked_two_clauses,Medial Meniscus,positive,v3_target,abnormality,target_local_association,3,3
+linked_two_clauses,Medial Meniscus,positive,v3_target,degeneration,target_local_association,8,8
+linked_two_clauses,Medial Meniscus,positive,v3_target,extrusion,target_local_association,4,4
+linked_two_clauses,Medial Meniscus,positive,v3_target,tear,target_local_association,29,29
+linked_two_clauses,Medial Meniscus,positive,v3_target|v2_exact,abnormality,target_local_association,5,5
+linked_two_clauses,Medial Meniscus,positive,v3_target|v2_exact,degeneration,target_local_association,8,8
+linked_two_clauses,Medial Meniscus,positive,v3_target|v2_exact,extrusion,target_local_association,1,1
+linked_two_clauses,Medial Meniscus,positive,v3_target|v2_exact,tear,target_local_association,35,35
+linked_two_clauses,Medial Meniscus,uncertain,v3_target,sprain,target_local_association,1,1
+linked_two_clauses,Medial Meniscus,uncertain,v3_target,tear,target_local_association,3,3
+linked_two_clauses,Medial Meniscus,uncertain,v3_target|v2_exact,tear,target_local_association,2,2
+linked_two_clauses,Medial OA,negative,v3_target,chondral_abnormality_absent,compartment_scope,1,1
+linked_two_clauses,Medial OA,negative,v3_target,normal_cartilage,compartment_normality,5,5
+linked_two_clauses,Medial OA,positive,v3_target,chondral_abnormality,compartment_scope,23,23
+linked_two_clauses,Medial OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,8,8
+linked_two_clauses,PF OA,negative,v3_target,chondral_abnormality_absent,compartment_scope,1,1
+linked_two_clauses,PF OA,negative,v3_target,normal_cartilage,compartment_normality,1,1
+linked_two_clauses,PF OA,positive,v3_target,chondral_abnormality,compartment_scope,27,27
+linked_two_clauses,PF OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,12,12
+linked_two_clauses,PF OA,uncertain,v3_target,chondral_abnormality,compartment_scope,2,2
+linked_two_clauses,Synovitis,positive,v3_morphology,synovitis,synovitis_de,1,1
+linked_two_clauses,Synovitis,uncertain,v3_morphology,synovitis,synovitis_de,1,1
+other,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_el_root,1,1
+other,Lateral Meniscus,negative,v3_target,abnormality_absent,target_local_association,1,1
+other,Medial Meniscus,uncertain,v3_target,tear,target_local_association,1,1
+single_clause,ACL,negative,v2_exact,abnormality_absent,<no_explicit_rule>,933,933
+single_clause,ACL,negative,v3_target,abnormality_absent,target_local_association,10,10
+single_clause,ACL,negative,v3_target,normal_structure,target_local_normality,1038,1035
+single_clause,ACL,negative,v3_target|v2_exact,abnormality_absent,target_local_association,187,180
+single_clause,ACL,positive,v2_exact,abnormality,<no_explicit_rule>,22,20
+single_clause,ACL,positive,v2_exact,avulsion,<no_explicit_rule>,1,1
+single_clause,ACL,positive,v2_exact,degeneration,<no_explicit_rule>,11,11
+single_clause,ACL,positive,v2_exact,sprain,<no_explicit_rule>,2,1
+single_clause,ACL,positive,v2_exact,tear,<no_explicit_rule>,10,9
+single_clause,ACL,positive,v3_target,abnormality,target_local_association,12,12
+single_clause,ACL,positive,v3_target,degeneration,target_local_association,161,150
+single_clause,ACL,positive,v3_target,sprain,target_local_association,3,3
+single_clause,ACL,positive,v3_target,tear,target_local_association,69,65
+single_clause,ACL,positive,v3_target|v2_exact,abnormality,target_local_association,171,115
+single_clause,ACL,positive,v3_target|v2_exact,avulsion,target_local_association,6,4
+single_clause,ACL,positive,v3_target|v2_exact,degeneration,target_local_association,208,172
+single_clause,ACL,positive,v3_target|v2_exact,sprain,target_local_association,16,13
+single_clause,ACL,positive,v3_target|v2_exact,tear,target_local_association,652,457
+single_clause,ACL,uncertain,v3_target,abnormality,target_local_association,4,4
+single_clause,ACL,uncertain,v3_target,degeneration,target_local_association,6,6
+single_clause,ACL,uncertain,v3_target,tear,target_local_association,19,19
+single_clause,ACL,uncertain,v3_target|v2_exact,abnormality,target_local_association,5,5
+single_clause,ACL,uncertain,v3_target|v2_exact,degeneration,target_local_association,4,3
+single_clause,ACL,uncertain,v3_target|v2_exact,sprain,target_local_association,3,3
+single_clause,ACL,uncertain,v3_target|v2_exact,tear,target_local_association,29,25
+single_clause,Baker's,negative,v2_exact,abnormality_absent,<no_explicit_rule>,806,782
+single_clause,Baker's,negative,v3_morphology,baker_cyst_absent,baker_nl|baker_variants,1,1
+single_clause,Baker's,negative,v3_morphology,baker_cyst_absent,baker_sl,74,74
+single_clause,Baker's,negative,v3_morphology,baker_cyst_absent,baker_variants,266,266
+single_clause,Baker's,positive,v2_exact,abnormality,<no_explicit_rule>,727,650
+single_clause,Baker's,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,8,7
+single_clause,Baker's,positive,v2_exact,degeneration,<no_explicit_rule>,3,3
+single_clause,Baker's,positive,v2_exact,tear,<no_explicit_rule>,106,91
+single_clause,Baker's,positive,v3_morphology,baker_cyst,baker_el,112,103
+single_clause,Baker's,positive,v3_morphology,baker_cyst,baker_nl|baker_variants,11,8
+single_clause,Baker's,positive,v3_morphology,baker_cyst,baker_sl,9,9
+single_clause,Baker's,positive,v3_morphology,baker_cyst,baker_sl|baker_variants,87,87
+single_clause,Baker's,positive,v3_morphology,baker_cyst,baker_variants,640,480
+single_clause,Baker's,uncertain,v2_exact,abnormality,<no_explicit_rule>,16,12
+single_clause,Baker's,uncertain,v2_exact,tear,<no_explicit_rule>,3,3
+single_clause,Baker's,uncertain,v3_morphology,baker_cyst,baker_sl|baker_variants,1,1
+single_clause,Baker's,uncertain,v3_morphology,baker_cyst,baker_variants,4,4
+single_clause,Contusion,negative,v2_exact,abnormality_absent,<no_explicit_rule>,445,445
+single_clause,Contusion,negative,v3_morphology,bone_contusion_absent,contusion_el,1,1
+single_clause,Contusion,negative,v3_morphology,bone_contusion_absent,contusion_en,454,452
+single_clause,Contusion,positive,v2_exact,abnormality,<no_explicit_rule>,180,167
+single_clause,Contusion,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,11,11
+single_clause,Contusion,positive,v2_exact,degeneration,<no_explicit_rule>,1,1
+single_clause,Contusion,positive,v2_exact,fracture,<no_explicit_rule>,23,19
+single_clause,Contusion,positive,v2_exact,sprain,<no_explicit_rule>,4,4
+single_clause,Contusion,positive,v2_exact,tear,<no_explicit_rule>,5,5
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_cyr,30,19
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_el,20,19
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_el|contusion_en,27,27
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_en,284,202
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_sl,11,11
+single_clause,Contusion,positive,v3_morphology,bone_contusion,contusion_tr,33,27
+single_clause,Contusion,uncertain,v2_exact,abnormality,<no_explicit_rule>,3,3
+single_clause,Contusion,uncertain,v2_exact,fracture,<no_explicit_rule>,5,5
+single_clause,Contusion,uncertain,v3_morphology,bone_contusion,contusion_en,20,17
+single_clause,Contusion,uncertain,v3_morphology,bone_contusion,contusion_sl,1,1
+single_clause,Contusion,uncertain,v3_morphology,bone_contusion,contusion_tr,2,2
+single_clause,Effusion,negative,v2_exact,abnormality_absent,<no_explicit_rule>,955,952
+single_clause,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_de_root,41,41
+single_clause,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_el_root,32,32
+single_clause,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_en_plural,426,421
+single_clause,Effusion,negative,v3_morphology,joint_effusion_absent,effusion_tr_root,132,132
+single_clause,Effusion,positive,v2_exact,abnormality,<no_explicit_rule>,2254,1996
+single_clause,Effusion,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,30,30
+single_clause,Effusion,positive,v2_exact,degeneration,<no_explicit_rule>,8,8
+single_clause,Effusion,positive,v2_exact,extrusion,<no_explicit_rule>,1,1
+single_clause,Effusion,positive,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,Effusion,positive,v2_exact,tear,<no_explicit_rule>,32,30
+single_clause,Effusion,positive,v3_morphology,joint_effusion,effusion_de_root,107,107
+single_clause,Effusion,positive,v3_morphology,joint_effusion,effusion_el_root,153,129
+single_clause,Effusion,positive,v3_morphology,joint_effusion,effusion_en_plural,1251,967
+single_clause,Effusion,positive,v3_morphology,joint_effusion,effusion_tr_root,337,328
+single_clause,Effusion,positive,v3_morphology,tear,effusion_tr_root,1,1
+single_clause,Effusion,uncertain,v2_exact,abnormality,<no_explicit_rule>,8,8
+single_clause,Effusion,uncertain,v2_exact,chondral_abnormality,<no_explicit_rule>,1,1
+single_clause,Effusion,uncertain,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,Effusion,uncertain,v2_exact,tear,<no_explicit_rule>,2,2
+single_clause,Effusion,uncertain,v3_morphology,joint_effusion,effusion_en_plural,9,9
+single_clause,Fracture,negative,v2_exact,abnormality_absent,<no_explicit_rule>,529,528
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_cyr,11,10
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_de,49,48
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_el,3,3
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_en,510,493
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_en|fracture_fr,29,29
+single_clause,Fracture,negative,v3_morphology,fracture_absent,fracture_sl,3,3
+single_clause,Fracture,positive,v2_exact,abnormality,<no_explicit_rule>,1,1
+single_clause,Fracture,positive,v2_exact,avulsion,<no_explicit_rule>,3,3
+single_clause,Fracture,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,3,3
+single_clause,Fracture,positive,v2_exact,fracture,<no_explicit_rule>,17,15
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_cyr,2,2
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_de,1,1
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_el,3,3
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_en,13,10
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_sl,2,2
+single_clause,Fracture,positive,v3_morphology,fracture,fracture_tr,2,2
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_cyr,21,12
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_de,1,1
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_el,49,42
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_el|fracture_en,1,1
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_en,209,121
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_en|fracture_fr,11,7
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_sl,14,12
+single_clause,Fracture,positive,v3_morphology|v2_exact,fracture,fracture_tr,22,14
+single_clause,Fracture,uncertain,v2_exact,chondral_abnormality,<no_explicit_rule>,1,1
+single_clause,Fracture,uncertain,v3_morphology,fracture,fracture_en,3,3
+single_clause,Fracture,uncertain,v3_morphology,fracture,fracture_tr,1,1
+single_clause,Fracture,uncertain,v3_morphology|v2_exact,fracture,fracture_en,43,37
+single_clause,Fracture,uncertain,v3_morphology|v2_exact,fracture,fracture_en|fracture_fr,1,1
+single_clause,Fracture,uncertain,v3_morphology|v2_exact,fracture,fracture_sl,3,3
+single_clause,Fracture,uncertain,v3_morphology|v2_exact,fracture,fracture_tr,3,3
+single_clause,Lateral Meniscus,negative,v2_exact,abnormality_absent,<no_explicit_rule>,1218,1218
+single_clause,Lateral Meniscus,negative,v3_target,abnormality_absent,target_local_association,1,1
+single_clause,Lateral Meniscus,negative,v3_target,normal_structure,target_local_normality,1409,1400
+single_clause,Lateral Meniscus,negative,v3_target|v2_collective,abnormality_absent,both_menisci_negative_only|target_local_association,1,1
+single_clause,Lateral Meniscus,negative,v3_target|v2_collective,abnormality_absent,both_menisci|both_menisci_negative_only|target_local_association,3,3
+single_clause,Lateral Meniscus,negative,v3_target|v2_exact,abnormality_absent,target_local_association,466,459
+single_clause,Lateral Meniscus,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,1,1
+single_clause,Lateral Meniscus,positive,v2_exact,degeneration,<no_explicit_rule>,6,5
+single_clause,Lateral Meniscus,positive,v2_exact,sprain,<no_explicit_rule>,1,1
+single_clause,Lateral Meniscus,positive,v2_exact,tear,<no_explicit_rule>,58,53
+single_clause,Lateral Meniscus,positive,v3_target,abnormality,target_local_association,17,15
+single_clause,Lateral Meniscus,positive,v3_target,degeneration,target_local_association,153,153
+single_clause,Lateral Meniscus,positive,v3_target,extrusion,target_local_association,8,8
+single_clause,Lateral Meniscus,positive,v3_target,tear,target_local_association,58,58
+single_clause,Lateral Meniscus,positive,v3_target|v2_collective,tear,both_menisci|target_local_association,7,7
+single_clause,Lateral Meniscus,positive,v3_target|v2_exact,abnormality,target_local_association,90,63
+single_clause,Lateral Meniscus,positive,v3_target|v2_exact,degeneration,target_local_association,215,185
+single_clause,Lateral Meniscus,positive,v3_target|v2_exact,extrusion,target_local_association,5,5
+single_clause,Lateral Meniscus,positive,v3_target|v2_exact,tear,target_local_association,694,468
+single_clause,Lateral Meniscus,uncertain,v3_target,abnormality,target_local_association,1,1
+single_clause,Lateral Meniscus,uncertain,v3_target,degeneration,target_local_association,6,6
+single_clause,Lateral Meniscus,uncertain,v3_target,tear,target_local_association,7,6
+single_clause,Lateral Meniscus,uncertain,v3_target|v2_exact,abnormality,target_local_association,4,4
+single_clause,Lateral Meniscus,uncertain,v3_target|v2_exact,degeneration,target_local_association,1,1
+single_clause,Lateral Meniscus,uncertain,v3_target|v2_exact,tear,target_local_association,75,57
+single_clause,Lateral OA,negative,v2_exact,abnormality_absent,<no_explicit_rule>,473,473
+single_clause,Lateral OA,negative,v3_target,chondral_abnormality_absent,compartment_scope,325,325
+single_clause,Lateral OA,negative,v3_target,normal_cartilage,compartment_normality,187,187
+single_clause,Lateral OA,positive,v2_exact,abnormality,<no_explicit_rule>,36,36
+single_clause,Lateral OA,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,36,36
+single_clause,Lateral OA,positive,v2_exact,degeneration,<no_explicit_rule>,37,37
+single_clause,Lateral OA,positive,v2_exact,tear,<no_explicit_rule>,6,6
+single_clause,Lateral OA,positive,v2_exact|v2_collective,abnormality,tibiofemoral_compartments,1,1
+single_clause,Lateral OA,positive,v3_target,chondral_abnormality,compartment_scope,146,130
+single_clause,Lateral OA,positive,v3_target,degeneration,compartment_scope,1,1
+single_clause,Lateral OA,positive,v3_target,tear,compartment_scope,1,1
+single_clause,Lateral OA,positive,v3_target|v2_collective,chondral_abnormality,compartment_scope|lateral_and_patellofemoral_compartments,2,2
+single_clause,Lateral OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,259,218
+single_clause,Lateral OA,positive,v3_target|v2_exact,degeneration,compartment_scope,1,1
+single_clause,Lateral OA,positive,v3_target|v2_exact|v2_collective,chondral_abnormality,compartment_scope|lateral_and_patellofemoral_compartments,1,1
+single_clause,Lateral OA,uncertain,v3_target|v2_exact,chondral_abnormality,compartment_scope,1,1
+single_clause,MCL,negative,v2_exact,abnormality_absent,<no_explicit_rule>,1084,1084
+single_clause,MCL,negative,v3_target,abnormality_absent,target_local_association,2,2
+single_clause,MCL,negative,v3_target,normal_structure,target_local_normality,1473,1471
+single_clause,MCL,negative,v3_target|v2_exact,abnormality_absent,target_local_association,68,67
+single_clause,MCL,positive,v2_exact,abnormality,<no_explicit_rule>,19,15
+single_clause,MCL,positive,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,MCL,positive,v2_exact,sprain,<no_explicit_rule>,2,2
+single_clause,MCL,positive,v2_exact,tear,<no_explicit_rule>,11,11
+single_clause,MCL,positive,v3_target,abnormality,target_local_association,12,12
+single_clause,MCL,positive,v3_target,avulsion,target_local_association,1,1
+single_clause,MCL,positive,v3_target,degeneration,target_local_association,3,3
+single_clause,MCL,positive,v3_target,sprain,target_local_association,57,57
+single_clause,MCL,positive,v3_target,tear,target_local_association,20,17
+single_clause,MCL,positive,v3_target|v2_exact,abnormality,target_local_association,81,68
+single_clause,MCL,positive,v3_target|v2_exact,avulsion,target_local_association,8,5
+single_clause,MCL,positive,v3_target|v2_exact,degeneration,target_local_association,11,9
+single_clause,MCL,positive,v3_target|v2_exact,sprain,target_local_association,223,168
+single_clause,MCL,positive,v3_target|v2_exact,tear,target_local_association,150,109
+single_clause,MCL,uncertain,v3_target,abnormality,target_local_association,6,5
+single_clause,MCL,uncertain,v3_target,degeneration,target_local_association,1,1
+single_clause,MCL,uncertain,v3_target,sprain,target_local_association,2,2
+single_clause,MCL,uncertain,v3_target,tear,target_local_association,5,5
+single_clause,MCL,uncertain,v3_target|v2_exact,abnormality,target_local_association,9,8
+single_clause,MCL,uncertain,v3_target|v2_exact,avulsion,target_local_association,1,1
+single_clause,MCL,uncertain,v3_target|v2_exact,degeneration,target_local_association,1,1
+single_clause,MCL,uncertain,v3_target|v2_exact,sprain,target_local_association,1,1
+single_clause,MCL,uncertain,v3_target|v2_exact,tear,target_local_association,7,7
+single_clause,Medial Meniscus,negative,v2_exact,abnormality_absent,<no_explicit_rule>,476,476
+single_clause,Medial Meniscus,negative,v3_target,abnormality_absent,target_local_association,1,1
+single_clause,Medial Meniscus,negative,v3_target,normal_structure,target_local_normality,525,525
+single_clause,Medial Meniscus,negative,v3_target|v2_exact,abnormality_absent,target_local_association,255,249
+single_clause,Medial Meniscus,positive,v2_exact,abnormality,<no_explicit_rule>,5,4
+single_clause,Medial Meniscus,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,3,3
+single_clause,Medial Meniscus,positive,v2_exact,degeneration,<no_explicit_rule>,18,18
+single_clause,Medial Meniscus,positive,v2_exact,fracture,<no_explicit_rule>,3,3
+single_clause,Medial Meniscus,positive,v2_exact,sprain,<no_explicit_rule>,1,1
+single_clause,Medial Meniscus,positive,v2_exact,tear,<no_explicit_rule>,70,66
+single_clause,Medial Meniscus,positive,v3_target,abnormality,target_local_association,49,45
+single_clause,Medial Meniscus,positive,v3_target,degeneration,target_local_association,188,173
+single_clause,Medial Meniscus,positive,v3_target,extrusion,target_local_association,14,13
+single_clause,Medial Meniscus,positive,v3_target,sprain,target_local_association,2,2
+single_clause,Medial Meniscus,positive,v3_target,tear,target_local_association,106,106
+single_clause,Medial Meniscus,positive,v3_target|v2_exact,abnormality,target_local_association,327,234
+single_clause,Medial Meniscus,positive,v3_target|v2_exact,avulsion,target_local_association,5,3
+single_clause,Medial Meniscus,positive,v3_target|v2_exact,degeneration,target_local_association,407,336
+single_clause,Medial Meniscus,positive,v3_target|v2_exact,extrusion,target_local_association,34,31
+single_clause,Medial Meniscus,positive,v3_target|v2_exact,tear,target_local_association,1756,1190
+single_clause,Medial Meniscus,uncertain,v2_exact,chondral_abnormality,<no_explicit_rule>,1,1
+single_clause,Medial Meniscus,uncertain,v3_target,abnormality,target_local_association,3,3
+single_clause,Medial Meniscus,uncertain,v3_target,degeneration,target_local_association,7,7
+single_clause,Medial Meniscus,uncertain,v3_target,extrusion,target_local_association,1,1
+single_clause,Medial Meniscus,uncertain,v3_target,sprain,target_local_association,1,1
+single_clause,Medial Meniscus,uncertain,v3_target,tear,target_local_association,13,13
+single_clause,Medial Meniscus,uncertain,v3_target|v2_exact,abnormality,target_local_association,11,10
+single_clause,Medial Meniscus,uncertain,v3_target|v2_exact,tear,target_local_association,78,65
+single_clause,Medial OA,negative,v2_exact,abnormality_absent,<no_explicit_rule>,353,353
+single_clause,Medial OA,negative,v3_target,chondral_abnormality_absent,compartment_scope,297,297
+single_clause,Medial OA,negative,v3_target,normal_cartilage,compartment_normality,117,117
+single_clause,Medial OA,positive,v2_exact,abnormality,<no_explicit_rule>,47,47
+single_clause,Medial OA,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,27,27
+single_clause,Medial OA,positive,v2_exact,degeneration,<no_explicit_rule>,29,29
+single_clause,Medial OA,positive,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,Medial OA,positive,v2_exact,tear,<no_explicit_rule>,10,10
+single_clause,Medial OA,positive,v3_target,chondral_abnormality,compartment_scope,311,272
+single_clause,Medial OA,positive,v3_target,degeneration,compartment_scope,3,3
+single_clause,Medial OA,positive,v3_target|v2_collective,chondral_abnormality,compartment_scope|tibiofemoral_compartments,11,9
+single_clause,Medial OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,376,313
+single_clause,Medial OA,positive,v3_target|v2_exact,degeneration,compartment_scope,19,19
+single_clause,Medial OA,uncertain,v3_target,chondral_abnormality,compartment_scope,3,3
+single_clause,PF OA,negative,v2_exact,abnormality_absent,<no_explicit_rule>,516,516
+single_clause,PF OA,negative,v3_target,chondral_abnormality_absent,compartment_scope,308,306
+single_clause,PF OA,negative,v3_target,normal_cartilage,compartment_normality,554,547
+single_clause,PF OA,positive,v2_exact,abnormality,<no_explicit_rule>,20,20
+single_clause,PF OA,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,17,17
+single_clause,PF OA,positive,v2_exact,degeneration,<no_explicit_rule>,29,29
+single_clause,PF OA,positive,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,PF OA,positive,v2_exact,tear,<no_explicit_rule>,3,3
+single_clause,PF OA,positive,v3_target,chondral_abnormality,compartment_scope,601,530
+single_clause,PF OA,positive,v3_target,degeneration,compartment_scope,3,3
+single_clause,PF OA,positive,v3_target|v2_collective,chondral_abnormality,compartment_scope|tibiofemoral_compartments,1,1
+single_clause,PF OA,positive,v3_target|v2_exact,chondral_abnormality,compartment_scope,641,510
+single_clause,PF OA,positive,v3_target|v2_exact,degeneration,compartment_scope,10,10
+single_clause,PF OA,uncertain,v3_target,chondral_abnormality,compartment_scope,11,10
+single_clause,PF OA,uncertain,v3_target|v2_exact,chondral_abnormality,compartment_scope,3,3
+single_clause,Synovitis,negative,v2_exact,abnormality_absent,<no_explicit_rule>,22,21
+single_clause,Synovitis,negative,v3_morphology,synovitis_absent,synovitis_de,1,1
+single_clause,Synovitis,positive,v2_exact,abnormality,<no_explicit_rule>,677,449
+single_clause,Synovitis,positive,v2_exact,chondral_abnormality,<no_explicit_rule>,12,12
+single_clause,Synovitis,positive,v2_exact,degeneration,<no_explicit_rule>,1,1
+single_clause,Synovitis,positive,v2_exact,fracture,<no_explicit_rule>,1,1
+single_clause,Synovitis,positive,v2_exact,sprain,<no_explicit_rule>,6,6
+single_clause,Synovitis,positive,v2_exact,tear,<no_explicit_rule>,11,10
+single_clause,Synovitis,positive,v3_morphology,synovitis,synovitis_de,13,13
+single_clause,Synovitis,positive,v3_morphology,synovitis,synovitis_el,36,26
+single_clause,Synovitis,positive,v3_morphology,synovitis,synovitis_sl,3,3
+single_clause,Synovitis,positive,v3_morphology,synovitis,synovitis_tr,22,22
+single_clause,Synovitis,uncertain,v2_exact,abnormality,<no_explicit_rule>,11,10
+single_clause,Synovitis,uncertain,v2_exact,fracture,<no_explicit_rule>,1,1

@@ -1,0 +1,11 @@
+language_hypothesis,reports,study_target_pairs,positive,negative,uncertain,unknown,resolved_rate,strict_views,linked_views,mentions,propositions,non_exclusive_denominator
+cyrillic_script,220,2640,438,522,0,1680,0.36363636363636365,4249,12,1905,1529,Reports may contribute to more than one hypothesis
+dutch,153,1836,378,414,8,1036,0.43137254901960786,1850,2,1481,1189,Reports may contribute to more than one hypothesis
+english,3866,46392,9852,12253,294,23993,0.47648301431281254,72387,2470,48304,38318,Reports may contribute to more than one hypothesis
+french,80,960,260,254,2,444,0.5354166666666667,1701,114,1186,923,Reports may contribute to more than one hypothesis
+german,259,3108,437,722,10,1939,0.3729086229086229,3895,13,1973,1837,Reports may contribute to more than one hypothesis
+greek_script,321,3852,828,401,0,2623,0.31905503634475596,3145,96,2395,1964,Reports may contribute to more than one hypothesis
+latin_other,22,264,43,83,0,138,0.4772727272727273,305,15,214,166,Reports may contribute to more than one hypothesis
+south_slavic,403,4836,1183,1073,69,2511,0.4665012406947891,6540,188,3708,3015,Reports may contribute to more than one hypothesis
+spanish,678,8136,1261,2021,17,4837,0.4033923303834808,8925,691,6889,4411,Reports may contribute to more than one hypothesis
+turkish,547,6564,1493,992,11,4068,0.3785801340645948,6583,0,4970,3982,Reports may contribute to more than one hypothesis

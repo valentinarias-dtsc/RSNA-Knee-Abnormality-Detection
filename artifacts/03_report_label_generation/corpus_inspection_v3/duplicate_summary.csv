@@ -1,0 +1,5 @@
+level,total_instances,unique_texts,duplicated_instances_excess,duplicate_rate_excess,instances_in_duplicate_groups,duplicate_groups,mean_duplicate_group_size,median_duplicate_group_size,max_duplicate_group_size,duplicate_definition
+Report,4407,4259,148,0.03358293623780349,201,53,3.792452830188679,2.0,37,excess instances = total instances - unique normalized texts
+strict TextView,79781,33756,46025,0.5768917411413745,50994,4969,10.262427047695713,3.0,657,excess instances = total instances - unique normalized texts
+linked TextView,2578,1036,1542,0.5981380915438325,1641,99,16.575757575757574,3.0,491,excess instances = total instances - unique normalized texts
+selected evidence,38706,13324,25382,0.6557639642432698,29416,4034,7.292017848289539,2.0,980,excess instances = total instances - unique normalized texts

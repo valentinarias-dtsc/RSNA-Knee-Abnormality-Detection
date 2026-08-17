@@ -1,0 +1,4 @@
+usage_category,diagnostic_strict_clauses,unique_normalized_texts,unique_studies,mean_characters,mean_simple_tokens,semantic_label_created
+no_detector_mention,47732,19128,4274,52.9303402329674,7.334345931450599,False
+not_selected_but_contains_detector_mention,417,386,320,92.24940047961631,13.359712230215827,False
+selected_evidence_for_at_least_one_target,26297,13046,4227,74.1834429782865,10.22842909837624,False

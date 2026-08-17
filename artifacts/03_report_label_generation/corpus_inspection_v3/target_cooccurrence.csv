@@ -1,0 +1,433 @@
+matrix_type,row_target,column_target,study_count,denominator_studies
+positive_positive,ACL,ACL,963,4407
+positive_positive,ACL,MCL,231,4407
+positive_positive,ACL,Medial Meniscus,571,4407
+positive_positive,ACL,Lateral Meniscus,375,4407
+positive_positive,ACL,Medial OA,170,4407
+positive_positive,ACL,Lateral OA,113,4407
+positive_positive,ACL,PF OA,219,4407
+positive_positive,ACL,Effusion,717,4407
+positive_positive,ACL,Synovitis,176,4407
+positive_positive,ACL,Baker's,233,4407
+positive_positive,ACL,Contusion,191,4407
+positive_positive,ACL,Fracture,86,4407
+positive_positive,MCL,ACL,231,4407
+positive_positive,MCL,MCL,447,4407
+positive_positive,MCL,Medial Meniscus,259,4407
+positive_positive,MCL,Lateral Meniscus,154,4407
+positive_positive,MCL,Medial OA,84,4407
+positive_positive,MCL,Lateral OA,35,4407
+positive_positive,MCL,PF OA,95,4407
+positive_positive,MCL,Effusion,314,4407
+positive_positive,MCL,Synovitis,89,4407
+positive_positive,MCL,Baker's,103,4407
+positive_positive,MCL,Contusion,105,4407
+positive_positive,MCL,Fracture,56,4407
+positive_positive,Medial Meniscus,ACL,571,4407
+positive_positive,Medial Meniscus,MCL,259,4407
+positive_positive,Medial Meniscus,Medial Meniscus,2008,4407
+positive_positive,Medial Meniscus,Lateral Meniscus,608,4407
+positive_positive,Medial Meniscus,Medial OA,461,4407
+positive_positive,Medial Meniscus,Lateral OA,256,4407
+positive_positive,Medial Meniscus,PF OA,553,4407
+positive_positive,Medial Meniscus,Effusion,1359,4407
+positive_positive,Medial Meniscus,Synovitis,305,4407
+positive_positive,Medial Meniscus,Baker's,578,4407
+positive_positive,Medial Meniscus,Contusion,135,4407
+positive_positive,Medial Meniscus,Fracture,114,4407
+positive_positive,Lateral Meniscus,ACL,375,4407
+positive_positive,Lateral Meniscus,MCL,154,4407
+positive_positive,Lateral Meniscus,Medial Meniscus,608,4407
+positive_positive,Lateral Meniscus,Lateral Meniscus,952,4407
+positive_positive,Lateral Meniscus,Medial OA,215,4407
+positive_positive,Lateral Meniscus,Lateral OA,204,4407
+positive_positive,Lateral Meniscus,PF OA,295,4407
+positive_positive,Lateral Meniscus,Effusion,693,4407
+positive_positive,Lateral Meniscus,Synovitis,204,4407
+positive_positive,Lateral Meniscus,Baker's,287,4407
+positive_positive,Lateral Meniscus,Contusion,86,4407
+positive_positive,Lateral Meniscus,Fracture,76,4407
+positive_positive,Medial OA,ACL,170,4407
+positive_positive,Medial OA,MCL,84,4407
+positive_positive,Medial OA,Medial Meniscus,461,4407
+positive_positive,Medial OA,Lateral Meniscus,215,4407
+positive_positive,Medial OA,Medial OA,662,4407
+positive_positive,Medial OA,Lateral OA,287,4407
+positive_positive,Medial OA,PF OA,395,4407
+positive_positive,Medial OA,Effusion,511,4407
+positive_positive,Medial OA,Synovitis,166,4407
+positive_positive,Medial OA,Baker's,250,4407
+positive_positive,Medial OA,Contusion,21,4407
+positive_positive,Medial OA,Fracture,44,4407
+positive_positive,Lateral OA,ACL,113,4407
+positive_positive,Lateral OA,MCL,35,4407
+positive_positive,Lateral OA,Medial Meniscus,256,4407
+positive_positive,Lateral OA,Lateral Meniscus,204,4407
+positive_positive,Lateral OA,Medial OA,287,4407
+positive_positive,Lateral OA,Lateral OA,438,4407
+positive_positive,Lateral OA,PF OA,293,4407
+positive_positive,Lateral OA,Effusion,352,4407
+positive_positive,Lateral OA,Synovitis,129,4407
+positive_positive,Lateral OA,Baker's,161,4407
+positive_positive,Lateral OA,Contusion,16,4407
+positive_positive,Lateral OA,Fracture,25,4407
+positive_positive,PF OA,ACL,219,4407
+positive_positive,PF OA,MCL,95,4407
+positive_positive,PF OA,Medial Meniscus,553,4407
+positive_positive,PF OA,Lateral Meniscus,295,4407
+positive_positive,PF OA,Medial OA,395,4407
+positive_positive,PF OA,Lateral OA,293,4407
+positive_positive,PF OA,PF OA,1015,4407
+positive_positive,PF OA,Effusion,728,4407
+positive_positive,PF OA,Synovitis,204,4407
+positive_positive,PF OA,Baker's,355,4407
+positive_positive,PF OA,Contusion,43,4407
+positive_positive,PF OA,Fracture,42,4407
+positive_positive,Effusion,ACL,717,4407
+positive_positive,Effusion,MCL,314,4407
+positive_positive,Effusion,Medial Meniscus,1359,4407
+positive_positive,Effusion,Lateral Meniscus,693,4407
+positive_positive,Effusion,Medial OA,511,4407
+positive_positive,Effusion,Lateral OA,352,4407
+positive_positive,Effusion,PF OA,728,4407
+positive_positive,Effusion,Effusion,2550,4407
+positive_positive,Effusion,Synovitis,447,4407
+positive_positive,Effusion,Baker's,739,4407
+positive_positive,Effusion,Contusion,260,4407
+positive_positive,Effusion,Fracture,177,4407
+positive_positive,Synovitis,ACL,176,4407
+positive_positive,Synovitis,MCL,89,4407
+positive_positive,Synovitis,Medial Meniscus,305,4407
+positive_positive,Synovitis,Lateral Meniscus,204,4407
+positive_positive,Synovitis,Medial OA,166,4407
+positive_positive,Synovitis,Lateral OA,129,4407
+positive_positive,Synovitis,PF OA,204,4407
+positive_positive,Synovitis,Effusion,447,4407
+positive_positive,Synovitis,Synovitis,486,4407
+positive_positive,Synovitis,Baker's,185,4407
+positive_positive,Synovitis,Contusion,52,4407
+positive_positive,Synovitis,Fracture,46,4407
+positive_positive,Baker's,ACL,233,4407
+positive_positive,Baker's,MCL,103,4407
+positive_positive,Baker's,Medial Meniscus,578,4407
+positive_positive,Baker's,Lateral Meniscus,287,4407
+positive_positive,Baker's,Medial OA,250,4407
+positive_positive,Baker's,Lateral OA,161,4407
+positive_positive,Baker's,PF OA,355,4407
+positive_positive,Baker's,Effusion,739,4407
+positive_positive,Baker's,Synovitis,185,4407
+positive_positive,Baker's,Baker's,989,4407
+positive_positive,Baker's,Contusion,66,4407
+positive_positive,Baker's,Fracture,62,4407
+positive_positive,Contusion,ACL,191,4407
+positive_positive,Contusion,MCL,105,4407
+positive_positive,Contusion,Medial Meniscus,135,4407
+positive_positive,Contusion,Lateral Meniscus,86,4407
+positive_positive,Contusion,Medial OA,21,4407
+positive_positive,Contusion,Lateral OA,16,4407
+positive_positive,Contusion,PF OA,43,4407
+positive_positive,Contusion,Effusion,260,4407
+positive_positive,Contusion,Synovitis,52,4407
+positive_positive,Contusion,Baker's,66,4407
+positive_positive,Contusion,Contusion,359,4407
+positive_positive,Contusion,Fracture,66,4407
+positive_positive,Fracture,ACL,86,4407
+positive_positive,Fracture,MCL,56,4407
+positive_positive,Fracture,Medial Meniscus,114,4407
+positive_positive,Fracture,Lateral Meniscus,76,4407
+positive_positive,Fracture,Medial OA,44,4407
+positive_positive,Fracture,Lateral OA,25,4407
+positive_positive,Fracture,PF OA,42,4407
+positive_positive,Fracture,Effusion,177,4407
+positive_positive,Fracture,Synovitis,46,4407
+positive_positive,Fracture,Baker's,62,4407
+positive_positive,Fracture,Contusion,66,4407
+positive_positive,Fracture,Fracture,249,4407
+binary_resolved,ACL,ACL,3040,4407
+binary_resolved,ACL,MCL,2482,4407
+binary_resolved,ACL,Medial Meniscus,2456,4407
+binary_resolved,ACL,Lateral Meniscus,2505,4407
+binary_resolved,ACL,Medial OA,1077,4407
+binary_resolved,ACL,Lateral OA,999,4407
+binary_resolved,ACL,PF OA,1578,4407
+binary_resolved,ACL,Effusion,2692,4407
+binary_resolved,ACL,Synovitis,397,4407
+binary_resolved,ACL,Baker's,1486,4407
+binary_resolved,ACL,Contusion,691,4407
+binary_resolved,ACL,Fracture,735,4407
+binary_resolved,MCL,ACL,2482,4407
+binary_resolved,MCL,MCL,3067,4407
+binary_resolved,MCL,Medial Meniscus,2517,4407
+binary_resolved,MCL,Lateral Meniscus,2592,4407
+binary_resolved,MCL,Medial OA,983,4407
+binary_resolved,MCL,Lateral OA,892,4407
+binary_resolved,MCL,PF OA,1498,4407
+binary_resolved,MCL,Effusion,2704,4407
+binary_resolved,MCL,Synovitis,373,4407
+binary_resolved,MCL,Baker's,1401,4407
+binary_resolved,MCL,Contusion,627,4407
+binary_resolved,MCL,Fracture,664,4407
+binary_resolved,Medial Meniscus,ACL,2456,4407
+binary_resolved,Medial Meniscus,MCL,2517,4407
+binary_resolved,Medial Meniscus,Medial Meniscus,3291,4407
+binary_resolved,Medial Meniscus,Lateral Meniscus,2687,4407
+binary_resolved,Medial Meniscus,Medial OA,1074,4407
+binary_resolved,Medial Meniscus,Lateral OA,972,4407
+binary_resolved,Medial Meniscus,PF OA,1578,4407
+binary_resolved,Medial Meniscus,Effusion,2837,4407
+binary_resolved,Medial Meniscus,Synovitis,398,4407
+binary_resolved,Medial Meniscus,Baker's,1521,4407
+binary_resolved,Medial Meniscus,Contusion,566,4407
+binary_resolved,Medial Meniscus,Fracture,663,4407
+binary_resolved,Lateral Meniscus,ACL,2505,4407
+binary_resolved,Lateral Meniscus,MCL,2592,4407
+binary_resolved,Lateral Meniscus,Medial Meniscus,2687,4407
+binary_resolved,Lateral Meniscus,Lateral Meniscus,3143,4407
+binary_resolved,Lateral Meniscus,Medial OA,1048,4407
+binary_resolved,Lateral Meniscus,Lateral OA,966,4407
+binary_resolved,Lateral Meniscus,PF OA,1565,4407
+binary_resolved,Lateral Meniscus,Effusion,2779,4407
+binary_resolved,Lateral Meniscus,Synovitis,376,4407
+binary_resolved,Lateral Meniscus,Baker's,1512,4407
+binary_resolved,Lateral Meniscus,Contusion,600,4407
+binary_resolved,Lateral Meniscus,Fracture,663,4407
+binary_resolved,Medial OA,ACL,1077,4407
+binary_resolved,Medial OA,MCL,983,4407
+binary_resolved,Medial OA,Medial Meniscus,1074,4407
+binary_resolved,Medial OA,Lateral Meniscus,1048,4407
+binary_resolved,Medial OA,Medial OA,1251,4407
+binary_resolved,Medial OA,Lateral OA,932,4407
+binary_resolved,Medial OA,PF OA,947,4407
+binary_resolved,Medial OA,Effusion,1161,4407
+binary_resolved,Medial OA,Synovitis,215,4407
+binary_resolved,Medial OA,Baker's,853,4407
+binary_resolved,Medial OA,Contusion,373,4407
+binary_resolved,Medial OA,Fracture,458,4407
+binary_resolved,Lateral OA,ACL,999,4407
+binary_resolved,Lateral OA,MCL,892,4407
+binary_resolved,Lateral OA,Medial Meniscus,972,4407
+binary_resolved,Lateral OA,Lateral Meniscus,966,4407
+binary_resolved,Lateral OA,Medial OA,932,4407
+binary_resolved,Lateral OA,Lateral OA,1118,4407
+binary_resolved,Lateral OA,PF OA,900,4407
+binary_resolved,Lateral OA,Effusion,1064,4407
+binary_resolved,Lateral OA,Synovitis,191,4407
+binary_resolved,Lateral OA,Baker's,782,4407
+binary_resolved,Lateral OA,Contusion,360,4407
+binary_resolved,Lateral OA,Fracture,436,4407
+binary_resolved,PF OA,ACL,1578,4407
+binary_resolved,PF OA,MCL,1498,4407
+binary_resolved,PF OA,Medial Meniscus,1578,4407
+binary_resolved,PF OA,Lateral Meniscus,1565,4407
+binary_resolved,PF OA,Medial OA,947,4407
+binary_resolved,PF OA,Lateral OA,900,4407
+binary_resolved,PF OA,PF OA,1879,4407
+binary_resolved,PF OA,Effusion,1698,4407
+binary_resolved,PF OA,Synovitis,245,4407
+binary_resolved,PF OA,Baker's,972,4407
+binary_resolved,PF OA,Contusion,466,4407
+binary_resolved,PF OA,Fracture,525,4407
+binary_resolved,Effusion,ACL,2692,4407
+binary_resolved,Effusion,MCL,2704,4407
+binary_resolved,Effusion,Medial Meniscus,2837,4407
+binary_resolved,Effusion,Lateral Meniscus,2779,4407
+binary_resolved,Effusion,Medial OA,1161,4407
+binary_resolved,Effusion,Lateral OA,1064,4407
+binary_resolved,Effusion,PF OA,1698,4407
+binary_resolved,Effusion,Effusion,3527,4407
+binary_resolved,Effusion,Synovitis,469,4407
+binary_resolved,Effusion,Baker's,1661,4407
+binary_resolved,Effusion,Contusion,688,4407
+binary_resolved,Effusion,Fracture,742,4407
+binary_resolved,Synovitis,ACL,397,4407
+binary_resolved,Synovitis,MCL,373,4407
+binary_resolved,Synovitis,Medial Meniscus,398,4407
+binary_resolved,Synovitis,Lateral Meniscus,376,4407
+binary_resolved,Synovitis,Medial OA,215,4407
+binary_resolved,Synovitis,Lateral OA,191,4407
+binary_resolved,Synovitis,PF OA,245,4407
+binary_resolved,Synovitis,Effusion,469,4407
+binary_resolved,Synovitis,Synovitis,507,4407
+binary_resolved,Synovitis,Baker's,250,4407
+binary_resolved,Synovitis,Contusion,105,4407
+binary_resolved,Synovitis,Fracture,105,4407
+binary_resolved,Baker's,ACL,1486,4407
+binary_resolved,Baker's,MCL,1401,4407
+binary_resolved,Baker's,Medial Meniscus,1521,4407
+binary_resolved,Baker's,Lateral Meniscus,1512,4407
+binary_resolved,Baker's,Medial OA,853,4407
+binary_resolved,Baker's,Lateral OA,782,4407
+binary_resolved,Baker's,PF OA,972,4407
+binary_resolved,Baker's,Effusion,1661,4407
+binary_resolved,Baker's,Synovitis,250,4407
+binary_resolved,Baker's,Baker's,1830,4407
+binary_resolved,Baker's,Contusion,384,4407
+binary_resolved,Baker's,Fracture,514,4407
+binary_resolved,Contusion,ACL,691,4407
+binary_resolved,Contusion,MCL,627,4407
+binary_resolved,Contusion,Medial Meniscus,566,4407
+binary_resolved,Contusion,Lateral Meniscus,600,4407
+binary_resolved,Contusion,Medial OA,373,4407
+binary_resolved,Contusion,Lateral OA,360,4407
+binary_resolved,Contusion,PF OA,466,4407
+binary_resolved,Contusion,Effusion,688,4407
+binary_resolved,Contusion,Synovitis,105,4407
+binary_resolved,Contusion,Baker's,384,4407
+binary_resolved,Contusion,Contusion,807,4407
+binary_resolved,Contusion,Fracture,480,4407
+binary_resolved,Fracture,ACL,735,4407
+binary_resolved,Fracture,MCL,664,4407
+binary_resolved,Fracture,Medial Meniscus,663,4407
+binary_resolved,Fracture,Lateral Meniscus,663,4407
+binary_resolved,Fracture,Medial OA,458,4407
+binary_resolved,Fracture,Lateral OA,436,4407
+binary_resolved,Fracture,PF OA,525,4407
+binary_resolved,Fracture,Effusion,742,4407
+binary_resolved,Fracture,Synovitis,105,4407
+binary_resolved,Fracture,Baker's,514,4407
+binary_resolved,Fracture,Contusion,480,4407
+binary_resolved,Fracture,Fracture,834,4407
+shared_normalized_selected_evidence,ACL,ACL,3575,4407
+shared_normalized_selected_evidence,ACL,MCL,787,4407
+shared_normalized_selected_evidence,ACL,Medial Meniscus,53,4407
+shared_normalized_selected_evidence,ACL,Lateral Meniscus,63,4407
+shared_normalized_selected_evidence,ACL,Medial OA,3,4407
+shared_normalized_selected_evidence,ACL,Lateral OA,3,4407
+shared_normalized_selected_evidence,ACL,PF OA,3,4407
+shared_normalized_selected_evidence,ACL,Effusion,8,4407
+shared_normalized_selected_evidence,ACL,Synovitis,9,4407
+shared_normalized_selected_evidence,ACL,Baker's,5,4407
+shared_normalized_selected_evidence,ACL,Contusion,13,4407
+shared_normalized_selected_evidence,ACL,Fracture,7,4407
+shared_normalized_selected_evidence,MCL,ACL,787,4407
+shared_normalized_selected_evidence,MCL,MCL,3297,4407
+shared_normalized_selected_evidence,MCL,Medial Meniscus,62,4407
+shared_normalized_selected_evidence,MCL,Lateral Meniscus,77,4407
+shared_normalized_selected_evidence,MCL,Medial OA,2,4407
+shared_normalized_selected_evidence,MCL,Lateral OA,1,4407
+shared_normalized_selected_evidence,MCL,PF OA,1,4407
+shared_normalized_selected_evidence,MCL,Effusion,6,4407
+shared_normalized_selected_evidence,MCL,Synovitis,8,4407
+shared_normalized_selected_evidence,MCL,Baker's,2,4407
+shared_normalized_selected_evidence,MCL,Contusion,3,4407
+shared_normalized_selected_evidence,MCL,Fracture,2,4407
+shared_normalized_selected_evidence,Medial Meniscus,ACL,53,4407
+shared_normalized_selected_evidence,Medial Meniscus,MCL,62,4407
+shared_normalized_selected_evidence,Medial Meniscus,Medial Meniscus,4455,4407
+shared_normalized_selected_evidence,Medial Meniscus,Lateral Meniscus,657,4407
+shared_normalized_selected_evidence,Medial Meniscus,Medial OA,38,4407
+shared_normalized_selected_evidence,Medial Meniscus,Lateral OA,3,4407
+shared_normalized_selected_evidence,Medial Meniscus,PF OA,5,4407
+shared_normalized_selected_evidence,Medial Meniscus,Effusion,19,4407
+shared_normalized_selected_evidence,Medial Meniscus,Synovitis,4,4407
+shared_normalized_selected_evidence,Medial Meniscus,Baker's,3,4407
+shared_normalized_selected_evidence,Medial Meniscus,Contusion,4,4407
+shared_normalized_selected_evidence,Medial Meniscus,Fracture,6,4407
+shared_normalized_selected_evidence,Lateral Meniscus,ACL,63,4407
+shared_normalized_selected_evidence,Lateral Meniscus,MCL,77,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Medial Meniscus,657,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Lateral Meniscus,3671,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Medial OA,2,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Lateral OA,15,4407
+shared_normalized_selected_evidence,Lateral Meniscus,PF OA,0,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Effusion,5,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Synovitis,8,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Baker's,4,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Contusion,2,4407
+shared_normalized_selected_evidence,Lateral Meniscus,Fracture,1,4407
+shared_normalized_selected_evidence,Medial OA,ACL,3,4407
+shared_normalized_selected_evidence,Medial OA,MCL,2,4407
+shared_normalized_selected_evidence,Medial OA,Medial Meniscus,38,4407
+shared_normalized_selected_evidence,Medial OA,Lateral Meniscus,2,4407
+shared_normalized_selected_evidence,Medial OA,Medial OA,1442,4407
+shared_normalized_selected_evidence,Medial OA,Lateral OA,387,4407
+shared_normalized_selected_evidence,Medial OA,PF OA,318,4407
+shared_normalized_selected_evidence,Medial OA,Effusion,7,4407
+shared_normalized_selected_evidence,Medial OA,Synovitis,6,4407
+shared_normalized_selected_evidence,Medial OA,Baker's,2,4407
+shared_normalized_selected_evidence,Medial OA,Contusion,0,4407
+shared_normalized_selected_evidence,Medial OA,Fracture,6,4407
+shared_normalized_selected_evidence,Lateral OA,ACL,3,4407
+shared_normalized_selected_evidence,Lateral OA,MCL,1,4407
+shared_normalized_selected_evidence,Lateral OA,Medial Meniscus,3,4407
+shared_normalized_selected_evidence,Lateral OA,Lateral Meniscus,15,4407
+shared_normalized_selected_evidence,Lateral OA,Medial OA,387,4407
+shared_normalized_selected_evidence,Lateral OA,Lateral OA,1235,4407
+shared_normalized_selected_evidence,Lateral OA,PF OA,286,4407
+shared_normalized_selected_evidence,Lateral OA,Effusion,2,4407
+shared_normalized_selected_evidence,Lateral OA,Synovitis,2,4407
+shared_normalized_selected_evidence,Lateral OA,Baker's,0,4407
+shared_normalized_selected_evidence,Lateral OA,Contusion,0,4407
+shared_normalized_selected_evidence,Lateral OA,Fracture,1,4407
+shared_normalized_selected_evidence,PF OA,ACL,3,4407
+shared_normalized_selected_evidence,PF OA,MCL,1,4407
+shared_normalized_selected_evidence,PF OA,Medial Meniscus,5,4407
+shared_normalized_selected_evidence,PF OA,Lateral Meniscus,0,4407
+shared_normalized_selected_evidence,PF OA,Medial OA,318,4407
+shared_normalized_selected_evidence,PF OA,Lateral OA,286,4407
+shared_normalized_selected_evidence,PF OA,PF OA,2276,4407
+shared_normalized_selected_evidence,PF OA,Effusion,14,4407
+shared_normalized_selected_evidence,PF OA,Synovitis,4,4407
+shared_normalized_selected_evidence,PF OA,Baker's,1,4407
+shared_normalized_selected_evidence,PF OA,Contusion,0,4407
+shared_normalized_selected_evidence,PF OA,Fracture,1,4407
+shared_normalized_selected_evidence,Effusion,ACL,8,4407
+shared_normalized_selected_evidence,Effusion,MCL,6,4407
+shared_normalized_selected_evidence,Effusion,Medial Meniscus,19,4407
+shared_normalized_selected_evidence,Effusion,Lateral Meniscus,5,4407
+shared_normalized_selected_evidence,Effusion,Medial OA,7,4407
+shared_normalized_selected_evidence,Effusion,Lateral OA,2,4407
+shared_normalized_selected_evidence,Effusion,PF OA,14,4407
+shared_normalized_selected_evidence,Effusion,Effusion,4261,4407
+shared_normalized_selected_evidence,Effusion,Synovitis,383,4407
+shared_normalized_selected_evidence,Effusion,Baker's,295,4407
+shared_normalized_selected_evidence,Effusion,Contusion,4,4407
+shared_normalized_selected_evidence,Effusion,Fracture,2,4407
+shared_normalized_selected_evidence,Synovitis,ACL,9,4407
+shared_normalized_selected_evidence,Synovitis,MCL,8,4407
+shared_normalized_selected_evidence,Synovitis,Medial Meniscus,4,4407
+shared_normalized_selected_evidence,Synovitis,Lateral Meniscus,8,4407
+shared_normalized_selected_evidence,Synovitis,Medial OA,6,4407
+shared_normalized_selected_evidence,Synovitis,Lateral OA,2,4407
+shared_normalized_selected_evidence,Synovitis,PF OA,4,4407
+shared_normalized_selected_evidence,Synovitis,Effusion,383,4407
+shared_normalized_selected_evidence,Synovitis,Synovitis,770,4407
+shared_normalized_selected_evidence,Synovitis,Baker's,53,4407
+shared_normalized_selected_evidence,Synovitis,Contusion,0,4407
+shared_normalized_selected_evidence,Synovitis,Fracture,2,4407
+shared_normalized_selected_evidence,Baker's,ACL,5,4407
+shared_normalized_selected_evidence,Baker's,MCL,2,4407
+shared_normalized_selected_evidence,Baker's,Medial Meniscus,3,4407
+shared_normalized_selected_evidence,Baker's,Lateral Meniscus,4,4407
+shared_normalized_selected_evidence,Baker's,Medial OA,2,4407
+shared_normalized_selected_evidence,Baker's,Lateral OA,0,4407
+shared_normalized_selected_evidence,Baker's,PF OA,1,4407
+shared_normalized_selected_evidence,Baker's,Effusion,295,4407
+shared_normalized_selected_evidence,Baker's,Synovitis,53,4407
+shared_normalized_selected_evidence,Baker's,Baker's,2157,4407
+shared_normalized_selected_evidence,Baker's,Contusion,0,4407
+shared_normalized_selected_evidence,Baker's,Fracture,0,4407
+shared_normalized_selected_evidence,Contusion,ACL,13,4407
+shared_normalized_selected_evidence,Contusion,MCL,3,4407
+shared_normalized_selected_evidence,Contusion,Medial Meniscus,4,4407
+shared_normalized_selected_evidence,Contusion,Lateral Meniscus,2,4407
+shared_normalized_selected_evidence,Contusion,Medial OA,0,4407
+shared_normalized_selected_evidence,Contusion,Lateral OA,0,4407
+shared_normalized_selected_evidence,Contusion,PF OA,0,4407
+shared_normalized_selected_evidence,Contusion,Effusion,4,4407
+shared_normalized_selected_evidence,Contusion,Synovitis,0,4407
+shared_normalized_selected_evidence,Contusion,Baker's,0,4407
+shared_normalized_selected_evidence,Contusion,Contusion,964,4407
+shared_normalized_selected_evidence,Contusion,Fracture,406,4407
+shared_normalized_selected_evidence,Fracture,ACL,7,4407
+shared_normalized_selected_evidence,Fracture,MCL,2,4407
+shared_normalized_selected_evidence,Fracture,Medial Meniscus,6,4407
+shared_normalized_selected_evidence,Fracture,Lateral Meniscus,1,4407
+shared_normalized_selected_evidence,Fracture,Medial OA,6,4407
+shared_normalized_selected_evidence,Fracture,Lateral OA,1,4407
+shared_normalized_selected_evidence,Fracture,PF OA,1,4407
+shared_normalized_selected_evidence,Fracture,Effusion,2,4407
+shared_normalized_selected_evidence,Fracture,Synovitis,2,4407
+shared_normalized_selected_evidence,Fracture,Baker's,0,4407
+shared_normalized_selected_evidence,Fracture,Contusion,406,4407
+shared_normalized_selected_evidence,Fracture,Fracture,1073,4407

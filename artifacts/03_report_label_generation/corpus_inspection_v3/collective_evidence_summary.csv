@@ -1,0 +1,225 @@
+record_type,target,status,rule_combination,language_combination,phenotype,confidence,mentions,propositions,unique_studies,selected_propositions,selected_winning_propositions,selected_study_target_pairs
+mention,ACL,negative,cruciate_and_collateral_ligaments,english,abnormality_absent,0.75,52,0,52,0,0,0
+mention,ACL,negative,cruciate_and_collateral_ligaments,greek_script,abnormality_absent,0.75,56,0,56,0,0,0
+mention,ACL,negative,cruciate_and_collateral_ligaments,latin_other,abnormality_absent,0.75,7,0,7,0,0,0
+mention,ACL,negative,cruciate_and_collateral_ligaments,spanish,abnormality_absent,0.75,238,0,238,0,0,0
+mention,ACL,negative,cruciate_ligaments,cyrillic_script,abnormality_absent,0.75,137,0,134,0,0,0
+mention,ACL,negative,cruciate_ligaments,dutch,abnormality_absent,0.75,59,0,58,0,0,0
+mention,ACL,negative,cruciate_ligaments,english,abnormality_absent,0.75,134,0,134,0,0,0
+mention,ACL,negative,cruciate_ligaments,french,abnormality_absent,0.75,20,0,20,0,0,0
+mention,ACL,negative,cruciate_ligaments,german,abnormality_absent,0.75,148,0,148,0,0,0
+mention,ACL,negative,cruciate_ligaments,greek_script,abnormality_absent,0.75,57,0,55,0,0,0
+mention,ACL,negative,cruciate_ligaments,latin_other,abnormality_absent,0.75,5,0,5,0,0,0
+mention,ACL,negative,cruciate_ligaments,south_slavic,abnormality_absent,0.75,55,0,55,0,0,0
+mention,ACL,negative,cruciate_ligaments,spanish,abnormality_absent,0.75,272,0,272,0,0,0
+mention,ACL,negative,cruciate_ligaments,turkish,abnormality_absent,0.75,8,0,8,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,dutch,abnormality_absent,0.75,37,0,36,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,english,abnormality_absent,0.75,166,0,165,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,french,abnormality_absent,0.75,4,0,4,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,german,abnormality_absent,0.75,11,0,11,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,greek_script,abnormality_absent,0.75,34,0,33,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,latin_other,abnormality_absent,0.75,6,0,6,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,south_slavic,abnormality_absent,0.75,5,0,5,0,0,0
+mention,Lateral Meniscus,negative,both_menisci,spanish,abnormality_absent,0.75,9,0,9,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,cyrillic_script,abnormality_absent,0.75,10,0,10,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,dutch,abnormality_absent,0.75,41,0,40,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,english,abnormality_absent,0.75,225,0,223,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,french,abnormality_absent,0.75,5,0,5,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,german,abnormality_absent,0.75,48,0,47,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,latin_other,abnormality_absent,0.75,11,0,11,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,south_slavic,abnormality_absent,0.75,9,0,9,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,spanish,abnormality_absent,0.75,127,0,127,0,0,0
+mention,Lateral Meniscus,negative,both_menisci_negative_only,turkish,abnormality_absent,0.75,2,0,2,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,english,degeneration,0.8,3,0,3,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,english,tear,0.8,10,0,10,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,greek_script,tear,0.8,3,0,3,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,latin_other,tear,0.8,1,0,1,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,south_slavic,degeneration,0.8,1,0,1,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,south_slavic,tear,0.8,3,0,3,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,spanish,degeneration,0.8,3,0,2,0,0,0
+mention,Lateral Meniscus,positive,both_menisci,spanish,tear,0.8,25,0,13,0,0,0
+mention,Lateral OA,negative,tibiofemoral_compartments,latin_other,abnormality_absent,0.75,8,0,4,0,0,0
+mention,Lateral OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,326,0,164,0,0,0
+mention,Lateral OA,positive,lateral_and_patellofemoral_compartments,english,chondral_abnormality,0.8,3,0,3,0,0,0
+mention,Lateral OA,positive,lateral_and_patellofemoral_compartments,english,tear,0.8,2,0,1,0,0,0
+mention,Lateral OA,positive,tibiofemoral_compartments,english,abnormality,0.8,3,0,2,0,0,0
+mention,Lateral OA,positive,tibiofemoral_compartments,english,chondral_abnormality,0.8,1,0,1,0,0,0
+mention,Lateral OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,100,0,27,0,0,0
+mention,MCL,negative,collateral_ligaments,cyrillic_script,abnormality_absent,0.75,120,0,118,0,0,0
+mention,MCL,negative,collateral_ligaments,dutch,abnormality_absent,0.75,55,0,54,0,0,0
+mention,MCL,negative,collateral_ligaments,english,abnormality_absent,0.75,234,0,234,0,0,0
+mention,MCL,negative,collateral_ligaments,german,abnormality_absent,0.75,61,0,61,0,0,0
+mention,MCL,negative,collateral_ligaments,greek_script,abnormality_absent,0.75,121,0,118,0,0,0
+mention,MCL,negative,collateral_ligaments,latin_other,abnormality_absent,0.75,10,0,10,0,0,0
+mention,MCL,negative,collateral_ligaments,south_slavic,abnormality_absent,0.75,134,0,134,0,0,0
+mention,MCL,negative,collateral_ligaments,spanish,abnormality_absent,0.75,36,0,36,0,0,0
+mention,MCL,negative,collateral_ligaments,turkish,abnormality_absent,0.75,157,0,156,0,0,0
+mention,MCL,negative,cruciate_and_collateral_ligaments,english,abnormality_absent,0.75,52,0,52,0,0,0
+mention,MCL,negative,cruciate_and_collateral_ligaments,greek_script,abnormality_absent,0.75,56,0,56,0,0,0
+mention,MCL,negative,cruciate_and_collateral_ligaments,latin_other,abnormality_absent,0.75,7,0,7,0,0,0
+mention,MCL,negative,cruciate_and_collateral_ligaments,spanish,abnormality_absent,0.75,238,0,238,0,0,0
+mention,Medial Meniscus,negative,both_menisci,dutch,abnormality_absent,0.75,37,0,36,0,0,0
+mention,Medial Meniscus,negative,both_menisci,english,abnormality_absent,0.75,174,0,173,0,0,0
+mention,Medial Meniscus,negative,both_menisci,french,abnormality_absent,0.75,4,0,4,0,0,0
+mention,Medial Meniscus,negative,both_menisci,german,abnormality_absent,0.75,11,0,11,0,0,0
+mention,Medial Meniscus,negative,both_menisci,greek_script,abnormality_absent,0.75,34,0,33,0,0,0
+mention,Medial Meniscus,negative,both_menisci,latin_other,abnormality_absent,0.75,6,0,6,0,0,0
+mention,Medial Meniscus,negative,both_menisci,south_slavic,abnormality_absent,0.75,6,0,6,0,0,0
+mention,Medial Meniscus,negative,both_menisci,spanish,abnormality_absent,0.75,8,0,8,0,0,0
+mention,Medial Meniscus,negative,both_menisci,turkish,abnormality_absent,0.75,60,0,59,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,cyrillic_script,abnormality_absent,0.75,10,0,10,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,dutch,abnormality_absent,0.75,41,0,40,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,english,abnormality_absent,0.75,223,0,222,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,french,abnormality_absent,0.75,5,0,5,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,german,abnormality_absent,0.75,46,0,46,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,latin_other,abnormality_absent,0.75,11,0,11,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,south_slavic,abnormality_absent,0.75,9,0,9,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,spanish,abnormality_absent,0.75,127,0,127,0,0,0
+mention,Medial Meniscus,negative,both_menisci_negative_only,turkish,abnormality_absent,0.75,2,0,2,0,0,0
+mention,Medial Meniscus,positive,both_menisci,english,avulsion,0.8,2,0,1,0,0,0
+mention,Medial Meniscus,positive,both_menisci,english,degeneration,0.8,12,0,11,0,0,0
+mention,Medial Meniscus,positive,both_menisci,english,tear,0.8,16,0,16,0,0,0
+mention,Medial Meniscus,positive,both_menisci,greek_script,tear,0.8,3,0,3,0,0,0
+mention,Medial Meniscus,positive,both_menisci,latin_other,tear,0.8,1,0,1,0,0,0
+mention,Medial Meniscus,positive,both_menisci,south_slavic,degeneration,0.8,1,0,1,0,0,0
+mention,Medial Meniscus,positive,both_menisci,south_slavic,tear,0.8,2,0,2,0,0,0
+mention,Medial Meniscus,positive,both_menisci,spanish,tear,0.8,2,0,1,0,0,0
+mention,Medial Meniscus,positive,both_menisci,turkish,degeneration,0.8,10,0,9,0,0,0
+mention,Medial Meniscus,positive,both_menisci,turkish,sprain,0.8,1,0,1,0,0,0
+mention,Medial Meniscus,positive,both_menisci,turkish,tear,0.8,1,0,1,0,0,0
+mention,Medial Meniscus,uncertain,both_menisci,english,tear,0.45,2,0,2,0,0,0
+mention,Medial OA,negative,tibiofemoral_compartments,english,abnormality_absent,0.75,3,0,3,0,0,0
+mention,Medial OA,negative,tibiofemoral_compartments,greek_script,abnormality_absent,0.75,9,0,8,0,0,0
+mention,Medial OA,negative,tibiofemoral_compartments,latin_other,abnormality_absent,0.75,4,0,4,0,0,0
+mention,Medial OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,165,0,165,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,english,abnormality,0.8,4,0,4,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,english,chondral_abnormality,0.8,8,0,6,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,english,degeneration,0.8,1,0,1,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,greek_script,abnormality,0.8,1,0,1,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,greek_script,chondral_abnormality,0.8,1,0,1,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,greek_script,tear,0.8,1,0,1,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,south_slavic,chondral_abnormality,0.8,2,0,2,0,0,0
+mention,Medial OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,50,0,27,0,0,0
+mention,PF OA,negative,tibiofemoral_compartments,greek_script,abnormality_absent,0.75,9,0,8,0,0,0
+mention,PF OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,206,0,104,0,0,0
+mention,PF OA,positive,lateral_and_patellofemoral_compartments,english,tear,0.8,2,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,english,abnormality,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,english,chondral_abnormality,0.8,6,0,4,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,english,degeneration,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,greek_script,abnormality,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,greek_script,chondral_abnormality,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,greek_script,tear,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,south_slavic,chondral_abnormality,0.8,1,0,1,0,0,0
+mention,PF OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,82,0,22,0,0,0
+proposition,ACL,negative,cruciate_and_collateral_ligaments,english,abnormality_absent,0.75,0,52,52,52,51,52
+proposition,ACL,negative,cruciate_and_collateral_ligaments,greek_script,abnormality_absent,0.75,0,24,24,24,24,24
+proposition,ACL,negative,cruciate_and_collateral_ligaments,latin_other,abnormality_absent,0.75,0,5,5,5,5,5
+proposition,ACL,negative,cruciate_and_collateral_ligaments|cruciate_ligaments,greek_script,abnormality_absent,0.75,0,32,32,32,32,32
+proposition,ACL,negative,cruciate_and_collateral_ligaments|cruciate_ligaments,latin_other,abnormality_absent,0.75,0,2,2,2,2,2
+proposition,ACL,negative,cruciate_and_collateral_ligaments|cruciate_ligaments,spanish,abnormality_absent,0.75,0,238,238,238,238,238
+proposition,ACL,negative,cruciate_ligaments,cyrillic_script,abnormality_absent,0.75,0,135,134,134,130,133
+proposition,ACL,negative,cruciate_ligaments,dutch,abnormality_absent,0.75,0,58,58,55,55,55
+proposition,ACL,negative,cruciate_ligaments,english,abnormality_absent,0.75,0,134,134,127,116,127
+proposition,ACL,negative,cruciate_ligaments,french,abnormality_absent,0.75,0,20,20,20,20,20
+proposition,ACL,negative,cruciate_ligaments,german,abnormality_absent,0.75,0,148,148,148,148,148
+proposition,ACL,negative,cruciate_ligaments,greek_script,abnormality_absent,0.75,0,24,23,24,24,23
+proposition,ACL,negative,cruciate_ligaments,latin_other,abnormality_absent,0.75,0,3,3,3,3,3
+proposition,ACL,negative,cruciate_ligaments,south_slavic,abnormality_absent,0.75,0,55,55,52,51,52
+proposition,ACL,negative,cruciate_ligaments,spanish,abnormality_absent,0.75,0,34,34,34,34,34
+proposition,ACL,negative,cruciate_ligaments,turkish,abnormality_absent,0.75,0,8,8,7,7,7
+proposition,Lateral Meniscus,negative,both_menisci,greek_script,abnormality_absent,0.75,0,33,33,33,33,33
+proposition,Lateral Meniscus,negative,both_menisci,south_slavic,abnormality_absent,0.75,0,5,5,5,5,5
+proposition,Lateral Meniscus,negative,both_menisci,spanish,abnormality_absent,0.75,0,1,1,1,1,1
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,cyrillic_script,abnormality_absent,0.75,0,10,10,10,9,10
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,dutch,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,english,abnormality_absent,0.75,0,58,57,53,52,53
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,french,abnormality_absent,0.75,0,1,1,1,1,1
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,german,abnormality_absent,0.75,0,37,36,37,36,36
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,latin_other,abnormality_absent,0.75,0,5,5,5,5,5
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,south_slavic,abnormality_absent,0.75,0,9,9,9,9,9
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,spanish,abnormality_absent,0.75,0,119,119,119,119,119
+proposition,Lateral Meniscus,negative,both_menisci_negative_only,turkish,abnormality_absent,0.75,0,2,2,2,2,2
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,dutch,abnormality_absent,0.75,0,36,36,36,36,36
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,english,abnormality_absent,0.75,0,162,162,159,159,159
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,french,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,german,abnormality_absent,0.75,0,11,11,11,11,11
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,latin_other,abnormality_absent,0.75,0,6,6,6,6,6
+proposition,Lateral Meniscus,negative,both_menisci|both_menisci_negative_only,spanish,abnormality_absent,0.75,0,8,8,8,8,8
+proposition,Lateral Meniscus,positive,both_menisci,english,degeneration,0.8,0,3,3,3,3,3
+proposition,Lateral Meniscus,positive,both_menisci,english,tear,0.8,0,2,2,2,2,2
+proposition,Lateral Meniscus,positive,both_menisci,greek_script,tear,0.8,0,3,3,3,3,3
+proposition,Lateral Meniscus,positive,both_menisci,latin_other,tear,0.8,0,1,1,1,1,1
+proposition,Lateral Meniscus,positive,both_menisci,south_slavic,degeneration,0.8,0,1,1,1,1,1
+proposition,Lateral Meniscus,positive,both_menisci,south_slavic,tear,0.8,0,3,3,3,3,3
+proposition,Lateral Meniscus,positive,both_menisci,spanish,degeneration,0.8,0,3,2,3,3,2
+proposition,Lateral Meniscus,positive,both_menisci,spanish,tear,0.8,0,21,13,21,21,13
+proposition,Lateral OA,negative,tibiofemoral_compartments,latin_other,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Lateral OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,0,164,164,164,164,164
+proposition,Lateral OA,positive,lateral_and_patellofemoral_compartments,english,tear,0.8,0,2,1,1,1,1
+proposition,Lateral OA,positive,tibiofemoral_compartments,english,abnormality,0.8,0,1,1,1,1,1
+proposition,Lateral OA,positive,tibiofemoral_compartments,english,chondral_abnormality,0.8,0,1,1,1,1,1
+proposition,Lateral OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,0,45,27,45,45,27
+proposition,MCL,negative,collateral_ligaments,cyrillic_script,abnormality_absent,0.75,0,119,118,119,119,118
+proposition,MCL,negative,collateral_ligaments,dutch,abnormality_absent,0.75,0,54,54,54,54,54
+proposition,MCL,negative,collateral_ligaments,english,abnormality_absent,0.75,0,182,182,177,164,177
+proposition,MCL,negative,collateral_ligaments,german,abnormality_absent,0.75,0,61,61,61,61,61
+proposition,MCL,negative,collateral_ligaments,greek_script,abnormality_absent,0.75,0,64,62,64,63,62
+proposition,MCL,negative,collateral_ligaments,latin_other,abnormality_absent,0.75,0,5,5,5,4,5
+proposition,MCL,negative,collateral_ligaments,south_slavic,abnormality_absent,0.75,0,134,134,131,128,131
+proposition,MCL,negative,collateral_ligaments,spanish,abnormality_absent,0.75,0,36,36,36,36,36
+proposition,MCL,negative,collateral_ligaments,turkish,abnormality_absent,0.75,0,157,156,155,150,155
+proposition,MCL,negative,collateral_ligaments|cruciate_and_collateral_ligaments,english,abnormality_absent,0.75,0,52,52,51,50,51
+proposition,MCL,negative,collateral_ligaments|cruciate_and_collateral_ligaments,greek_script,abnormality_absent,0.75,0,56,56,56,56,56
+proposition,MCL,negative,collateral_ligaments|cruciate_and_collateral_ligaments,latin_other,abnormality_absent,0.75,0,5,5,5,5,5
+proposition,MCL,negative,cruciate_and_collateral_ligaments,latin_other,abnormality_absent,0.75,0,2,2,2,2,2
+proposition,MCL,negative,cruciate_and_collateral_ligaments,spanish,abnormality_absent,0.75,0,238,238,238,238,238
+proposition,Medial Meniscus,negative,both_menisci,english,abnormality_absent,0.75,0,8,8,8,6,8
+proposition,Medial Meniscus,negative,both_menisci,greek_script,abnormality_absent,0.75,0,33,33,33,33,33
+proposition,Medial Meniscus,negative,both_menisci,south_slavic,abnormality_absent,0.75,0,6,6,6,5,6
+proposition,Medial Meniscus,negative,both_menisci,turkish,abnormality_absent,0.75,0,59,59,59,59,59
+proposition,Medial Meniscus,negative,both_menisci_negative_only,cyrillic_script,abnormality_absent,0.75,0,10,10,10,9,10
+proposition,Medial Meniscus,negative,both_menisci_negative_only,dutch,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Medial Meniscus,negative,both_menisci_negative_only,english,abnormality_absent,0.75,0,57,57,52,52,52
+proposition,Medial Meniscus,negative,both_menisci_negative_only,french,abnormality_absent,0.75,0,1,1,1,1,1
+proposition,Medial Meniscus,negative,both_menisci_negative_only,german,abnormality_absent,0.75,0,35,35,34,33,34
+proposition,Medial Meniscus,negative,both_menisci_negative_only,latin_other,abnormality_absent,0.75,0,5,5,5,5,5
+proposition,Medial Meniscus,negative,both_menisci_negative_only,south_slavic,abnormality_absent,0.75,0,9,9,9,7,9
+proposition,Medial Meniscus,negative,both_menisci_negative_only,spanish,abnormality_absent,0.75,0,119,119,119,118,119
+proposition,Medial Meniscus,negative,both_menisci_negative_only,turkish,abnormality_absent,0.75,0,2,2,2,2,2
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,dutch,abnormality_absent,0.75,0,36,36,36,35,36
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,english,abnormality_absent,0.75,0,165,165,164,164,164
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,french,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,german,abnormality_absent,0.75,0,11,11,11,11,11
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,latin_other,abnormality_absent,0.75,0,6,6,6,6,6
+proposition,Medial Meniscus,negative,both_menisci|both_menisci_negative_only,spanish,abnormality_absent,0.75,0,8,8,8,8,8
+proposition,Medial Meniscus,positive,both_menisci,english,avulsion,0.8,0,2,1,0,0,0
+proposition,Medial Meniscus,positive,both_menisci,english,degeneration,0.8,0,11,11,9,9,9
+proposition,Medial Meniscus,positive,both_menisci,english,tear,0.8,0,16,16,13,13,13
+proposition,Medial Meniscus,positive,both_menisci,greek_script,tear,0.8,0,3,3,3,3,3
+proposition,Medial Meniscus,positive,both_menisci,latin_other,tear,0.8,0,1,1,1,1,1
+proposition,Medial Meniscus,positive,both_menisci,south_slavic,degeneration,0.8,0,1,1,1,1,1
+proposition,Medial Meniscus,positive,both_menisci,south_slavic,tear,0.8,0,2,2,2,2,2
+proposition,Medial Meniscus,positive,both_menisci,spanish,tear,0.8,0,2,1,2,2,1
+proposition,Medial Meniscus,positive,both_menisci,turkish,degeneration,0.8,0,10,9,9,9,8
+proposition,Medial Meniscus,positive,both_menisci,turkish,sprain,0.8,0,1,1,1,1,1
+proposition,Medial Meniscus,positive,both_menisci,turkish,tear,0.8,0,1,1,1,1,1
+proposition,Medial Meniscus,uncertain,both_menisci,english,tear,0.45,0,2,2,2,1,2
+proposition,Medial OA,negative,tibiofemoral_compartments,english,abnormality_absent,0.75,0,3,3,3,3,3
+proposition,Medial OA,negative,tibiofemoral_compartments,greek_script,abnormality_absent,0.75,0,9,8,8,8,8
+proposition,Medial OA,negative,tibiofemoral_compartments,latin_other,abnormality_absent,0.75,0,4,4,4,4,4
+proposition,Medial OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,0,165,165,165,163,165
+proposition,Medial OA,positive,tibiofemoral_compartments,english,abnormality,0.8,0,4,4,3,3,3
+proposition,Medial OA,positive,tibiofemoral_compartments,english,degeneration,0.8,0,1,1,1,1,1
+proposition,Medial OA,positive,tibiofemoral_compartments,greek_script,abnormality,0.8,0,1,1,1,1,1
+proposition,Medial OA,positive,tibiofemoral_compartments,greek_script,tear,0.8,0,1,1,0,0,0
+proposition,Medial OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,0,45,27,45,45,27
+proposition,PF OA,negative,tibiofemoral_compartments,greek_script,abnormality_absent,0.75,0,9,8,8,4,8
+proposition,PF OA,negative,tibiofemoral_compartments,spanish,abnormality_absent,0.75,0,104,104,104,104,104
+proposition,PF OA,positive,lateral_and_patellofemoral_compartments,english,tear,0.8,0,2,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,english,abnormality,0.8,0,1,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,english,chondral_abnormality,0.8,0,6,4,5,5,4
+proposition,PF OA,positive,tibiofemoral_compartments,english,degeneration,0.8,0,1,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,greek_script,abnormality,0.8,0,1,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,greek_script,tear,0.8,0,1,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,south_slavic,chondral_abnormality,0.8,0,1,1,1,1,1
+proposition,PF OA,positive,tibiofemoral_compartments,spanish,chondral_abnormality,0.8,0,36,22,36,36,22
