@@ -1,0 +1,116 @@
+{
+  "stage": "04_report_label_model",
+  "version": "report-label-model-baseline-v1.0.0",
+  "upstream_policy_version": "report-label-policy-v3.0.0",
+  "experiment_name": "baseline_xlmr_v1",
+  "expected_source_studies": 4407,
+  "expected_official_studies_excluded": 58,
+  "paths": {
+    "train_csv": "data/train.csv",
+    "supervision_v3": "artifacts/03_report_label_generation/supervision_long_v3.csv",
+    "evidence_inventory": "artifacts/03_report_label_generation/corpus_inspection_v3/evidence_inventory.csv",
+    "upstream_policy_config": "config/03_report_label_generation/policy_v3.json",
+    "upstream_inspection_metadata": "artifacts/03_report_label_generation/corpus_inspection_v3/inspection_run_metadata.json",
+    "artifact_dir": "artifacts/04_report_label_model/baseline_xlmr_v1",
+    "figure_dir": "figures/04_report_label_model/baseline_xlmr_v1",
+    "stage_report": "reports/stages/04_report_label_model_baseline_v1.md",
+    "implementation_report": "reports/implementation/04_report_label_model_baseline_v1_implementation.md"
+  },
+  "targets": {
+    "ACL": "anterior cruciate ligament abnormality",
+    "MCL": "medial collateral ligament abnormality",
+    "Medial Meniscus": "medial meniscus abnormality",
+    "Lateral Meniscus": "lateral meniscus abnormality",
+    "Medial OA": "medial tibiofemoral osteoarthritis or cartilage abnormality",
+    "Lateral OA": "lateral tibiofemoral osteoarthritis or cartilage abnormality",
+    "PF OA": "patellofemoral osteoarthritis or cartilage abnormality",
+    "Effusion": "knee joint effusion",
+    "Synovitis": "knee synovitis",
+    "Baker's": "Baker cyst",
+    "Contusion": "bone contusion",
+    "Fracture": "fracture"
+  },
+  "labels": {
+    "label2id": {
+      "negative": 0,
+      "positive": 1,
+      "uncertain": 2,
+      "no_evidence": 3
+    },
+    "numeric_ids_have_precedence_semantics": false
+  },
+  "teacher": {
+    "unit": "target_plus_strict_diagnostic_clause",
+    "include_selected_winning_only": true,
+    "statuses": ["positive", "negative", "uncertain"],
+    "allowed_detectors": ["v2_exact", "v3_target", "v3_morphology"],
+    "require_strict_only": true,
+    "require_diagnostic": true,
+    "exclude_collective": true,
+    "exclude_conflicts": true,
+    "exclude_linked": true,
+    "exclude_unknown": true,
+    "exclude_official_studies": true,
+    "confidence_role": "audit_metadata_only"
+  },
+  "no_evidence": {
+    "source": "contrastive_other_target",
+    "examples_per_labeled_clause": 1,
+    "forbid_study_target_unknown_derivation": true,
+    "require_no_selected_evidence": true,
+    "require_no_v3_mention": true,
+    "require_no_v3_proposition": true,
+    "require_no_explicit_v3_target_cue": true,
+    "balance_across_targets": true
+  },
+  "split": {
+    "ratios": {"train": 0.70, "validation": 0.15, "test": 0.15},
+    "group_unit": "numeric_normalized_report_family_or_study_singleton",
+    "stratification": "deterministic_greedy_language_and_target_label",
+    "minimum_groups_for_full_support_audit": 3
+  },
+  "deduplication": {
+    "when": "after_split_train_only",
+    "key": ["target", "label", "normalized_clause"],
+    "collision_key": ["target", "normalized_clause"],
+    "collision_policy": "exclude_from_train_and_persist"
+  },
+  "model": {
+    "name_or_path": "FacebookAI/xlm-roberta-base",
+    "tokenizer_name_or_path": "FacebookAI/xlm-roberta-base",
+    "revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+    "input": "sentence_pair_target_description_then_raw_clause"
+  },
+  "tokenization": {
+    "max_length": 128,
+    "truncation": true,
+    "padding": "dynamic_per_batch",
+    "model_text_preprocessing": "whitespace_only"
+  },
+  "sampling": {
+    "method": "weighted_random_sampler",
+    "stratum": ["target", "label"],
+    "weight": "inverse_sqrt_frequency",
+    "max_relative_weight": 10.0,
+    "samples_per_epoch": "deduplicated_train_size"
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.00002,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.10,
+    "max_epochs": 5,
+    "train_batch_size": 16,
+    "eval_batch_size": 32,
+    "gradient_clip_norm": 1.0,
+    "early_stopping_patience": 2,
+    "mixed_precision": true,
+    "loss": "cross_entropy",
+    "primary_metric": "mean_per_target_macro_f1"
+  },
+  "aggregation": {
+    "precedence": ["positive", "uncertain", "negative", "no_evidence"],
+    "all_no_evidence_status": "unknown"
+  },
+  "seed": 20260818
+}

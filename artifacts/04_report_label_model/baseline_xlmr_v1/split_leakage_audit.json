@@ -1,0 +1,51 @@
+[
+  {
+    "check": "study_disjointness",
+    "detail": "Every StudyInstanceUID must occur in exactly one split.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "duplicate_report_family_disjointness",
+    "detail": "Exact/numeric-normalized duplicate report families are indivisible.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "assignment_row_uniqueness",
+    "detail": "The split manifest contains one row per Study.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "candidate_manifest_reconciliation",
+    "detail": "Every candidate reconciles to exactly one manifest row.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "nonempty_partitions",
+    "detail": "All requested partitions contain Studies.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "deterministic_reproduction",
+    "detail": "Same inputs/config/seed reproduce the manifest.",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  },
+  {
+    "check": "supported_target_label_presence",
+    "detail": "Target/label strata with >= 3 groups appear in every split (46 strata checked).",
+    "passed": true,
+    "severity": "error",
+    "violations": 0
+  }
+]

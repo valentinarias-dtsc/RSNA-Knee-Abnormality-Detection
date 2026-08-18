@@ -1,0 +1,972 @@
+{
+  "config": {
+    "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\config\\04_report_label_model\\baseline_xlmr_v1.json",
+    "sha256": "69bc88008fb57997525cd4789385d09a142a4e6f0f6e184218a62ebe8f0f8d7e"
+  },
+  "counts": {
+    "alignment_failures": 435,
+    "contrastive_no_evidence_examples": 22508,
+    "eligible_studies": 4349,
+    "official_studies_excluded": 58,
+    "raw_candidate_examples": 46874,
+    "source_studies": 4407,
+    "strict_clauses": 78565,
+    "test_examples": 8496,
+    "train_examples_after_dedup": 18649,
+    "train_source_examples": 29869,
+    "trusted_teacher_examples": 24366,
+    "validation_examples": 8509
+  },
+  "counts_by_split_target_label": [
+    {
+      "count": 196,
+      "label": "negative",
+      "split": "test",
+      "target": "ACL"
+    },
+    {
+      "count": 344,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "ACL"
+    },
+    {
+      "count": 220,
+      "label": "positive",
+      "split": "test",
+      "target": "ACL"
+    },
+    {
+      "count": 11,
+      "label": "uncertain",
+      "split": "test",
+      "target": "ACL"
+    },
+    {
+      "count": 157,
+      "label": "negative",
+      "split": "test",
+      "target": "Baker's"
+    },
+    {
+      "count": 342,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Baker's"
+    },
+    {
+      "count": 250,
+      "label": "positive",
+      "split": "test",
+      "target": "Baker's"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Baker's"
+    },
+    {
+      "count": 100,
+      "label": "negative",
+      "split": "test",
+      "target": "Contusion"
+    },
+    {
+      "count": 340,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Contusion"
+    },
+    {
+      "count": 97,
+      "label": "positive",
+      "split": "test",
+      "target": "Contusion"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Contusion"
+    },
+    {
+      "count": 171,
+      "label": "negative",
+      "split": "test",
+      "target": "Effusion"
+    },
+    {
+      "count": 338,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Effusion"
+    },
+    {
+      "count": 480,
+      "label": "positive",
+      "split": "test",
+      "target": "Effusion"
+    },
+    {
+      "count": 1,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Effusion"
+    },
+    {
+      "count": 133,
+      "label": "negative",
+      "split": "test",
+      "target": "Fracture"
+    },
+    {
+      "count": 336,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Fracture"
+    },
+    {
+      "count": 74,
+      "label": "positive",
+      "split": "test",
+      "target": "Fracture"
+    },
+    {
+      "count": 9,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Fracture"
+    },
+    {
+      "count": 302,
+      "label": "negative",
+      "split": "test",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 338,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 224,
+      "label": "positive",
+      "split": "test",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 18,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 108,
+      "label": "negative",
+      "split": "test",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 335,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 105,
+      "label": "positive",
+      "split": "test",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 243,
+      "label": "negative",
+      "split": "test",
+      "target": "MCL"
+    },
+    {
+      "count": 338,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "MCL"
+    },
+    {
+      "count": 103,
+      "label": "positive",
+      "split": "test",
+      "target": "MCL"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "test",
+      "target": "MCL"
+    },
+    {
+      "count": 135,
+      "label": "negative",
+      "split": "test",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 343,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 494,
+      "label": "positive",
+      "split": "test",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 18,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 89,
+      "label": "negative",
+      "split": "test",
+      "target": "Medial OA"
+    },
+    {
+      "count": 337,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Medial OA"
+    },
+    {
+      "count": 162,
+      "label": "positive",
+      "split": "test",
+      "target": "Medial OA"
+    },
+    {
+      "count": 134,
+      "label": "negative",
+      "split": "test",
+      "target": "PF OA"
+    },
+    {
+      "count": 346,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "PF OA"
+    },
+    {
+      "count": 225,
+      "label": "positive",
+      "split": "test",
+      "target": "PF OA"
+    },
+    {
+      "count": 2,
+      "label": "uncertain",
+      "split": "test",
+      "target": "PF OA"
+    },
+    {
+      "count": 4,
+      "label": "negative",
+      "split": "test",
+      "target": "Synovitis"
+    },
+    {
+      "count": 346,
+      "label": "no_evidence",
+      "split": "test",
+      "target": "Synovitis"
+    },
+    {
+      "count": 137,
+      "label": "positive",
+      "split": "test",
+      "target": "Synovitis"
+    },
+    {
+      "count": 2,
+      "label": "uncertain",
+      "split": "test",
+      "target": "Synovitis"
+    },
+    {
+      "count": 805,
+      "label": "negative",
+      "split": "train",
+      "target": "ACL"
+    },
+    {
+      "count": 1186,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "ACL"
+    },
+    {
+      "count": 809,
+      "label": "positive",
+      "split": "train",
+      "target": "ACL"
+    },
+    {
+      "count": 33,
+      "label": "uncertain",
+      "split": "train",
+      "target": "ACL"
+    },
+    {
+      "count": 543,
+      "label": "negative",
+      "split": "train",
+      "target": "Baker's"
+    },
+    {
+      "count": 1195,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Baker's"
+    },
+    {
+      "count": 768,
+      "label": "positive",
+      "split": "train",
+      "target": "Baker's"
+    },
+    {
+      "count": 9,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Baker's"
+    },
+    {
+      "count": 246,
+      "label": "negative",
+      "split": "train",
+      "target": "Contusion"
+    },
+    {
+      "count": 1195,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Contusion"
+    },
+    {
+      "count": 262,
+      "label": "positive",
+      "split": "train",
+      "target": "Contusion"
+    },
+    {
+      "count": 11,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Contusion"
+    },
+    {
+      "count": 641,
+      "label": "negative",
+      "split": "train",
+      "target": "Effusion"
+    },
+    {
+      "count": 1199,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Effusion"
+    },
+    {
+      "count": 2117,
+      "label": "positive",
+      "split": "train",
+      "target": "Effusion"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Effusion"
+    },
+    {
+      "count": 336,
+      "label": "negative",
+      "split": "train",
+      "target": "Fracture"
+    },
+    {
+      "count": 1202,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Fracture"
+    },
+    {
+      "count": 203,
+      "label": "positive",
+      "split": "train",
+      "target": "Fracture"
+    },
+    {
+      "count": 28,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Fracture"
+    },
+    {
+      "count": 1256,
+      "label": "negative",
+      "split": "train",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 1198,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 796,
+      "label": "positive",
+      "split": "train",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 45,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 295,
+      "label": "negative",
+      "split": "train",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 1203,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 260,
+      "label": "positive",
+      "split": "train",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 1006,
+      "label": "negative",
+      "split": "train",
+      "target": "MCL"
+    },
+    {
+      "count": 1198,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "MCL"
+    },
+    {
+      "count": 305,
+      "label": "positive",
+      "split": "train",
+      "target": "MCL"
+    },
+    {
+      "count": 13,
+      "label": "uncertain",
+      "split": "train",
+      "target": "MCL"
+    },
+    {
+      "count": 457,
+      "label": "negative",
+      "split": "train",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 1189,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 1861,
+      "label": "positive",
+      "split": "train",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 47,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 227,
+      "label": "negative",
+      "split": "train",
+      "target": "Medial OA"
+    },
+    {
+      "count": 1200,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Medial OA"
+    },
+    {
+      "count": 442,
+      "label": "positive",
+      "split": "train",
+      "target": "Medial OA"
+    },
+    {
+      "count": 1,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Medial OA"
+    },
+    {
+      "count": 516,
+      "label": "negative",
+      "split": "train",
+      "target": "PF OA"
+    },
+    {
+      "count": 1184,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "PF OA"
+    },
+    {
+      "count": 738,
+      "label": "positive",
+      "split": "train",
+      "target": "PF OA"
+    },
+    {
+      "count": 6,
+      "label": "uncertain",
+      "split": "train",
+      "target": "PF OA"
+    },
+    {
+      "count": 14,
+      "label": "negative",
+      "split": "train",
+      "target": "Synovitis"
+    },
+    {
+      "count": 1181,
+      "label": "no_evidence",
+      "split": "train",
+      "target": "Synovitis"
+    },
+    {
+      "count": 435,
+      "label": "positive",
+      "split": "train",
+      "target": "Synovitis"
+    },
+    {
+      "count": 5,
+      "label": "uncertain",
+      "split": "train",
+      "target": "Synovitis"
+    },
+    {
+      "count": 196,
+      "label": "negative",
+      "split": "validation",
+      "target": "ACL"
+    },
+    {
+      "count": 345,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "ACL"
+    },
+    {
+      "count": 220,
+      "label": "positive",
+      "split": "validation",
+      "target": "ACL"
+    },
+    {
+      "count": 11,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "ACL"
+    },
+    {
+      "count": 157,
+      "label": "negative",
+      "split": "validation",
+      "target": "Baker's"
+    },
+    {
+      "count": 339,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Baker's"
+    },
+    {
+      "count": 248,
+      "label": "positive",
+      "split": "validation",
+      "target": "Baker's"
+    },
+    {
+      "count": 2,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Baker's"
+    },
+    {
+      "count": 100,
+      "label": "negative",
+      "split": "validation",
+      "target": "Contusion"
+    },
+    {
+      "count": 341,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Contusion"
+    },
+    {
+      "count": 98,
+      "label": "positive",
+      "split": "validation",
+      "target": "Contusion"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Contusion"
+    },
+    {
+      "count": 171,
+      "label": "negative",
+      "split": "validation",
+      "target": "Effusion"
+    },
+    {
+      "count": 339,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Effusion"
+    },
+    {
+      "count": 476,
+      "label": "positive",
+      "split": "validation",
+      "target": "Effusion"
+    },
+    {
+      "count": 1,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Effusion"
+    },
+    {
+      "count": 132,
+      "label": "negative",
+      "split": "validation",
+      "target": "Fracture"
+    },
+    {
+      "count": 338,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Fracture"
+    },
+    {
+      "count": 72,
+      "label": "positive",
+      "split": "validation",
+      "target": "Fracture"
+    },
+    {
+      "count": 9,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Fracture"
+    },
+    {
+      "count": 303,
+      "label": "negative",
+      "split": "validation",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 340,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 224,
+      "label": "positive",
+      "split": "validation",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 18,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Lateral Meniscus"
+    },
+    {
+      "count": 106,
+      "label": "negative",
+      "split": "validation",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 338,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 105,
+      "label": "positive",
+      "split": "validation",
+      "target": "Lateral OA"
+    },
+    {
+      "count": 248,
+      "label": "negative",
+      "split": "validation",
+      "target": "MCL"
+    },
+    {
+      "count": 340,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "MCL"
+    },
+    {
+      "count": 102,
+      "label": "positive",
+      "split": "validation",
+      "target": "MCL"
+    },
+    {
+      "count": 3,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "MCL"
+    },
+    {
+      "count": 135,
+      "label": "negative",
+      "split": "validation",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 343,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 502,
+      "label": "positive",
+      "split": "validation",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 18,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Medial Meniscus"
+    },
+    {
+      "count": 89,
+      "label": "negative",
+      "split": "validation",
+      "target": "Medial OA"
+    },
+    {
+      "count": 339,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Medial OA"
+    },
+    {
+      "count": 162,
+      "label": "positive",
+      "split": "validation",
+      "target": "Medial OA"
+    },
+    {
+      "count": 135,
+      "label": "negative",
+      "split": "validation",
+      "target": "PF OA"
+    },
+    {
+      "count": 345,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "PF OA"
+    },
+    {
+      "count": 225,
+      "label": "positive",
+      "split": "validation",
+      "target": "PF OA"
+    },
+    {
+      "count": 2,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "PF OA"
+    },
+    {
+      "count": 4,
+      "label": "negative",
+      "split": "validation",
+      "target": "Synovitis"
+    },
+    {
+      "count": 348,
+      "label": "no_evidence",
+      "split": "validation",
+      "target": "Synovitis"
+    },
+    {
+      "count": 135,
+      "label": "positive",
+      "split": "validation",
+      "target": "Synovitis"
+    },
+    {
+      "count": 2,
+      "label": "uncertain",
+      "split": "validation",
+      "target": "Synovitis"
+    }
+  ],
+  "determinism": {
+    "pytorch_deterministic_algorithms": "enabled with warn_only during model training",
+    "semantic_preparation_outputs": "deterministic for identical inputs/config/software/seed"
+  },
+  "git": {
+    "commit_sha": "a7b95d30ca84d4190733ddfc261abd7ee0a2e45f",
+    "dirty": true
+  },
+  "inputs": {
+    "evidence_inventory": {
+      "bytes": 23082665,
+      "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\artifacts\\03_report_label_generation\\corpus_inspection_v3\\evidence_inventory.csv",
+      "sha256": "83aeff2dde99809144e4e6fc6df37924586ac0e291a7035a4c718a75dbc757f4"
+    },
+    "supervision_v3": {
+      "bytes": 34051529,
+      "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\artifacts\\03_report_label_generation\\supervision_long_v3.csv",
+      "sha256": "c92d95176a167cea769cc915a624434486d696e7ea935d753d3ea6c26b0386d8"
+    },
+    "train_csv": {
+      "bytes": 5690007,
+      "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\data\\train.csv",
+      "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+    },
+    "upstream_inspection_metadata": {
+      "bytes": 30184,
+      "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\artifacts\\03_report_label_generation\\corpus_inspection_v3\\inspection_run_metadata.json",
+      "sha256": "1b9df49a4356080d5c61cb939b61a600baa7cba3702dd9d0835755ee66cc515f"
+    },
+    "upstream_policy_config": {
+      "bytes": 1547,
+      "path": "C:\\Github\\RSNA-Knee-Abnormality-Detection\\config\\03_report_label_generation\\policy_v3.json",
+      "sha256": "c700441ecbffe500ef16fe59d98af925e1eaf37fdc348873f1720dcba27b6d46"
+    }
+  },
+  "model_identifier": "FacebookAI/xlm-roberta-base",
+  "model_revision": "e73636d4f797dec63c3081bb6ed5c7b0bb3f2089",
+  "outputs": {
+    "artifacts/04_report_label_model/baseline_xlmr_v1/alignment_failures.csv": {
+      "bytes": 139616,
+      "sha256": "4097f7c5e1e76a843118020b107e780148576e48736ac7bf71932c73846ab43a"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/candidate_examples.csv": {
+      "bytes": 60318124,
+      "sha256": "5b62a076c35f0e067b09420b80f9e8232502e0c315a758a01bb6a02187935416"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/dedup_summary.csv": {
+      "bytes": 191,
+      "sha256": "4c6cb08fbb70a3148fc589165d5b98acc8cfd633f5cdf8c956c593ca2ead1f9e"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/excluded_official_studies.json": {
+      "bytes": 4384,
+      "sha256": "4b5ef7d1df0b9a625812d1b73d41956f2f9f40763b99d0868a37a829afabc977"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/label_collision_cases.csv": {
+      "bytes": 494,
+      "sha256": "cb5e56351e91935cf42b5c46e3b59a34e0928ed99dd4944f1bb61d47f20450ec"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/no_evidence_generation_summary.csv": {
+      "bytes": 3034026,
+      "sha256": "fb5306c1916da789da06e7d796a255809f8b0aad107272d790d06d9a4339a6ff"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/split_assignments.csv": {
+      "bytes": 1512782,
+      "sha256": "44642fe2c451e09d64d5f134dde4e14e4848454bde3aa8f758fe9c11e21e19b0"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/split_leakage_audit.csv": {
+      "bytes": 731,
+      "sha256": "1543605ce072a89ce264130f10435488c6a954fade7f6aba1905aa85508af9fa"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/split_leakage_audit.json": {
+      "bytes": 1393,
+      "sha256": "1c209da9044673a7577d018b1dde0a2971da472dd589fba0bc2b9aeba290e260"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/split_summary.csv": {
+      "bytes": 7357,
+      "sha256": "72ba608b4f7d3b032dfe3b5625e2cdce1155cac469a01009efdcb62d168b1ef1"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/test_examples.csv": {
+      "bytes": 11820503,
+      "sha256": "7fd6f963dfce857726df7280acab01b2bd0ec8a6befa46844652ddd383f7c3a3"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/test_slice_summary.csv": {
+      "bytes": 66,
+      "sha256": "e98ba8f30fc78067f359c8faa3c9c1e7395d2df1ef8628b04c7b42d95a446c20"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/train_examples_dedup.csv": {
+      "bytes": 28966522,
+      "sha256": "0717f0b10a565556093784fbb96d78950d4b38d99dab9678c7a702f86c0d07d5"
+    },
+    "artifacts/04_report_label_model/baseline_xlmr_v1/validation_examples.csv": {
+      "bytes": 11757260,
+      "sha256": "3e5342e0e1732fe4e7106432e4977288614294afefdec4b1e8cd4a3acd000051"
+    },
+    "figures/04_report_label_model/baseline_xlmr_v1/dataset_size_before_after_dedup.png": {
+      "bytes": 37265,
+      "sha256": "66c5dec9665e85f7d9c12067f2c234271f1eb72218b02c4e7e1a9ffd182bee8c"
+    }
+  },
+  "packages": {
+    "matplotlib": "3.10.9",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.8.0",
+    "transformers": "4.55.2"
+  },
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python_version": "3.10.11",
+  "run_status": "prepared_without_model_training",
+  "seed": 20260818,
+  "split_manifest_sha256": "44642fe2c451e09d64d5f134dde4e14e4848454bde3aa8f758fe9c11e21e19b0",
+  "stage_version": "report-label-model-baseline-v1.0.0",
+  "timestamp_utc": "2026-08-18T13:01:04.950905+00:00",
+  "tokenizer_identifier": "FacebookAI/xlm-roberta-base",
+  "upstream_policy_version": "report-label-policy-v3.0.0"
+}

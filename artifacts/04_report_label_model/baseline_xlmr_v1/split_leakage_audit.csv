@@ -1,0 +1,8 @@
+check,passed,violations,severity,detail
+study_disjointness,True,0,error,Every StudyInstanceUID must occur in exactly one split.
+duplicate_report_family_disjointness,True,0,error,Exact/numeric-normalized duplicate report families are indivisible.
+assignment_row_uniqueness,True,0,error,The split manifest contains one row per Study.
+candidate_manifest_reconciliation,True,0,error,Every candidate reconciles to exactly one manifest row.
+nonempty_partitions,True,0,error,All requested partitions contain Studies.
+deterministic_reproduction,True,0,error,Same inputs/config/seed reproduce the manifest.
+supported_target_label_presence,True,0,error,Target/label strata with >= 3 groups appear in every split (46 strata checked).

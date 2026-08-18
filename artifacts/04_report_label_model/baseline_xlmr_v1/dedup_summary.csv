@@ -1,0 +1,7 @@
+measure,value
+train_source_rows,29869
+collision_keys,0
+collision_rows_excluded,0
+train_rows_after_collision_exclusion,29869
+train_rows_after_dedup,18649
+duplicate_excess_removed,11220

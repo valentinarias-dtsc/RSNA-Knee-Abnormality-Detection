@@ -54,3 +54,19 @@ private/*
 !artifacts/03_report_label_generation/corpus_inspection_v3/
 !artifacts/03_report_label_generation/corpus_inspection_v3/*.csv
 !artifacts/03_report_label_generation/corpus_inspection_v3/*.json
+
+# Versioned lightweight outputs for Stage 04
+!artifacts/04_report_label_model/
+!artifacts/04_report_label_model/baseline_xlmr_v1/
+!artifacts/04_report_label_model/baseline_xlmr_v1/*.csv
+!artifacts/04_report_label_model/baseline_xlmr_v1/*.json
+
+# Stage 04 model weights, optimizer state and local model caches stay local
+artifacts/04_report_label_model/**/checkpoint/
+artifacts/04_report_label_model/**/checkpoints/
+artifacts/04_report_label_model/**/smoke/
+artifacts/04_report_label_model/**/*.safetensors
+artifacts/04_report_label_model/**/pytorch_model.bin
+artifacts/04_report_label_model/**/optimizer.pt
+.huggingface/
+huggingface_cache/

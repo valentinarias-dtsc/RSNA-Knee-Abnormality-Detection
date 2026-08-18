@@ -1,0 +1,143 @@
+record_type,split,target,label,studies,split_groups,examples
+overall,train,__all__,__all__,3082,2974,29869
+target_label,train,ACL,negative,796,786,805
+target_label,train,ACL,no_evidence,964,953,1186
+target_label,train,ACL,positive,583,582,809
+target_label,train,ACL,uncertain,31,31,33
+target_label,train,Baker's,negative,528,522,543
+target_label,train,Baker's,no_evidence,980,969,1195
+target_label,train,Baker's,positive,611,609,768
+target_label,train,Baker's,uncertain,6,6,9
+target_label,train,Contusion,negative,245,243,246
+target_label,train,Contusion,no_evidence,985,978,1195
+target_label,train,Contusion,positive,205,205,262
+target_label,train,Contusion,uncertain,9,9,11
+target_label,train,Effusion,negative,639,624,641
+target_label,train,Effusion,no_evidence,978,972,1199
+target_label,train,Effusion,positive,1772,1728,2117
+target_label,train,Effusion,uncertain,3,3,3
+target_label,train,Fracture,negative,323,320,336
+target_label,train,Fracture,no_evidence,982,979,1202
+target_label,train,Fracture,positive,132,132,203
+target_label,train,Fracture,uncertain,25,25,28
+target_label,train,Lateral Meniscus,negative,1246,1200,1256
+target_label,train,Lateral Meniscus,no_evidence,978,974,1198
+target_label,train,Lateral Meniscus,positive,574,574,796
+target_label,train,Lateral Meniscus,uncertain,37,37,45
+target_label,train,Lateral OA,negative,295,288,295
+target_label,train,Lateral OA,no_evidence,999,991,1203
+target_label,train,Lateral OA,positive,216,216,260
+target_label,train,MCL,negative,1002,983,1006
+target_label,train,MCL,no_evidence,985,977,1198
+target_label,train,MCL,positive,220,214,305
+target_label,train,MCL,uncertain,11,11,13
+target_label,train,Medial Meniscus,negative,445,436,457
+target_label,train,Medial Meniscus,no_evidence,973,966,1189
+target_label,train,Medial Meniscus,positive,1244,1230,1861
+target_label,train,Medial Meniscus,uncertain,41,41,47
+target_label,train,Medial OA,negative,227,220,227
+target_label,train,Medial OA,no_evidence,995,983,1200
+target_label,train,Medial OA,positive,359,359,442
+target_label,train,Medial OA,uncertain,1,1,1
+target_label,train,PF OA,negative,510,499,516
+target_label,train,PF OA,no_evidence,982,975,1184
+target_label,train,PF OA,positive,568,568,738
+target_label,train,PF OA,uncertain,6,6,6
+target_label,train,Synovitis,negative,14,14,14
+target_label,train,Synovitis,no_evidence,962,948,1181
+target_label,train,Synovitis,positive,295,294,435
+target_label,train,Synovitis,uncertain,5,5,5
+overall,validation,__all__,__all__,633,614,8509
+target_label,validation,ACL,negative,190,189,196
+target_label,validation,ACL,no_evidence,240,240,345
+target_label,validation,ACL,positive,136,136,220
+target_label,validation,ACL,uncertain,8,8,11
+target_label,validation,Baker's,negative,152,152,157
+target_label,validation,Baker's,no_evidence,242,242,339
+target_label,validation,Baker's,positive,168,168,248
+target_label,validation,Baker's,uncertain,1,1,2
+target_label,validation,Contusion,negative,98,97,100
+target_label,validation,Contusion,no_evidence,249,249,341
+target_label,validation,Contusion,positive,62,62,98
+target_label,validation,Contusion,uncertain,2,2,3
+target_label,validation,Effusion,negative,167,164,171
+target_label,validation,Effusion,no_evidence,242,242,339
+target_label,validation,Effusion,positive,343,342,476
+target_label,validation,Effusion,uncertain,1,1,1
+target_label,validation,Fracture,negative,127,126,132
+target_label,validation,Fracture,no_evidence,257,257,338
+target_label,validation,Fracture,positive,40,40,72
+target_label,validation,Fracture,uncertain,7,7,9
+target_label,validation,Lateral Meniscus,negative,297,295,303
+target_label,validation,Lateral Meniscus,no_evidence,245,244,340
+target_label,validation,Lateral Meniscus,positive,134,134,224
+target_label,validation,Lateral Meniscus,uncertain,12,12,18
+target_label,validation,Lateral OA,negative,106,105,106
+target_label,validation,Lateral OA,no_evidence,247,246,338
+target_label,validation,Lateral OA,positive,78,78,105
+target_label,validation,MCL,negative,247,245,248
+target_label,validation,MCL,no_evidence,252,252,340
+target_label,validation,MCL,positive,68,68,102
+target_label,validation,MCL,uncertain,2,2,3
+target_label,validation,Medial Meniscus,negative,132,131,135
+target_label,validation,Medial Meniscus,no_evidence,248,248,343
+target_label,validation,Medial Meniscus,positive,314,314,502
+target_label,validation,Medial Meniscus,uncertain,13,13,18
+target_label,validation,Medial OA,negative,89,88,89
+target_label,validation,Medial OA,no_evidence,253,253,339
+target_label,validation,Medial OA,positive,115,115,162
+target_label,validation,PF OA,negative,130,129,135
+target_label,validation,PF OA,no_evidence,254,254,345
+target_label,validation,PF OA,positive,151,151,225
+target_label,validation,PF OA,uncertain,1,1,2
+target_label,validation,Synovitis,negative,4,4,4
+target_label,validation,Synovitis,no_evidence,274,273,348
+target_label,validation,Synovitis,positive,81,81,135
+target_label,validation,Synovitis,uncertain,2,2,2
+overall,test,__all__,__all__,634,614,8496
+target_label,test,ACL,negative,194,192,196
+target_label,test,ACL,no_evidence,258,257,344
+target_label,test,ACL,positive,137,137,220
+target_label,test,ACL,uncertain,8,8,11
+target_label,test,Baker's,negative,153,153,157
+target_label,test,Baker's,no_evidence,234,231,342
+target_label,test,Baker's,positive,168,168,250
+target_label,test,Baker's,uncertain,2,2,3
+target_label,test,Contusion,negative,100,98,100
+target_label,test,Contusion,no_evidence,254,254,340
+target_label,test,Contusion,positive,62,62,97
+target_label,test,Contusion,uncertain,2,2,3
+target_label,test,Effusion,negative,167,164,171
+target_label,test,Effusion,no_evidence,236,236,338
+target_label,test,Effusion,positive,342,341,480
+target_label,test,Effusion,uncertain,1,1,1
+target_label,test,Fracture,negative,128,126,133
+target_label,test,Fracture,no_evidence,238,238,336
+target_label,test,Fracture,positive,41,41,74
+target_label,test,Fracture,uncertain,6,6,9
+target_label,test,Lateral Meniscus,negative,292,290,302
+target_label,test,Lateral Meniscus,no_evidence,250,248,338
+target_label,test,Lateral Meniscus,positive,142,142,224
+target_label,test,Lateral Meniscus,uncertain,11,11,18
+target_label,test,Lateral OA,negative,108,106,108
+target_label,test,Lateral OA,no_evidence,254,254,335
+target_label,test,Lateral OA,positive,78,78,105
+target_label,test,MCL,negative,240,237,243
+target_label,test,MCL,no_evidence,266,266,338
+target_label,test,MCL,positive,64,64,103
+target_label,test,MCL,uncertain,2,2,3
+target_label,test,Medial Meniscus,negative,135,135,135
+target_label,test,Medial Meniscus,no_evidence,260,259,343
+target_label,test,Medial Meniscus,positive,305,305,494
+target_label,test,Medial Meniscus,uncertain,12,12,18
+target_label,test,Medial OA,negative,89,87,89
+target_label,test,Medial OA,no_evidence,250,249,337
+target_label,test,Medial OA,positive,115,115,162
+target_label,test,PF OA,negative,131,127,134
+target_label,test,PF OA,no_evidence,249,249,346
+target_label,test,PF OA,positive,148,148,225
+target_label,test,PF OA,uncertain,2,2,2
+target_label,test,Synovitis,negative,3,3,4
+target_label,test,Synovitis,no_evidence,252,251,346
+target_label,test,Synovitis,positive,90,90,137
+target_label,test,Synovitis,uncertain,1,1,2
